@@ -9,6 +9,7 @@
     <script src="jspsych.js"></script>
     <script src="plugins/jspsych-html-keyboard-response.js"></script>
     <script src="plugins/jspsych-html-button-response.js"></script>
+    <script src="plugins/recall-plugin.js"></script>
     <link rel="stylesheet" href="css/jspsych.css">
 </head>
 <body></body>
@@ -61,9 +62,8 @@ print_r($letters);
     ?>
 
     var training_recall = {
-        type: 'html-button-response',
-        stimulus: '<h2>Rappel :</h2>',
-        choices: ['A', 'B', 'C', 'G', 'H', 'T']
+        type: 'recall-letters',
+
     }
     timeline.push(training_recall)
 
