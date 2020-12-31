@@ -78,7 +78,7 @@ jsPsych.plugins["button-response-grid"] = (function () {
     plugin.trial = function (display_element, trial) {
 
         // display stimulus
-        var html = '<div style="display: grid"></div> <div id="jspsych-html-button-response-stimulus">' + trial.stimulus + '</div>';
+        var html = '<div id="jspsych-html-button-response-stimulus">' + trial.stimulus + '</div>';
 
         //display buttons
         var buttons = [];
@@ -93,11 +93,20 @@ jsPsych.plugins["button-response-grid"] = (function () {
                 buttons.push(trial.button_html);
             }
         }
-        html += '<div id="jspsych-html-button-response-btngroup">';
+        html += '<div id="jspsych-html-button-response-btngroup" style="display: grid; grid-auto-flow: row">';
+        var row = 1;
+        var col = 1;
         for (var i = 0; i < trial.choices.length; i++) {
             var str = buttons[i].replace(/%choice%/g, trial.choices[i]);
-            html += '<div class="jspsych-html-button-response-button" style="display: inline-block; margin:' + trial.margin_vertical + ' ' + trial.margin_horizontal + '" id="jspsych-html-button-response-button-' + i + '" data-choice="' + i + '">' + str + '</div>';
+            html += '<div class="jspsych-html-button-response-button" style="grid-row: ' + row + '; grid-column: ' + col + '; margin:' + trial.margin_vertical + ' ' + trial.margin_horizontal + '" id="jspsych-html-button-response-button-' + i + '" data-choice="' + i + '">' + str + '</div>';
+            if (col < 3) {
+                col++;
+            } else {
+                col = 1;
+                row++;
+            }
         }
+
         html += '</div>';
 
         //show prompt if there is one
