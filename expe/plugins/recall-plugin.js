@@ -9,22 +9,33 @@ jsPsych.plugins["recall-letters"] = (function () {
     plugin.info = {
         name: "recall-letters",
         parameters: {
-            parameter_name: {
-                type: jsPsych.plugins.parameterType.INT, // BOOL, STRING, INT, FLOAT, FUNCTION, KEYCODE, SELECT, HTML_STRING, IMAGE, AUDIO, VIDEO, OBJECT, COMPLEX
+            letters_choices: {
+                type: jsPsych.plugins.parameterType.STRING, // BOOL, STRING, INT, FLOAT, FUNCTION, KEYCODE, SELECT, HTML_STRING, IMAGE, AUDIO, VIDEO, OBJECT, COMPLEX
+                pretty_name: 'Letters choices',
+                array: true,
                 default: undefined
             },
-            parameter_name: {
-                type: jsPsych.plugins.parameterType.IMAGE,
-                default: undefined
-            }
         }
     }
 
+
     plugin.trial = function (display_element, trial) {
+
+        var html_content = "<p>Test d'un paragraphe</p>";
+        display_element.innerHTML = html_content;
+
+        // start time
+        var start_time = performance.now();
+
+        // store response
+        var response = {
+            rt: null,
+            button: null
+        };
 
         // data saving
         var trial_data = {
-            parameter_name: 'parameter value'
+            parameter_name: 'letters_choices'
         };
 
         // end trial

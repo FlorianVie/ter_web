@@ -9,7 +9,8 @@
     <script src="jspsych.js"></script>
     <script src="plugins/jspsych-html-keyboard-response.js"></script>
     <script src="plugins/jspsych-html-button-response.js"></script>
-    <script src="plugins/recall-plugin.js"></script>
+    <script src="plugins/jspsych-canvas-button-response.js"></script>
+    <script src="plugins/button-response-grid.js"></script>
     <link rel="stylesheet" href="css/jspsych.css">
 </head>
 <body></body>
@@ -32,40 +33,12 @@ print_r($letters);
     // timeline creation
     var timeline = [];
 
-    // welcome message
-    var welcome = {
-        type: 'html-keyboard-response',
-        stimulus: "<h1>Ecrire le message de bienvenue</h1> Appuyez sur une touche pour continuer.",
+    var recall = {
+        type: 'button-response-grid',
+        stimulus: 'TEST',
+        choices: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
     }
-    timeline.push(welcome);
-
-    // instructions
-    var instructions = {
-        type: 'html-keyboard-response',
-        stimulus: "Des instructions trop cools à lire !",
-    }
-    timeline.push(instructions);
-
-    // training
-    <?php
-    for ($i = 0; $i < $tr_nb; $i++) {
-    ?>
-    var training_trial = {
-        type: 'html-keyboard-response',
-        stimulus: "<h1><?php echo $letters[$i] ?></h1>",
-        trial_duration: 1000,
-        choices: "",
-    }
-    timeline.push(training_trial);
-    <?php
-    }
-    ?>
-
-    var training_recall = {
-        type: 'recall-letters',
-        letters_choices: ['R', 'T', 'J', 'K', 'B', 'C', 'S']
-    }
-    timeline.push(training_recall)
+    timeline.push(recall);
 
     jsPsych.init({
         timeline: timeline,
