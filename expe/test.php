@@ -9,6 +9,8 @@
     <script src="jspsych.js"></script>
     <script src="plugins/jspsych-html-keyboard-response.js"></script>
     <script src="plugins/button-response-grid.js"></script>
+    <script src="plugins/jspsych-survey-html-form.js"></script>
+    <script src="plugins/jspsych-survey-multi-select.js"></script>
     <link rel="stylesheet" href="css/jspsych.css">
 </head>
 <body></body>
@@ -37,6 +39,22 @@ shuffle($letters);
         margin_horizontal: '20px',
     }
     timeline.push(recall);
+
+    var recall2 = {
+        type: 'survey-html-form',
+        preamble: '<p>Rappel :</p>',
+        html: '',
+    }
+    timeline.push(recall2);
+
+    var formu = {
+        type: 'survey-html-form',
+        preamble: '<p>Retranscription :</p>',
+        html: '<p><textarea name="response" id="test-resp-box" cols="60" rows="10"></textarea></p>',
+        autofocus: 'test-resp-box'
+    }
+    timeline.push(formu);
+
 
     jsPsych.init({
         timeline: timeline,
