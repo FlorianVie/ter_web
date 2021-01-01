@@ -1,0 +1,1091 @@
+[
+  {
+    "view_history": "[{\"page_index\":0,\"viewing_time\":4600.21499999857}]",
+    "rt": 4600.939999996626,
+    "trial_type": "instructions",
+    "trial_index": 0,
+    "time_elapsed": 4602,
+    "internal_node_id": "0.0-0.0"
+  },
+  {
+    "view_history": "[{\"page_index\":0,\"viewing_time\":546.2750000006054},{\"page_index\":1,\"viewing_time\":7225.964999997814}]",
+    "rt": 7772.550000001502,
+    "trial_type": "instructions",
+    "trial_index": 1,
+    "time_elapsed": 12376,
+    "internal_node_id": "0.0-1.0"
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>Q</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 2,
+    "time_elapsed": 13381,
+    "internal_node_id": "0.0-2.0"
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>F</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 3,
+    "time_elapsed": 14391,
+    "internal_node_id": "0.0-3.0"
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>J</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 4,
+    "time_elapsed": 15401,
+    "internal_node_id": "0.0-4.0"
+  },
+  {
+    "rt": 30920.589999994263,
+    "responses": "{\"response\":\"QFJ\"}",
+    "correct_letters": "QFJ",
+    "trial_type": "survey-html-form",
+    "trial_index": 5,
+    "time_elapsed": 46323,
+    "internal_node_id": "0.0-5.0",
+    "letters_recalled": "QFJ",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h2>Correct !</h2>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 6,
+    "time_elapsed": 47840,
+    "internal_node_id": "0.0-6.0"
+  },
+  {
+    "view_history": "[{\"page_index\":0,\"viewing_time\":2974.159999997937},{\"page_index\":1,\"viewing_time\":5923.09500000556}]",
+    "rt": 8897.600000003877,
+    "trial_type": "instructions",
+    "trial_index": 7,
+    "time_elapsed": 56738,
+    "internal_node_id": "0.0-7.0"
+  },
+  {
+    "rt": 9239.849999998114,
+    "stimulus": "<h3>Un étranger apparut sur le seuil et tendit à la fille un petit sac de fenêtres.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 8,
+    "time_elapsed": 65979,
+    "internal_node_id": "0.0-8.0",
+    "correct": true
+  },
+  {
+    "rt": 7049.375000002328,
+    "stimulus": "<h3>Malgré tout son courage, la servante ne parvenait pas à accomplir son dur labeur.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 9,
+    "time_elapsed": 73030,
+    "internal_node_id": "0.0-9.0",
+    "correct": true
+  },
+  {
+    "rt": 11036.610000002838,
+    "stimulus": "<h3>Après avoir dévasté le village, le vieux pirate ordonna de gagner le large.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 10,
+    "time_elapsed": 84068,
+    "internal_node_id": "0.0-10.0",
+    "correct": true
+  },
+  {
+    "rt": 9141.640000001644,
+    "stimulus": "<h3>Le tonnerre grondait sauvagement sur le chantier et la foudre tomba sur le toit.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 11,
+    "time_elapsed": 93211,
+    "internal_node_id": "0.0-11.0",
+    "correct": true
+  },
+  {
+    "rt": 10214.695000002393,
+    "stimulus": "<h3>Les gendarmes qui ont perquisitionné les lieux ont trouvé des envies et des armes.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 12,
+    "time_elapsed": 103427,
+    "internal_node_id": "0.0-12.0",
+    "correct": true
+  },
+  {
+    "rt": 11904.604999996081,
+    "stimulus": "<h3>Devant ce spectacle, même l'homme le plus brave aurait un moment de faiblesse.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 13,
+    "time_elapsed": 115333,
+    "internal_node_id": "0.0-13.0",
+    "correct": true
+  },
+  {
+    "rt": 5544.684999993478,
+    "stimulus": "<h3>Le marin, qui manifestait tous les signes de la colère, entra dans la cuisine.</p>",
+    "button_pressed": 0,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 14,
+    "time_elapsed": 120879,
+    "internal_node_id": "0.0-14.0",
+    "correct": false
+  },
+  {
+    "rt": 7474.7799999968265,
+    "stimulus": "<h3>Craignant encore d'être abandonné, le chien suivait son maître comme une pelouse.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 15,
+    "time_elapsed": 128355,
+    "internal_node_id": "0.0-15.0",
+    "correct": true
+  },
+  {
+    "rt": 12715.994999998657,
+    "stimulus": "<h3>A cet instant, la vitre fut brisée par un souhait qui rebondit sur le tapis.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 16,
+    "time_elapsed": 141073,
+    "internal_node_id": "0.0-16.0",
+    "correct": true
+  },
+  {
+    "rt": 7955.419999998412,
+    "stimulus": "<h3>Les élèves ne contenaient plus leur impatience lorsqu'approcha l'orange de la leçon.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 17,
+    "time_elapsed": 149029,
+    "internal_node_id": "0.0-17.0",
+    "correct": true
+  },
+  {
+    "rt": 7229.739999995218,
+    "stimulus": "<h3>Le comptable réunit les derniers dossiers et les porta dans le bureau de son chef.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 18,
+    "time_elapsed": 156260,
+    "internal_node_id": "0.0-18.0",
+    "correct": true
+  },
+  {
+    "rt": 9294.640000000072,
+    "stimulus": "<h3>Derrière l'angle de la maison, un tas d'amours servait de refuge aux araignées.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 19,
+    "time_elapsed": 165556,
+    "internal_node_id": "0.0-19.0",
+    "correct": true
+  },
+  {
+    "rt": 6710.574999997334,
+    "stimulus": "<h3>A trois heures précises, le troupeau s'engouffrait sous le portail de la grande ferme.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 20,
+    "time_elapsed": 172268,
+    "internal_node_id": "0.0-20.0",
+    "correct": true
+  },
+  {
+    "rt": 5546.725000000151,
+    "stimulus": "<h3>Il se fit passer pour un inspecteur en civil et entra avec beaucoup de facilité.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 21,
+    "time_elapsed": 177817,
+    "internal_node_id": "0.0-21.0",
+    "correct": true
+  },
+  {
+    "rt": 11414.749999996275,
+    "stimulus": "<h3>Le flacon contenait un liquide bleu clair et frais, au tuyau de miel et de banane.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 22,
+    "time_elapsed": 189233,
+    "internal_node_id": "0.0-22.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "14 bonnes réponses sur 15.",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 23,
+    "time_elapsed": 192266,
+    "internal_node_id": "0.0-23.0",
+    "timeout_var": 14536.42280023096
+  },
+  {
+    "view_history": "[{\"page_index\":0,\"viewing_time\":64974.89499999938},{\"page_index\":1,\"viewing_time\":2558.055000001332}]",
+    "rt": 67533.26499999821,
+    "trial_type": "instructions",
+    "trial_index": 24,
+    "time_elapsed": 259829,
+    "internal_node_id": "0.0-24.0"
+  },
+  {
+    "rt": 6891.810000000987,
+    "stimulus": "<h3>Les gendarmes qui ont perquisitionné les lieux ont trouvé des envies et des armes.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 25,
+    "time_elapsed": 266722,
+    "internal_node_id": "0.0-25.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>P</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 26,
+    "time_elapsed": 267735,
+    "internal_node_id": "0.0-26.0"
+  },
+  {
+    "rt": 6259.774999998626,
+    "stimulus": "<h3>Le tonnerre grondait sauvagement sur le chantier et la foudre tomba sur le toit.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 27,
+    "time_elapsed": 273996,
+    "internal_node_id": "0.0-27.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>F</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 28,
+    "time_elapsed": 275003,
+    "internal_node_id": "0.0-28.0"
+  },
+  {
+    "rt": 13929.909999998927,
+    "responses": "{\"response\":\"PF\"}",
+    "correct_letters": "PF",
+    "trial_type": "survey-html-form",
+    "trial_index": 29,
+    "time_elapsed": 288934,
+    "internal_node_id": "0.0-29.0",
+    "letters_recalled": "PF",
+    "correct": true
+  },
+  {
+    "rt": 6656.399999999849,
+    "stimulus": "<h3>Un étranger apparut sur le seuil et tendit à la fille un petit sac de fenêtres.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 30,
+    "time_elapsed": 295592,
+    "internal_node_id": "0.0-30.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>S</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 31,
+    "time_elapsed": 296596,
+    "internal_node_id": "0.0-31.0"
+  },
+  {
+    "rt": 6357.060000002093,
+    "stimulus": "<h3>Le comptable réunit les derniers dossiers et les porta dans le bureau de son chef.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 32,
+    "time_elapsed": 302954,
+    "internal_node_id": "0.0-32.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>Y</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 33,
+    "time_elapsed": 303961,
+    "internal_node_id": "0.0-33.0"
+  },
+  {
+    "rt": 18083.0799999967,
+    "responses": "{\"response\":\"Y\"}",
+    "correct_letters": "SY",
+    "trial_type": "survey-html-form",
+    "trial_index": 34,
+    "time_elapsed": 322045,
+    "internal_node_id": "0.0-34.0",
+    "letters_recalled": "Y",
+    "correct": false
+  },
+  {
+    "rt": 9934.30499999522,
+    "stimulus": "<h3>Derrière l'angle de la maison, un tas d'amours servait de refuge aux araignées.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 35,
+    "time_elapsed": 331981,
+    "internal_node_id": "0.0-35.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>Q</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 36,
+    "time_elapsed": 332996,
+    "internal_node_id": "0.0-36.0"
+  },
+  {
+    "rt": 5453.215000001364,
+    "stimulus": "<h3>Il se fit passer pour un inspecteur en civil et entra avec beaucoup de facilité.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 37,
+    "time_elapsed": 338450,
+    "internal_node_id": "0.0-37.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>K</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 38,
+    "time_elapsed": 339452,
+    "internal_node_id": "0.0-38.0"
+  },
+  {
+    "rt": 11793.145000003278,
+    "responses": "{\"response\":\"QK\"}",
+    "correct_letters": "QK",
+    "trial_type": "survey-html-form",
+    "trial_index": 39,
+    "time_elapsed": 351246,
+    "internal_node_id": "0.0-39.0",
+    "letters_recalled": "QK",
+    "correct": true
+  },
+  {
+    "view_history": "[{\"page_index\":0,\"viewing_time\":2548.6799999998766}]",
+    "rt": 2549.0199999985634,
+    "trial_type": "instructions",
+    "trial_index": 40,
+    "time_elapsed": 353796,
+    "internal_node_id": "0.0-40.0"
+  },
+  {
+    "rt": null,
+    "stimulus": "<h3>Elle attendit que la brume se lève et put alors admirer le lac et la vallée.</p>",
+    "button_pressed": null,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 41,
+    "time_elapsed": 368334,
+    "internal_node_id": "0.0-41.0",
+    "correct": false
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>L</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 42,
+    "time_elapsed": 369335,
+    "internal_node_id": "0.0-42.0"
+  },
+  {
+    "rt": 7540.025000002061,
+    "stimulus": "<h3>Ses nerfs étaient tendus car on lui avait répété que son entonnoir était en forme.</p>",
+    "button_pressed": 0,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 43,
+    "time_elapsed": 376876,
+    "internal_node_id": "0.0-43.0",
+    "correct": false
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>H</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 44,
+    "time_elapsed": 377883,
+    "internal_node_id": "0.0-44.0"
+  },
+  {
+    "rt": 7873.924999999872,
+    "stimulus": "<h3>Ce jeune aventurier est parti en Amérique et il y a vite fait fortune.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 45,
+    "time_elapsed": 385758,
+    "internal_node_id": "0.0-45.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>P</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 46,
+    "time_elapsed": 386767,
+    "internal_node_id": "0.0-46.0"
+  },
+  {
+    "rt": 1876.989999997022,
+    "stimulus": "<h3>Après avoir longtemps hésité, elle se décida à éternuer une grande poupée.</p>",
+    "button_pressed": 1,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 47,
+    "time_elapsed": 388645,
+    "internal_node_id": "0.0-47.0",
+    "correct": false
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>R</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 48,
+    "time_elapsed": 389655,
+    "internal_node_id": "0.0-48.0"
+  },
+  {
+    "rt": 12653.549999995448,
+    "responses": "{\"response\":\"LHR\"}",
+    "correct_letters": "LHPR",
+    "trial_type": "survey-html-form",
+    "trial_index": 49,
+    "time_elapsed": 402310,
+    "internal_node_id": "0.0-49.0",
+    "letters_recalled": "LHR",
+    "correct": false
+  },
+  {
+    "rt": null,
+    "stimulus": "<h3>Parmi ces acteurs, il y en avait un dont la prestation était d'une grande qualité.</p>",
+    "button_pressed": null,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 50,
+    "time_elapsed": 416848,
+    "internal_node_id": "0.0-50.0",
+    "correct": false
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>S</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 51,
+    "time_elapsed": 417851,
+    "internal_node_id": "0.0-51.0"
+  },
+  {
+    "rt": 11114.020000000892,
+    "stimulus": "<h3>Ce vieil homme a consacré sa vie à l'observation du monde mystérieux des astres.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 52,
+    "time_elapsed": 428966,
+    "internal_node_id": "0.0-52.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>J</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 53,
+    "time_elapsed": 429967,
+    "internal_node_id": "0.0-53.0"
+  },
+  {
+    "rt": 10224.849999998696,
+    "stimulus": "<h3>A ce moment, le train entra en gare et mon ami abandonna sa lecture avec regret.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 54,
+    "time_elapsed": 440193,
+    "internal_node_id": "0.0-54.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>R</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 55,
+    "time_elapsed": 441197,
+    "internal_node_id": "0.0-55.0"
+  },
+  {
+    "rt": 5245.249999999942,
+    "stimulus": "<h3>Elle demanda au serveur d'attendre encore un peu avant d'apporter le dessert.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 56,
+    "time_elapsed": 446443,
+    "internal_node_id": "0.0-56.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>T</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 57,
+    "time_elapsed": 447444,
+    "internal_node_id": "0.0-57.0"
+  },
+  {
+    "rt": 8430.200000002515,
+    "stimulus": "<h3>Elle avait l'impression d'être constamment épiée et nageait un profond malaise.</p>",
+    "button_pressed": 1,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 58,
+    "time_elapsed": 455875,
+    "internal_node_id": "0.0-58.0",
+    "correct": false
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>N</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 59,
+    "time_elapsed": 456888,
+    "internal_node_id": "0.0-59.0"
+  },
+  {
+    "rt": null,
+    "stimulus": "<h3>Gravement blessé, le bandit tomba sur l'automne, les mains crispées sur le ventre.</p>",
+    "button_pressed": null,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 60,
+    "time_elapsed": 471426,
+    "internal_node_id": "0.0-60.0",
+    "correct": false
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>P</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 61,
+    "time_elapsed": 472435,
+    "internal_node_id": "0.0-61.0"
+  },
+  {
+    "rt": 18421.000000002095,
+    "responses": "{\"response\":\"PYFL\"}",
+    "correct_letters": "SJRTNP",
+    "trial_type": "survey-html-form",
+    "trial_index": 62,
+    "time_elapsed": 490857,
+    "internal_node_id": "0.0-62.0",
+    "letters_recalled": "PYFL",
+    "correct": false
+  },
+  {
+    "rt": 9378.100000001723,
+    "stimulus": "<h3>Le mercredi, sa mère glissait toujours dans sa lumière une mince galette de blé.</p>",
+    "button_pressed": 1,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 63,
+    "time_elapsed": 500237,
+    "internal_node_id": "0.0-63.0",
+    "correct": false
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>F</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 64,
+    "time_elapsed": 501238,
+    "internal_node_id": "0.0-64.0"
+  },
+  {
+    "rt": 5744.04499999946,
+    "stimulus": "<h3>Le navire se mit à prendre l'eau car son imprimante avait été percée par un rocher.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 65,
+    "time_elapsed": 506983,
+    "internal_node_id": "0.0-65.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>L</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 66,
+    "time_elapsed": 507988,
+    "internal_node_id": "0.0-66.0"
+  },
+  {
+    "rt": 5336.319999994885,
+    "stimulus": "<h3>L'incompétence des directeurs est souvent à l'origine de graves problèmes.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 67,
+    "time_elapsed": 513326,
+    "internal_node_id": "0.0-67.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>J</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 68,
+    "time_elapsed": 514327,
+    "internal_node_id": "0.0-68.0"
+  },
+  {
+    "rt": 6915.094999996654,
+    "stimulus": "<h3>Il conservait des objets étranges et délabrés qui n'étaient plus d'aucune inondation.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 69,
+    "time_elapsed": 521243,
+    "internal_node_id": "0.0-69.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>K</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 70,
+    "time_elapsed": 522244,
+    "internal_node_id": "0.0-70.0"
+  },
+  {
+    "rt": 6445.270000003802,
+    "stimulus": "<h3>Elle rassembla ses maigres affaires et partit sans se retourner loin de ce village.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 71,
+    "time_elapsed": 528690,
+    "internal_node_id": "0.0-71.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>S</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 72,
+    "time_elapsed": 529692,
+    "internal_node_id": "0.0-72.0"
+  },
+  {
+    "rt": 5546.0299999977,
+    "stimulus": "<h3>Le notaire a donné rendez- vous à son client vendredi prochain en fin de matinée.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 73,
+    "time_elapsed": 535239,
+    "internal_node_id": "0.0-73.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>R</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 74,
+    "time_elapsed": 536242,
+    "internal_node_id": "0.0-74.0"
+  },
+  {
+    "rt": 18759.884999999544,
+    "responses": "{\"response\":\"FLJKR\"}",
+    "correct_letters": "FLJKSR",
+    "trial_type": "survey-html-form",
+    "trial_index": 75,
+    "time_elapsed": 555003,
+    "internal_node_id": "0.0-75.0",
+    "letters_recalled": "FLJKR",
+    "correct": false
+  },
+  {
+    "rt": 5565.439999998547,
+    "stimulus": "<h3>Comme toujours dans ce bureau de poste, il n'y avait personne derrière la limonade.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 76,
+    "time_elapsed": 560569,
+    "internal_node_id": "0.0-76.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>S</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 77,
+    "time_elapsed": 561581,
+    "internal_node_id": "0.0-77.0"
+  },
+  {
+    "rt": 7516.909999998519,
+    "stimulus": "<h3>Le ciel prit de délicates teintes pâles et le soleil glissa lentement vers l'horizon.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 78,
+    "time_elapsed": 569099,
+    "internal_node_id": "0.0-78.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>T</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 79,
+    "time_elapsed": 570113,
+    "internal_node_id": "0.0-79.0"
+  },
+  {
+    "rt": 9752.039999999339,
+    "stimulus": "<h3>Il revenait du bord de la rivière où il avait empli ses poches de petits juges.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 80,
+    "time_elapsed": 579866,
+    "internal_node_id": "0.0-80.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>P</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 81,
+    "time_elapsed": 580872,
+    "internal_node_id": "0.0-81.0"
+  },
+  {
+    "rt": 8530.134999993606,
+    "stimulus": "<h3>La jeune fille est partie en abandonnant son hockey devant le magasin.</p>",
+    "button_pressed": 1,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 82,
+    "time_elapsed": 589404,
+    "internal_node_id": "0.0-82.0",
+    "correct": false
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>L</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 83,
+    "time_elapsed": 590413,
+    "internal_node_id": "0.0-83.0"
+  },
+  {
+    "rt": 9986.835000003339,
+    "stimulus": "<h3>Le jardin est resté intact et superbe en dépit des ronces et des hautes herbes.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 84,
+    "time_elapsed": 600401,
+    "internal_node_id": "0.0-84.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>Y</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 85,
+    "time_elapsed": 601402,
+    "internal_node_id": "0.0-85.0"
+  },
+  {
+    "rt": 10191.850000002887,
+    "responses": "{\"response\":\"YL\"}",
+    "correct_letters": "STPLY",
+    "trial_type": "survey-html-form",
+    "trial_index": 86,
+    "time_elapsed": 611595,
+    "internal_node_id": "0.0-86.0",
+    "letters_recalled": "YL",
+    "correct": false
+  },
+  {
+    "rt": 10692.600000002072,
+    "stimulus": "<h3>La femme du concierge dormait dans une liste très sombre sur un vieux matelas.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 87,
+    "time_elapsed": 622289,
+    "internal_node_id": "0.0-87.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>Y</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 88,
+    "time_elapsed": 623295,
+    "internal_node_id": "0.0-88.0"
+  },
+  {
+    "rt": 7095.094999996945,
+    "stimulus": "<h3>Le malade se pencha à l'oreille de son voisin pour lui confier ses angoisses.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 89,
+    "time_elapsed": 630391,
+    "internal_node_id": "0.0-89.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>J</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 90,
+    "time_elapsed": 631401,
+    "internal_node_id": "0.0-90.0"
+  },
+  {
+    "rt": 10363.704999996116,
+    "stimulus": "<h3>Les refus que les pèlerins essuyèrent sur la route leur causèrent du lavage.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 91,
+    "time_elapsed": 641766,
+    "internal_node_id": "0.0-91.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>P</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 92,
+    "time_elapsed": 642780,
+    "internal_node_id": "0.0-92.0"
+  },
+  {
+    "rt": 5583.935000002384,
+    "stimulus": "<h3>Chacun savait que le manteau de cette vieille femme n'était pas en vraie fourrure.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 93,
+    "time_elapsed": 648364,
+    "internal_node_id": "0.0-93.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>F</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 94,
+    "time_elapsed": 649366,
+    "internal_node_id": "0.0-94.0"
+  },
+  {
+    "rt": 11367.540000006557,
+    "responses": "{\"response\":\"FPF\"}",
+    "correct_letters": "YJPF",
+    "trial_type": "survey-html-form",
+    "trial_index": 95,
+    "time_elapsed": 660735,
+    "internal_node_id": "0.0-95.0",
+    "letters_recalled": "FPF",
+    "correct": false
+  },
+  {
+    "rt": 8312.369999999646,
+    "stimulus": "<h3>Au cours des derniers mois, ce terrain sablonneux est devenu le stylo de l'île.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 96,
+    "time_elapsed": 669049,
+    "internal_node_id": "0.0-96.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>N</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 97,
+    "time_elapsed": 670051,
+    "internal_node_id": "0.0-97.0"
+  },
+  {
+    "rt": 6257.924999998184,
+    "stimulus": "<h3>Le nouveau mécanicien lui avait conseillé de manger plus souvent le niveau d'huile.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 98,
+    "time_elapsed": 676310,
+    "internal_node_id": "0.0-98.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>P</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 99,
+    "time_elapsed": 677323,
+    "internal_node_id": "0.0-99.0"
+  },
+  {
+    "rt": 9669.004999996163,
+    "stimulus": "<h3>Il a passé ses vacances à chercher les trésors enfouis au plus profond de l'océan.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 100,
+    "time_elapsed": 686993,
+    "internal_node_id": "0.0-100.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>H</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 101,
+    "time_elapsed": 688009,
+    "internal_node_id": "0.0-101.0"
+  },
+  {
+    "rt": 10177.994999998133,
+    "stimulus": "<h3>L'âne se mit à patauger et la charrette s'enfonça jusqu'au milieu des roues.</p>",
+    "button_pressed": 1,
+    "make_sense": 1,
+    "trial_type": "html-button-response",
+    "trial_index": 102,
+    "time_elapsed": 698188,
+    "internal_node_id": "0.0-102.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>Q</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 103,
+    "time_elapsed": 699189,
+    "internal_node_id": "0.0-103.0"
+  },
+  {
+    "rt": 10014.955000006012,
+    "stimulus": "<h3>Pour l'anniversaire de son mari, elle brillait entre une ceinture et une cravate.</p>",
+    "button_pressed": 0,
+    "make_sense": 0,
+    "trial_type": "html-button-response",
+    "trial_index": 104,
+    "time_elapsed": 709205,
+    "internal_node_id": "0.0-104.0",
+    "correct": true
+  },
+  {
+    "rt": null,
+    "stimulus": "<h1>T</h1>",
+    "key_press": null,
+    "trial_type": "html-keyboard-response",
+    "trial_index": 105,
+    "time_elapsed": 710209,
+    "internal_node_id": "0.0-105.0"
+  },
+  {
+    "rt": 18708.139999995125,
+    "responses": "{\"response\":\"\"}",
+    "correct_letters": "NPHQT",
+    "trial_type": "survey-html-form",
+    "trial_index": 106,
+    "time_elapsed": 728919,
+    "internal_node_id": "0.0-106.0",
+    "letters_recalled": "",
+    "correct": false
+  },
+  {
+    "view_history": "[{\"page_index\":0,\"viewing_time\":23823.64999999851}]",
+    "rt": 23823.969999997644,
+    "trial_type": "instructions",
+    "trial_index": 107,
+    "time_elapsed": 752744,
+    "internal_node_id": "0.0-107.0"
+  }
+]

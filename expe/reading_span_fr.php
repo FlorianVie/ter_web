@@ -187,7 +187,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         type: 'html-button-response',
         stimulus: "<h3><?php echo $practice[$i][1] ?></p>",
         choices: ['Faux', 'Vrai'],
-        trial_duration: 6000,
+        trial_duration: 20000,
         data: {
             make_sense: <?php echo $practice[$i][2] ?>
         },
