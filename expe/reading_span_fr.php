@@ -480,7 +480,6 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
     jsPsych.init({
         timeline: timeline,
         on_finish: function () {
-            saveData();
             jsPsych.data.displayData();
         }
     })
