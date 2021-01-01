@@ -23,6 +23,7 @@ include '../fonctions.php';
 $bdd = getBD();
 
 $sentences = getSentences($bdd);
+$practice = getSentencesPrac($bdd);
 $letters = array_column(getLetters($bdd), 'letter');
 
 $tr_nb = 3;
@@ -32,6 +33,11 @@ shuffle($letters_grid);
 ?>
 
 <script>
+
+    var feedback_time = 1500;
+    var sentences_timeout = 1000;
+    var sentences_time = [];
+
     // timeline creation
     var timeline = [];
 
@@ -43,11 +49,11 @@ shuffle($letters_grid);
     timeline.push(welcome);
 
     // instructions
-    var instructions = {
+    var instructions_training_recall = {
         type: 'html-keyboard-response',
         stimulus: "Des instructions trop cools à lire !",
     }
-    timeline.push(instructions);
+    timeline.push(instructions_training_recall);
 
     // training
     <?php
@@ -98,9 +104,75 @@ shuffle($letters_grid);
             correct_letters: '<?php for ($i = 0; $i < $tr_nb; $i++) {
                 echo $letters[$i];
             } ?>'
+        },
+        on_finish: function (data) {
+            data.letters_recalled = JSON.parse(data.responses).response;
+            data.correct = data.correct_letters === data.letters_recalled;
+            console.log('Recalled:', data.letters_recalled, data.correct);
         }
     }
     timeline.push(training_recall);
+
+    var feedback = {
+        type: 'html-keyboard-response',
+        trial_duration: feedback_time,
+        choices: "",
+        stimulus: function () {
+            var last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
+            if (last_trial_correct) {
+                return "<h2>Correct!</h2>";
+            } else {
+                return "<h2>Wrong.</h2>"
+            }
+        }
+    }
+    timeline.push(feedback);
+
+    // -------------------------------------------------------
+
+    var instructions_training_sentences = {
+        type: 'html-keyboard-response',
+        stimulus: "Des instructions trop cools à lire pour les phrases !",
+    }
+    timeline.push(instructions_training_sentences);
+
+    <?php
+    for ($i = 0; $i < count($practice); $i++) {
+    ?>
+    var sentence_training = {
+        type: 'html-button-response',
+        stimulus: "<h3><?php echo $practice[$i][1] ?></p>",
+        choices: ['False', 'True'],
+        data: {
+            make_sense: <?php echo $practice[$i][2] ?>
+        },
+        on_finish: function (data) {
+            data.correct = data.button_pressed === data.make_sense;
+            console.log('Make sense:', data.button_pressed, data.make_sense, data.correct);
+            sentences_time.push(data.rt);
+        }
+    }
+    timeline.push(sentence_training);
+    <?php
+    }
+    ?>
+
+    var feedback_training_sentences = {
+        type: 'html-keyboard-response',
+        trial_duration: 3000,
+        choices: "",
+        stimulus: function () {
+            var sum = 0;
+            for (var i = 0; i < sentences_time.length; i++) {
+                sum += sentences_time[i];
+            }
+            var avg = sum / sentences_time.length;
+
+            return avg;
+        },
+    }
+    timeline.push(feedback_training_sentences);
+
 
     jsPsych.init({
         timeline: timeline,

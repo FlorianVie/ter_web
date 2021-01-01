@@ -10,6 +10,15 @@ function getSentences($bdd)
     return $sentences;
 }
 
+function getSentencesPrac($bdd)
+{
+    $req = $bdd->prepare("SELECT * FROM practice");
+    $req->execute();
+    $sentences = $req->fetchAll();
+    $req->closeCursor();
+    return $sentences;
+}
+
 function getLetters($bdd)
 {
     $req = $bdd->prepare("SELECT letter FROM letters");
