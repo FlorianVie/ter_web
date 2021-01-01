@@ -8,6 +8,7 @@
     <title>Reading Span - EN</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
     <script src="jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/8.1.1/math.js"></script>
     <script src="jspsych.js"></script>
     <script src="plugins/jspsych-html-keyboard-response.js"></script>
     <script src="plugins/jspsych-html-button-response.js"></script>
@@ -37,6 +38,7 @@ shuffle($letters_grid);
     var feedback_time = 1500;
     var sentences_timeout = 1000;
     var sentences_time = [];
+    var sentences_correct_training = [];
 
     // timeline creation
     var timeline = [];
@@ -150,6 +152,11 @@ shuffle($letters_grid);
             data.correct = data.button_pressed === data.make_sense;
             console.log('Make sense:', data.button_pressed, data.make_sense, data.correct);
             sentences_time.push(data.rt);
+            if (data.correct === true) {
+                sentences_correct_training.push(1);
+            } else {
+                sentences_correct_training.push(0);
+            }
         }
     }
     timeline.push(sentence_training);
@@ -162,13 +169,14 @@ shuffle($letters_grid);
         trial_duration: 3000,
         choices: "",
         stimulus: function () {
-            var sum = 0;
-            for (var i = 0; i < sentences_time.length; i++) {
-                sum += sentences_time[i];
-            }
-            var avg = sum / sentences_time.length;
-
-            return avg;
+            var sentences_mean = math.mean(sentences_time);
+            var sentences_std = math.std(sentences_time);
+            var sentences_sum = math.sum(sentences_time);
+            console.log('TR mean:', sentences_mean);
+            console.log('TR std:', sentences_std);
+            sentences_timeout = sentences_mean + 2.5 * sentences_std;
+            console.log('Timeout calculated:', sentences_timeout);
+            return math.sum(sentences_correct_training) + ' bonnes réponses sur 15.';
         },
     }
     timeline.push(feedback_training_sentences);
