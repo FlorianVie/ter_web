@@ -27,3 +27,21 @@ function getLetters($bdd)
     $req->closeCursor();
     return $letters;
 }
+
+function getPhrases($bdd)
+{
+    $req = $bdd->prepare("SELECT * FROM phrases");
+    $req->execute();
+    $sentences = $req->fetchAll();
+    $req->closeCursor();
+    return $sentences;
+}
+
+function getEntrainement($bdd)
+{
+    $req = $bdd->prepare("SELECT * FROM entrainement");
+    $req->execute();
+    $sentences = $req->fetchAll();
+    $req->closeCursor();
+    return $sentences;
+}

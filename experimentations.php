@@ -17,8 +17,8 @@
             </h1>
             <div class="columns">
                 <div class="column">
-                    <a href="">
-                        <button class="button" disabled>Reading span - FR</button>
+                    <a href="expe/reading_span_fr.php">
+                        <button class="button">Reading span - FR</button>
                     </a>
                     <a href="expe/reading_span_en.php">
                         <button class="button">Reading span - EN</button>

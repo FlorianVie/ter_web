@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Reading Span - EN</title>
+    <title>Reading Span - FR</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
     <script src="jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/8.1.1/math.js"></script>
@@ -24,8 +24,8 @@
 include '../fonctions.php';
 $bdd = getBD();
 
-$sentences = getSentences($bdd);
-$practice = getSentencesPrac($bdd);
+$sentences = getPhrases($bdd);
+$practice = getEntrainement($bdd);
 $letters = array_column(getLetters($bdd), 'letter');
 
 shuffle($letters);
@@ -186,7 +186,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
     var sentence_training = {
         type: 'html-button-response',
         stimulus: "<h3><?php echo $practice[$i][1] ?></p>",
-        choices: ['False', 'True'],
+        choices: ['Faux', 'Vrai'],
         trial_duration: 6000,
         data: {
             make_sense: <?php echo $practice[$i][2] ?>
@@ -273,7 +273,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
     var training_both_sentence = {
         type: 'html-button-response',
         stimulus: "<h3><?php echo $practice[$j][1] ?></p>",
-        choices: ['False', 'True'],
+        choices: ['Faux', 'Vrai'],
         trial_duration: function () {
             console.log(sentences_timeout);
             return sentences_timeout;
@@ -387,7 +387,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
     var main_sentence = {
         type: 'html-button-response',
         stimulus: "<h3><?php echo $sentences[$id_sentence][1] ?></p>",
-        choices: ['False', 'True'],
+        choices: ['Faux', 'Vrai'],
         trial_duration: function () {
             console.log(sentences_timeout);
             return sentences_timeout;
