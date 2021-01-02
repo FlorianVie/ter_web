@@ -78,7 +78,8 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
     // welcome message
     var welcome = {
         type: 'instructions',
-        pages: ["<h1>Bienvenue</h1> Merci de participer à cette expérience."],
+        pages: ["<h1>Bienvenue</h1> Merci de participer à cette expérience." +
+        "<p>Identifiant : <b>" + subject_id + "</b></p>"],
         show_clickable_nav: true,
         data: {
             part: "instruction",
@@ -99,6 +100,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             "<p>Après 2-3 lettres présentées, sur l'écran s'affichera une grille avec les 12 lettres possibles.</p>" +
             "<p>Vous devrez rappeler les lettres en cliquant sur les boutons correspondants de la grille puis sur '<i>Continuer</i>'.</p>" +
             "<p>Si vous faites une erreur, vous pouvez appuyer sur le bouton '<i>Effacer</i>' pour recommancer votre saisie.</p>" +
+            "<p>Si vous avez oublié une lettre, vous pouvez appuyer sur le button '<i>_</i>'.</p>" +
             "<p><b><i>Cliquez sur 'Suivant' pour commencer l'entrainement au rappel.</i></b></p>"
         ],
         show_clickable_nav: true,
@@ -152,6 +154,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         '<td><button class="jspsych-btn" id="3" onclick="btn_clicked = getInputGrid(this, btn_clicked)" type="button"><?php echo $letters_grid[11] ?></button></td>' +
         '</tr>' +
         '</table>' +
+        '<p><button class="jspsych-btn" id="supp" onclick="btn_clicked =  getInputGrid(this, btn_clicked)" style="font-size: 1em" type="button" >_</button></p>' +
         '<p><input type="text" name="response" id="resp" style="font-size: 1.3em; text-align: center" ></p>' +
         '<p><button class="jspsych-btn" id="supp" onclick="btn_clicked =  removeInput()" style="background-color: grey; font-size: 1em" type="button" >Effacer</button></p>'
 
@@ -167,7 +170,11 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         },
         on_finish: function (data) {
             data.letters_recalled = JSON.parse(data.responses).response;
-            data.correct = data.correct_letters === data.letters_recalled;
+            if (data.correct_letters === data.letters_recalled) {
+                data.correct = 1;
+            } else {
+                data.correct = 0;
+            }
             console.log('Recalled:', data.letters_recalled, data.correct);
         }
     }
@@ -236,10 +243,14 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             if (data.rt === null) {
                 data.rt = 6000;
             }
-            data.correct = data.button_pressed === data.make_sense;
+            if (data.button_pressed === data.make_sense) {
+                data.correct = 1;
+            } else {
+                data.correct = 0;
+            }
             console.log('Make sense:', data.button_pressed, data.make_sense, data.correct, data.rt);
             sentences_time.push(data.rt);
-            if (data.correct === true) {
+            if (data.correct === 1) {
                 sentences_correct_training.push(1);
             } else {
                 sentences_correct_training.push(0);
@@ -327,10 +338,14 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             part: 'training-both-sentence'
         },
         on_finish: function (data) {
-            data.correct = data.button_pressed === data.make_sense;
+            if (data.button_pressed === data.make_sense) {
+                data.correct = 1;
+            } else {
+                data.correct = 0;
+            }
             console.log('Make sense:', data.button_pressed, data.make_sense, data.correct);
             sentences_time.push(data.rt);
-            if (data.correct === true) {
+            if (data.correct === 1) {
                 sentences_correct_training.push(1);
             } else {
                 sentences_correct_training.push(0);
@@ -376,6 +391,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         '<td><button class="jspsych-btn" id="3" onclick="btn_clicked = getInputGrid(this, btn_clicked)" type="button"><?php echo $letters_grid[11] ?></button></td>' +
         '</tr>' +
         '</table>' +
+        '<p><button class="jspsych-btn" id="supp" onclick="btn_clicked =  getInputGrid(this, btn_clicked)" style="font-size: 1em" type="button" >_</button></p>' +
         '<p><input type="text" name="response" id="resp" style="font-size: 1.3em; text-align: center" ></p>' +
         '<p><button class="jspsych-btn" id="supp" onclick="btn_clicked =  removeInput()" style="background-color: grey; font-size: 1em" type="button" >Effacer</button></p>'
 
@@ -391,7 +407,11 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         },
         on_finish: function (data) {
             data.letters_recalled = JSON.parse(data.responses).response;
-            data.correct = data.correct_letters === data.letters_recalled;
+            if (data.correct_letters === data.letters_recalled) {
+                data.correct = 1;
+            } else {
+                data.correct = 0;
+            }
             console.log('Recalled:', data.letters_recalled, data.correct);
         },
         on_start: function () {
@@ -449,10 +469,15 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             part: 'sentence'
         },
         on_finish: function (data) {
-            data.correct = data.button_pressed === data.make_sense;
+            if (data.button_pressed === data.make_sense) {
+                data.correct = 1;
+            } else {
+                data.correct = 0;
+            }
+
             console.log('Make sense:', data.button_pressed, data.make_sense, data.correct);
             sentences_time.push(data.rt);
-            if (data.correct === true) {
+            if (data.correct === 1) {
                 sentences_correct_training.push(1);
             } else {
                 sentences_correct_training.push(0);
@@ -499,6 +524,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         '<td><button class="jspsych-btn" id="3" onclick="btn_clicked = getInputGrid(this, btn_clicked)" type="button"><?php echo $letters_grid[11] ?></button></td>' +
         '</tr>' +
         '</table>' +
+        '<p><button class="jspsych-btn" id="supp" onclick="btn_clicked =  getInputGrid(this, btn_clicked)" style="font-size: 1em" type="button" >_</button></p>' +
         '<p><input type="text" name="response" id="resp" style="font-size: 1.3em; text-align: center" ></p>' +
         '<p><button class="jspsych-btn" id="supp" onclick="btn_clicked =  removeInput()" style="background-color: grey; font-size: 1em" type="button" >Effacer</button></p>'
 
@@ -516,7 +542,12 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         },
         on_finish: function (data) {
             data.letters_recalled = JSON.parse(data.responses).response;
-            data.correct = data.correct_letters === data.letters_recalled;
+            if (data.correct_letters === data.letters_recalled) {
+                data.correct = 1;
+            } else {
+                data.correct = 0;
+            }
+
             console.log('Recalled:', data.letters_recalled, data.correct, data.correct_letters);
         },
         on_start: function () {
