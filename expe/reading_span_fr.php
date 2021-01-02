@@ -18,6 +18,21 @@
     <link rel="stylesheet" href="css/jspsych.css">
 </head>
 
+<script>
+    function saveData() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'write_data.php'); // change 'write_data.php' to point to php script.
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                var response = JSON.parse(xhr.responseText);
+                console.log(response.success);
+            }
+        };
+        xhr.send(jsPsych.data.get().json());
+    }
+</script>
+
 <body></body>
 
 <?php
@@ -42,9 +57,15 @@ $both_size = 2;
 
 // Sizes range from 4-6 with 2 trials for each size
 $main_sizes = [4, 4, 5, 5, 6, 6];
+//$main_sizes = [2];
 ?>
 
 <script>
+
+    var subject_id = jsPsych.randomization.randomID(5);
+    jsPsych.data.addProperties({
+        subject: subject_id,
+    });
 
     var feedback_time = 1500;
     var sentences_timeout = 1000;
@@ -59,6 +80,9 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         type: 'instructions',
         pages: ["<h1>Bienvenue</h1> Merci de participer à cette expérience."],
         show_clickable_nav: true,
+        data: {
+            part: "instruction",
+        }
     }
     timeline.push(welcome);
 
@@ -78,6 +102,9 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             "<p><b><i>Cliquez sur 'Suivant' pour commencer l'entrainement au rappel.</i></b></p>"
         ],
         show_clickable_nav: true,
+        data: {
+            part: "instruction",
+        }
     }
     timeline.push(instructions_training_recall);
 
@@ -93,6 +120,9 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         stimulus: "<h1><?php echo $letters[$i] ?></h1>",
         trial_duration: 1000,
         choices: "",
+        data: {
+            part: "training-letters",
+        }
     }
     timeline.push(training_trial);
     <?php
@@ -132,7 +162,8 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         data: {
             correct_letters: '<?php for ($i = 0; $i < $tr_nb; $i++) {
                 echo $letters[$i];
-            } ?>'
+            } ?>',
+            part: "training-recall"
         },
         on_finish: function (data) {
             data.letters_recalled = JSON.parse(data.responses).response;
@@ -153,6 +184,9 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             } else {
                 return "<h2>Faux.</h2>"
             }
+        },
+        data: {
+            part: "feedback",
         }
     }
     timeline.push(feedback);
@@ -177,6 +211,9 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             "<p><b><i>Cliquez sur 'Suivant' pour commencer l'entrainement aux phrases.</i></b></p>"
         ],
         show_clickable_nav: true,
+        data: {
+            part: "instruction"
+        }
     }
     timeline.push(instructions_training_sentences);
 
@@ -189,7 +226,8 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         choices: ['Faux', 'Vrai'],
         trial_duration: 20000,
         data: {
-            make_sense: <?php echo $practice[$i][2] ?>
+            make_sense: <?php echo $practice[$i][2] ?>,
+            part: 'training-sentence'
         },
         on_finish: function (data) {
             if (data.button_pressed === null) {
@@ -217,6 +255,9 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         type: 'html-keyboard-response',
         trial_duration: 3000,
         choices: "",
+        data: {
+            part: 'feedback'
+        },
         stimulus: function () {
             return math.sum(sentences_correct_training) + ' bonnes réponses sur 15.';
         },
@@ -258,6 +299,9 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             "<p><b><i>Cliquez sur 'Suivant' pour commencer l'entrainement.</i></b></p>"
         ],
         show_clickable_nav: true,
+        data: {
+            part: 'instruction'
+        }
     }
     timeline.push(instructions_training_both);
 
@@ -279,7 +323,8 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             return sentences_timeout;
         },
         data: {
-            make_sense: <?php echo $practice[$j][2] ?>
+            make_sense: <?php echo $practice[$j][2] ?>,
+            part: 'training-both-sentence'
         },
         on_finish: function (data) {
             data.correct = data.button_pressed === data.make_sense;
@@ -299,6 +344,9 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         stimulus: "<h1><?php echo $letters_both[$j] ?></h1>",
         trial_duration: 1000,
         choices: "",
+        data: {
+            part: 'training-both-letter'
+        }
     }
     timeline.push(training_both_letter);
 
@@ -338,7 +386,8 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         data: {
             correct_letters: '<?php for ($k = 0; $k < $both_size; $k++) {
                 echo $letters_both[$k];
-            } ?>'
+            } ?>',
+            part: 'training-both-recall'
         },
         on_finish: function (data) {
             data.letters_recalled = JSON.parse(data.responses).response;
@@ -372,6 +421,9 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             "<p><b><i>Cliquez sur 'Suivant' pour commencer la tâche principale.</i></b></p>"
         ],
         show_clickable_nav: true,
+        data: {
+            part: 'instruction'
+        }
     }
     timeline.push(main_instuctions);
 
@@ -393,7 +445,8 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             return sentences_timeout;
         },
         data: {
-            make_sense: <?php echo $sentences[$id_sentence][2] ?>
+            make_sense: <?php echo $sentences[$id_sentence][2] ?>,
+            part: 'sentence'
         },
         on_finish: function (data) {
             data.correct = data.button_pressed === data.make_sense;
@@ -413,6 +466,9 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         stimulus: "<h1><?php echo $letters_main[$j] ?></h1>",
         trial_duration: 1000,
         choices: "",
+        data: {
+            part: 'letter'
+        }
     }
     timeline.push(main_letter);
 
@@ -453,7 +509,10 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         data: {
             correct_letters: '<?php for ($k = 0; $k < $main_sizes[$i]; $k++) {
                 echo $letters_main[$k];
-            } ?>'
+            } ?>',
+            part: 'recall',
+            set_number: <?php echo $i + 1 ?>,
+            size: <?php echo $main_sizes[$i] ?>
         },
         on_finish: function (data) {
             data.letters_recalled = JSON.parse(data.responses).response;
@@ -474,14 +533,18 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         type: 'instructions',
         pages: ["Fin !"],
         show_clickable_nav: true,
+        data: {
+            part: 'fin'
+        }
     }
     timeline.push(fin);
 
     jsPsych.init({
         timeline: timeline,
-        on_finish: function () {
-            jsPsych.data.displayData();
-        }
+        on_finish: saveData
+        /*on_finish: function () {
+            jsPsych.data.displayData('csv');
+        }*/
     })
 
 </script>
@@ -496,19 +559,6 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
     function removeInput() {
         $('#resp').val("");
         return "";
-    }
-
-    function saveData() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'write_data.php');
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.onload = function () {
-            if (xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
-                console.log(response.success);
-            }
-        };
-        xhr.send(jsPsych.data.get().json());
     }
 </script>
 
