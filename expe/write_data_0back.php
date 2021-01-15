@@ -4,7 +4,7 @@
 include('database_config.php');
 
 $data_array = json_decode(file_get_contents('php://input'), true);
-$table = "data";
+$table = "back_0";
 
 try {
     $conn = new PDO("mysql:host=$servername;port=$port;dbname=$dbname", $username, $password);

@@ -13,17 +13,21 @@
     <div class="hero-body">
         <div class="container has-text-centered">
             <h1 class="title">
-                TER
+                Entrainements
             </h1>
             <div class="columns">
                 <div class="column">
-                    <a href="experimentations.php"><button class="button">Expérimentations</button></a>
-                    <a href="entrainement.php"><button class="button">Entrainement</button></a>
+                    <a href="expe/reading_span_fr.php">
+                        <button class="button">Reading span - FR</button>
+                    </a>
+                    <a href="expe/reading_span_en.php">
+                        <button class="button">Reading span - EN</button>
+                    </a>
                 </div>
             </div>
             <div class="columns">
                 <div class="column">
-                    <button class="button" disabled>Monitoring</button>
+                    <a href="expe/0-back-training.php"><button class="button">n-back</button></a>
                 </div>
             </div>
         </div>
