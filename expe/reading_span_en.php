@@ -122,6 +122,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         stimulus: "<h1><?php echo $letters[$i] ?></h1>",
         trial_duration: 1000,
         choices: "",
+        post_trial_gap: 300,
         data: {
             part: "training-letters",
         }
@@ -359,6 +360,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         stimulus: "<h1><?php echo $letters_both[$j] ?></h1>",
         trial_duration: 1000,
         choices: "",
+        post_trial_gap: 300,
         data: {
             part: 'training-both-letter'
         }
@@ -491,6 +493,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         stimulus: "<h1><?php echo $letters_main[$j] ?></h1>",
         trial_duration: 1000,
         choices: "",
+        post_trial_gap: 300,
         data: {
             part: 'letter'
         }

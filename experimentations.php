@@ -27,7 +27,7 @@
             </div>
             <div class="columns">
                 <div class="column">
-                    <button class="button" disabled>Cambridge</button>
+                    <button class="button" disabled>Oxford</button>
                 </div>
             </div>
             <div class="columns">
