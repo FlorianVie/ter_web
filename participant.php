@@ -45,6 +45,12 @@ $subject = getSubject($bdd, $_GET['id']);
                                 <a href="http://ter.bigfive.890m.com/expe/1-back-training.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/1-back-training.php?id=<?php echo $subject[0] ?></a>
                             </td>
                         </tr>
+                        <tr>
+                            <td>2-Back</td>
+                            <td>
+                                <a href="http://ter.bigfive.890m.com/expe/2-back-training.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/1-back-training.php?id=<?php echo $subject[0] ?></a>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
