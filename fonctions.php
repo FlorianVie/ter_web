@@ -73,3 +73,19 @@ function upBack_1($bdd, $id)
     $req->execute();
     $req->closeCursor();
 }
+
+function getAllSubjects($bdd)
+{
+    $req = $bdd->prepare("SELECT * FROM subjects");
+    $req->execute();
+    $subject = $req->fetchAll();
+    $req->closeCursor();
+    return $subject;
+}
+
+function insertSubject($bdd)
+{
+    $req = $bdd->prepare("INSERT INTO subjects VALUES ()");
+    $req->execute();
+    $req->closeCursor();
+}
