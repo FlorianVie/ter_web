@@ -66,9 +66,27 @@ function getBack_1($bdd, $id)
     return $trial[0];
 }
 
+function getBack_2($bdd, $id)
+{
+    $req = $bdd->prepare("SELECT * FROM 2_back WHERE id_2_back = :id");
+    $req->bindParam(':id', $id);
+    $req->execute();
+    $trial = $req->fetchAll();
+    $req->closeCursor();
+    return $trial[0];
+}
+
 function upBack_1($bdd, $id)
 {
     $req = $bdd->prepare("UPDATE subjects SET back_1_level = back_1_level + 1 WHERE id_subject = :id");
+    $req->bindParam(':id', $id);
+    $req->execute();
+    $req->closeCursor();
+}
+
+function upBack_2($bdd, $id)
+{
+    $req = $bdd->prepare("UPDATE subjects SET back_2_level = back_2_level + 1 WHERE id_subject = :id");
     $req->bindParam(':id', $id);
     $req->execute();
     $req->closeCursor();
