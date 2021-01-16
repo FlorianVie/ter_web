@@ -27,7 +27,9 @@
             </div>
             <div class="columns">
                 <div class="column">
-                    <a href="expe/0-back-training.php"><button class="button">n-back</button></a>
+                    <a href="expe/0-back-training.php"><button class="button">0-back</button></a>
+                    <a href="expe/1-back-training.php"><button class="button">1-back</button></a>
+                    <a href="expe/2-back-training.php"><button class="button" disabled>2-back</button></a>
                 </div>
             </div>
         </div>

@@ -45,3 +45,31 @@ function getEntrainement($bdd)
     $req->closeCursor();
     return $sentences;
 }
+
+function getSubject($bdd, $id)
+{
+    $req = $bdd->prepare("SELECT * FROM subjects WHERE subjects.id_subject = :id");
+    $req->bindParam(':id', $id);
+    $req->execute();
+    $subject = $req->fetchAll();
+    $req->closeCursor();
+    return $subject[0];
+}
+
+function getBack_1($bdd, $id)
+{
+    $req = $bdd->prepare("SELECT * FROM 1_back WHERE id_1_back = :id");
+    $req->bindParam(':id', $id);
+    $req->execute();
+    $trial = $req->fetchAll();
+    $req->closeCursor();
+    return $trial[0];
+}
+
+function upBack_1($bdd, $id)
+{
+    $req = $bdd->prepare("UPDATE subjects SET back_1_level = back_1_level + 1 WHERE id_subject = :id");
+    $req->bindParam(':id', $id);
+    $req->execute();
+    $req->closeCursor();
+}

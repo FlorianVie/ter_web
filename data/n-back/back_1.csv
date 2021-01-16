@@ -1,0 +1,7 @@
+"view_history","rt","part","trial_type","trial_index","time_elapsed","internal_node_id","subject","id_1_back","stimulus","key_press","letter","trial_id","prev_letter","is_target","correct"
+"[{""page_index"":0,""viewing_time"":1152.815000154078},{""page_index"":1,""viewing_time"":842.9949996061623}]","1997.355000115931","instruction","instructions","0","2001","0.0-0.0","1","1","","","","","","",""
+"","null","","html-keyboard-response","1","4021","0.0-1.0","1","1","<h1>R</h1>","null","R","0","","0","1"
+"","null","","html-keyboard-response","2","6028","0.0-2.0","1","1","<h1>F</h1>","null","F","1","R","0","1"
+"","665.7600002363324","","html-keyboard-response","3","8035","0.0-3.0","1","1","<h1>F</h1>","32","F","2","F","1","1"
+"","null","","html-keyboard-response","4","10039","0.0-4.0","1","1","<h1>G</h1>","null","G","3","F","0","1"
+"","1425.8050001226366","feedback","html-keyboard-response","5","11470","0.0-5.0","1","1","<h1>Fin</h1><h2>Score : 100%</h2><p>Appuyez sur la touche espace pour envoyer vos résultats.</p>","32","","","","",""
