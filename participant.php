@@ -33,7 +33,7 @@ $back2JSON = json_encode($back2);
 
             <div class="columns is-centered">
                 <div class="column is-narrow">
-                    <table class="table is-half is-striped">
+                    <table class="table is-half is-striped has-shadow is-bordered">
                         <thead>
                         <tr>
                             <th>Tâche</th>
