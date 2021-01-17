@@ -16,7 +16,7 @@ $subjects = getAllSubjects($bdd);
 ?>
 
 <body>
-<section class="hero is-dark is-fullheight">
+<section class="hero is-light is-fullheight">
     <div class="hero-body">
         <div class="container has-text-centered">
             <h1 class="title">
@@ -24,7 +24,7 @@ $subjects = getAllSubjects($bdd);
             </h1>
             <div class="columns is-centered">
                 <div class="column is-narrow ">
-                    <table class="table is-striped is-hoverable">
+                    <table class="table is-striped is-hoverable has-shadow">
                         <thead>
                         <tr>
                             <th>ID Participant</th>

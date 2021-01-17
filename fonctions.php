@@ -68,12 +68,22 @@ function getBack_1($bdd, $id)
 
 function getBack_2($bdd, $id)
 {
-    $req = $bdd->prepare("SELECT * FROM 2_back WHERE id_2_back = :id");
+    $req = $bdd->prepare("SELECT * FROM 2_back WHERE id_2_back BETWEEN :id AND :id + 1");
     $req->bindParam(':id', $id);
     $req->execute();
     $trial = $req->fetchAll();
     $req->closeCursor();
-    return $trial[0];
+    return $trial;
+}
+
+function getBack_2_subject($bdd, $subject)
+{
+    $req = $bdd->prepare("SELECT id_subject, id_2_back, AVG(correct) as target_correct FROM back_2 WHERE is_target = 1 AND id_subject = :id GROUP BY  id_subject, id_2_back;");
+    $req->bindParam(':id', $subject);
+    $req->execute();
+    $trial = $req->fetchAll();
+    $req->closeCursor();
+    return $trial;
 }
 
 function upBack_1($bdd, $id)
@@ -86,7 +96,7 @@ function upBack_1($bdd, $id)
 
 function upBack_2($bdd, $id)
 {
-    $req = $bdd->prepare("UPDATE subjects SET back_2_level = back_2_level + 1 WHERE id_subject = :id");
+    $req = $bdd->prepare("UPDATE subjects SET back_2_level = back_2_level + 2 WHERE id_subject = :id");
     $req->bindParam(':id', $id);
     $req->execute();
     $req->closeCursor();

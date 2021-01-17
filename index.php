@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<section class="hero is-dark is-fullheight">
+<section class="hero is-light is-fullheight">
     <div class="hero-body">
         <div class="container has-text-centered">
             <h1 class="title">
@@ -31,7 +31,6 @@
                     <a href="participants.php">
                         <button class="button">Participants</button>
                     </a>
-                    <button class="button" disabled>Monitoring</button>
                 </div>
             </div>
         </div>
