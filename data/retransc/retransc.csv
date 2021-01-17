@@ -1,0 +1,6 @@
+"view_history","rt","part","trial_type","trial_index","time_elapsed","internal_node_id","subject","stimulus","key_press","audio_id","audio_file","responses","retransc"
+"[{""page_index"":0,""viewing_time"":609.9549999998999},{""page_index"":1,""viewing_time"":1149.1900000000896}]","1759.5750000000407","instruction","instructions","0","1761","0.0-0.0","1","","","","","",""
+"","null","Audio","audio-keyboard-response","1","6929","0.0-1.0","1","audio/mp3/conf-001.mp3","null","1","conf-001.mp3","",""
+"","12500.430000000051","","survey-html-form","2","19431","0.0-2.0","1","","","","","{""rep"":""What keep us happy and healthy as we go thrue life ?""}","What keep us happy and healthy as we go thrue life ?"
+"","null","Audio","audio-keyboard-response","3","24588","0.0-3.0","1","audio/mp3/conf-002.mp3","null","2","conf-002.mp3","",""
+"","12500.350000000253","","survey-html-form","4","37090","0.0-4.0","1","","","","","{""rep"":""If you have to invest, now, in our future best self""}","If you have to invest, now, in our future best self"

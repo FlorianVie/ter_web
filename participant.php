@@ -44,19 +44,34 @@ $back2JSON = json_encode($back2);
                         <tr>
                             <td>0-Back</td>
                             <td>
-                                <a href="http://ter.bigfive.890m.com/expe/0-back-training.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/0-back-training.php?id=<?php echo $subject[0] ?></a>
+                                <a href="expe/0-back-training.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/0-back-training.php?id=<?php echo $subject[0] ?></a>
                             </td>
                         </tr>
                         <tr>
                             <td>1-Back</td>
                             <td>
-                                <a href="http://ter.bigfive.890m.com/expe/1-back-training.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/1-back-training.php?id=<?php echo $subject[0] ?></a>
+                                <a href="expe/1-back-training.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/1-back-training.php?id=<?php echo $subject[0] ?></a>
                             </td>
                         </tr>
                         <tr>
                             <td>2-Back</td>
                             <td>
-                                <a href="http://ter.bigfive.890m.com/expe/2-back-training.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/1-back-training.php?id=<?php echo $subject[0] ?></a>
+                                <a href="expe/2-back-training.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/1-back-training.php?id=<?php echo $subject[0] ?></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <table class="table is-half is-striped has-shadow is-bordered">
+                        <thead>
+                        <tr>
+                            <th>Tâche principale</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <a href="expe/retranscription.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/retranscription.php?id=<?php echo $subject[0] ?></a>
                             </td>
                         </tr>
                         </tbody>

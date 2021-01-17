@@ -117,3 +117,12 @@ function insertSubject($bdd)
     $req->execute();
     $req->closeCursor();
 }
+
+function getAudio($bdd)
+{
+    $req = $bdd->prepare("SELECT * FROM duree");
+    $req->execute();
+    $audio = $req->fetchAll();
+    $req->closeCursor();
+    return $audio;
+}
