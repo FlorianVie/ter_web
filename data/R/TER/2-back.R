@@ -13,8 +13,7 @@ data_raw_2 <- dbFetch(rs)
 data_raw_2$id_subject <- as.character(data_raw_2$id_subject)
 
 data_2 <- data_raw_2 %>%
-  filter(part == "2-back") %>%
-  filter(is_target == 1)
+  filter(part == "2-back")
 
 data_2_mean <- data_2 %>%
   group_by(id_subject, id_2_back, is_target) %>%
@@ -22,14 +21,24 @@ data_2_mean <- data_2 %>%
     mean_correct = mean(correct)
   )
 
-p <- figure(width = 800) %>%
-  ly_points(data_2_mean$id_2_back, data_2_mean$mean_correct, color = data_2_mean$id_subject) %>%
-  ly_lines(data_2_mean$id_2_back, data_2_mean$mean_correct, color = data_2_mean$id_subject)
-p
+hits <- data_2_mean %>%
+  filter(is_target == 1)
+
+false_alarm <- data_2_mean %>%
+  filter(is_target == 0)
+false_alarm$mean_correct = 1 - false_alarm$mean_correct
+
+accuracy <- hits
+accuracy$mean_correct <- hits$mean_correct - false_alarm$mean_correct
 
 
 
+# Plots   
 
+acc <- figure(width = 800) %>%
+  ly_points(accuracy$id_2_back, accuracy$mean_correct, color = accuracy$id_subject) %>%
+  ly_lines(accuracy$id_2_back, accuracy$mean_correct, color = accuracy$id_subject)
+acc
 
 
 
