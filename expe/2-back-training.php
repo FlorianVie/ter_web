@@ -6,10 +6,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>2-back entrainement</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/jspsych.css">
+    <link rel="stylesheet" href="css/custom.css">
     <script src="jspsych.js"></script>
     <script src="plugins/jspsych-instructions.js"></script>
     <script src="plugins/jspsych-html-keyboard-response.js"></script>
+    <script src="plugins/jspsych-fullscreen.js"></script>
 </head>
 
 <script>
@@ -46,6 +50,7 @@ unset($trial[42]);
 unset($trial2[42]);
 
 #$trial = ['R', 'F', 'T', 'F', 'S'];
+#$trial2 = ['R', 'F', 'T', 'F', 'S'];
 ?>
 
 <script>
@@ -62,9 +67,20 @@ unset($trial2[42]);
         id_subject: subject_id,
     });
 
+    timeline.push({
+        type: 'fullscreen',
+        fullscreen_mode: true
+    });
+
     var welcome = {
         type: 'instructions',
-        pages: ["<h1>Entrainement 2-Back</h1>", "Des instructions ici"],
+        pages: ["<h1>Entrainement 2-Back</h1>",
+            "<p>Dans cette tâche, une séquence de lettres s'affichera en continu.</p>" +
+            "<p>Appuyez sur la barre espace si la lettre affichée est la même que l'avant dernière.</p>",
+            "<p style='font-size: 1.3em'>Exemple : <span class='mono' >R, T, F, <strong>T</strong>, H</span> </p>" +
+            "<p>Ici, il faut appuyer sur la barre espace lorsque la lettre <span class='mono'>T</span> s'affiche pour la deuxième fois.</p>" +
+            "<p>Vous avez le temps d'appuyer sur la barre espace jusqu'à l'apparition de la lettre suivante, même si la dernière présentée disparait.</p>",
+            "<p>Appuyez sur 'Suivant' pour commencer ...</p>"],
         show_clickable_nav: true,
         data: {
             part: "instruction",
@@ -72,12 +88,24 @@ unset($trial2[42]);
     }
     timeline.push(welcome);
 
+    var prepause = {
+        type: 'html-keyboard-response',
+        stimulus: '',
+        trial_duration: 1000,
+        choices: [],
+        response_ends_trial: false,
+        data: {
+            part: "Pause"
+        }
+    }
+    timeline.push(prepause);
+
     <?php
     for ($i = 0; $i < count($trial); $i++) {
     ?>
     var trial = {
         type: 'html-keyboard-response',
-        stimulus: '<h1><?php echo $trial[$i] ?></h1>',
+        stimulus: "<h1 class='mono'><?php echo $trial[$i] ?></h1>",
         stimulus_duration: 500,
         trial_duration: 2000,
         choices: [32],
@@ -119,9 +147,9 @@ unset($trial2[42]);
         post_trial_gap: 1000,
         trial_duration: 2500,
         stimulus: function () {
-            var moy = jsPsych.data.get().select('correct').mean();
-            var pourc = Math.round(moy * 100);
-            return '<h1>Fin</h1><h2>Score : ' + pourc + '%</h2><p>Deuxième partie dans 3 secondes ...</p>';
+            var moy = jsPsych.data.get().select('correct').sum();
+            var pourc = moy / jsPsych.data.get().select('correct').count();
+            return '<h1>Fin</h1><h2>Score : ' + pourc * 100 + '%</h2><p>Deuxième partie dans 3 secondes ...</p>';
         },
         data: {
             part: "feedback",
@@ -174,15 +202,20 @@ unset($trial2[42]);
         type: 'html-keyboard-response',
         choices: [32],
         stimulus: function () {
-            var moy = jsPsych.data.get().select('correct').mean();
-            var pourc = Math.round(moy * 100);
-            return '<h1>Fin</h1><h2>Score : ' + pourc + '%</h2><p>Appuyez sur la touche espace pour envoyer vos résultats.</p>';
+            var moy = jsPsych.data.get().select('correct').sum();
+            var pourc = moy / jsPsych.data.get().select('correct').count();
+            return '<h1>Fin</h1><h2>Score : ' + pourc * 100 + '%</h2><p>Appuyez sur la touche espace pour envoyer vos résultats.</p>';
         },
         data: {
             part: "feedback",
         },
     }
     timeline.push(feedback2);
+
+    timeline.push({
+        type: 'fullscreen',
+        fullscreen_mode: false
+    });
 
     jsPsych.init({
         timeline: timeline,
