@@ -40,8 +40,12 @@ acc <- figure(width = 800) %>%
   ly_lines(accuracy$id_2_back, accuracy$mean_correct, color = accuracy$id_subject)
 acc
 
+accuracy$id_subject <- as.character(accuracy$id_subject)
 
-
+ggplot(data = accuracy) +
+  geom_line(aes(id_2_back, mean_correct, color = id_subject)) +
+  expand_limits(x = 0, y = 0) +
+  theme_bw()
 
 
 

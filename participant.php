@@ -15,6 +15,7 @@ include 'fonctions.php';
 $bdd = getBD();
 $subject = getSubject($bdd, $_GET['id']);
 $back2 = getBack_2_subject($bdd, $_GET['id']);
+$back2fa = getBack_2_subject_fa($bdd, $_GET['id']);
 $back2JSON = json_encode($back2);
 ?>
 
@@ -30,9 +31,9 @@ $back2JSON = json_encode($back2);
             <h1 class="title has-text-centered">
                 Participant <?php echo $subject[0] ?>
             </h1>
-
             <div class="columns is-centered">
                 <div class="column is-narrow">
+                    <h2 class="subtitle">Entrainements</h2>
                     <table class="table is-half is-striped has-shadow is-bordered">
                         <thead>
                         <tr>
@@ -59,19 +60,54 @@ $back2JSON = json_encode($back2);
                                 <a href="expe/2-back-training.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/1-back-training.php?id=<?php echo $subject[0] ?></a>
                             </td>
                         </tr>
+                        <tr>
+                            <td>RSPAN</td>
+                            <td>
+                                <a href="expe/rspan.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/rspan.php?id=<?php echo $subject[0] ?></a>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
 
+                    <h2 class="subtitle">Tâche principale</h2>
                     <table class="table is-half is-striped has-shadow is-bordered">
                         <thead>
                         <tr>
-                            <th>Tâche principale</th>
+                            <th>Groupe</th>
+                            <th>Lien</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>
-                                <a href="expe/retranscription.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/retranscription.php?id=<?php echo $subject[0] ?></a>
+                                Transcription n-back
+                            </td>
+                            <td>
+                                <a href="expe/transcription-nback.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/transcription-nback.php?id=<?php echo $subject[0] ?></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Transcription RSPAN
+                            </td>
+                            <td>
+                                <a href="expe/transcription-rspan.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/transcription-rspan.php?id=<?php echo $subject[0] ?></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Contrôle n-back
+                            </td>
+                            <td>
+                                <a href="expe/controle-nback.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/controle-nback.php?id=<?php echo $subject[0] ?></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Contrôle RSPAN
+                            </td>
+                            <td>
+                                <a href="expe/controle-rspan.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/controle-rspan.php?id=<?php echo $subject[0] ?></a>
                             </td>
                         </tr>
                         </tbody>
@@ -97,7 +133,7 @@ $back2JSON = json_encode($back2);
                 datasets: [{
                     label: 'Score 2-Back',
                     data: [<?php for ($i = 0; $i < count($back2); $i++) {
-                        echo $back2[$i]['target_correct'] . ', ';
+                        echo $back2[$i]['target_correct'] - $back2fa[$i]['false_alarm'] . ', ';
                     } ?>],
                     borderColor: 'rgba(54, 162, 235, 1)',
                     borderWidth: 1

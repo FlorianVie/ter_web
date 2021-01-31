@@ -86,6 +86,16 @@ function getBack_2_subject($bdd, $subject)
     return $trial;
 }
 
+function getBack_2_subject_fa($bdd, $subject)
+{
+    $req = $bdd->prepare("SELECT id_subject, id_2_back, 1 - AVG(correct) as false_alarm FROM back_2 WHERE is_target = 0 AND id_subject = :id GROUP BY  id_subject, id_2_back;");
+    $req->bindParam(':id', $subject);
+    $req->execute();
+    $trial = $req->fetchAll();
+    $req->closeCursor();
+    return $trial;
+}
+
 function upBack_1($bdd, $id)
 {
     $req = $bdd->prepare("UPDATE subjects SET back_1_level = back_1_level + 1 WHERE id_subject = :id");
