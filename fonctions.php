@@ -76,6 +76,15 @@ function getBack_2($bdd, $id)
     return $trial;
 }
 
+function getBack_2_raw($bdd)
+{
+    $req = $bdd->prepare("SELECT * FROM 2_back");
+    $req->execute();
+    $trial = $req->fetchAll();
+    $req->closeCursor();
+    return $trial;
+}
+
 function getBack_2_subject($bdd, $subject)
 {
     $req = $bdd->prepare("SELECT id_subject, id_2_back, AVG(correct) as target_correct FROM back_2 WHERE is_target = 1 AND id_subject = :id GROUP BY  id_subject, id_2_back;");
@@ -131,6 +140,15 @@ function insertSubject($bdd)
 function getAudio($bdd)
 {
     $req = $bdd->prepare("SELECT * FROM duree");
+    $req->execute();
+    $audio = $req->fetchAll();
+    $req->closeCursor();
+    return $audio;
+}
+
+function getBack2_results($bdd)
+{
+    $req = $bdd->prepare("SELECT id_subject, trial_id, id_2_back, is_target, correct, rt, time_elapsed FROM back_2 WHERE part = '2-back'");
     $req->execute();
     $audio = $req->fetchAll();
     $req->closeCursor();

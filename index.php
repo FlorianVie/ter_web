@@ -19,10 +19,10 @@
             <div class="columns">
                 <div class="column">
                     <a href="experimentations.php">
-                        <button class="button">Expérimentations</button>
+                        <button class="button" disabled>Expérimentations</button>
                     </a>
                     <a href="entrainement.php">
-                        <button class="button">Entrainement</button>
+                        <button class="button" disabled>Entrainement</button>
                     </a>
                 </div>
             </div>

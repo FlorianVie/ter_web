@@ -51,7 +51,7 @@
 /* Form elements like input fields and buttons */
 
 .jspsych-display-element input[type="text"] {
-    font-family: 'Lato', 'Open Sans', 'Arial', sans-serif;
+    font-family: 'JetBrains Mono', 'Open Sans', 'Arial', sans-serif;
     font-size: 14px;
 }
 

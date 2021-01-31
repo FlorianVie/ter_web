@@ -7,3 +7,11 @@ body {
 .mono {
     font-family: 'JetBrains Mono', monospace;
 }
+
+td {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+input {
+    font-family: 'JetBrains Mono', monospace;
+}

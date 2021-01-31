@@ -13,6 +13,7 @@
     <script src="jspsych.js"></script>
     <script src="plugins/jspsych-instructions.js"></script>
     <script src="plugins/jspsych-html-keyboard-response.js"></script>
+    <script src="plugins/jspsych-fullscreen.js"></script>
 </head>
 
 <script>
@@ -56,6 +57,11 @@ $id_sujet = $_GET['id'];
     var subject_id = '<?php echo $id_sujet ?>';
     jsPsych.data.addProperties({
         subject: subject_id,
+    });
+
+    timeline.push({
+        type: 'fullscreen',
+        fullscreen_mode: true
     });
 
     var welcome = {
@@ -132,6 +138,11 @@ $id_sujet = $_GET['id'];
         },
     }
     timeline.push(feedback);
+
+    timeline.push({
+        type: 'fullscreen',
+        fullscreen_mode: false
+    });
 
     jsPsych.init({
         timeline: timeline,
