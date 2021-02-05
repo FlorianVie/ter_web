@@ -49,8 +49,8 @@ unset($trial2['id_2_back']);
 unset($trial[42]);
 unset($trial2[42]);
 
-#$trial = ['R', 'F', 'T', 'F', 'S'];
-#$trial2 = ['R', 'F', 'T', 'F', 'S'];
+#$trial = ['R', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
+#$trial2 = ['R', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
 ?>
 
 <script>
@@ -76,10 +76,10 @@ unset($trial2[42]);
         type: 'instructions',
         pages: ["<h1>Entrainement 2-Back</h1>",
             "<p>Dans cette tâche, une séquence de lettres s'affichera en continu.</p>" +
-            "<p>Appuyez sur la barre espace si la lettre affichée est la même que l'avant dernière.</p>",
+            "<p>Appuyez sur la touche 'J' si la lettre affichée est la même que l'avant-dernière. Si elle est différente, appuyez sur la touche 'F'.</p>",
             "<p style='font-size: 1.3em'>Exemple : <span class='mono' >R, T, F, <strong>T</strong>, H</span> </p>" +
-            "<p>Ici, il faut appuyer sur la barre espace lorsque la lettre <span class='mono'>T</span> s'affiche pour la deuxième fois.</p>" +
-            "<p>Vous avez le temps d'appuyer sur la barre espace jusqu'à l'apparition de la lettre suivante, même si la dernière présentée disparait.</p>",
+            "<p>Ici, il faut appuyer sur la touche 'J' lorsque la lettre <span class='mono'>T</span> s'affiche pour la deuxième fois et appuyer sur la touche 'F' pour les autres lettres.</p>" +
+            "<p>Vous avez le temps d'appuyer sur les touches jusqu'à l'apparition de la lettre suivante, même si la dernière présentée disparait.</p>",
             "<p>Appuyez sur 'Suivant' pour commencer ...</p>"],
         show_clickable_nav: true,
         data: {
@@ -87,6 +87,33 @@ unset($trial2[42]);
         }
     }
     timeline.push(welcome);
+
+    var preparation_main_droite = {
+        type: 'html-keyboard-response',
+        stimulus: "<h1>Positionnement de la main droite</h1>" +
+            "<p>Placez l'index de votre <strong>main droite</strong> sur la touche '<strong>J</strong>'</p>" +
+            "<p>Vous devrez garder votre doigt en position durant toute la session.</p>" +
+            "<p>Lorsque vous êtes prêt appuyez sur la touche '<strong>J</strong>' pour continuer.</p>",
+        choices: [74],
+        post_trial_gap: 500,
+        data: {
+            part: "Preparation"
+        }
+    }
+    timeline.push(preparation_main_droite);
+
+    var preparation_main_gauche = {
+        type: 'html-keyboard-response',
+        stimulus: "<h1>Positionnement de la main gauche</h1>" +
+            "<p>Placez l'index de votre <strong>main gauche</strong> sur la touche '<strong>F</strong>'</p>" +
+            "<p>Vous devrez garder votre doigt en position durant toute la session.</p>" +
+            "<p>Lorsque vous êtes prêt appuyez sur la touche '<strong>F</strong>' pour commencer la tâche.</p>",
+        choices: [70],
+        data: {
+            part: "Preparation"
+        }
+    }
+    timeline.push(preparation_main_gauche);
 
     var prepause = {
         type: 'html-keyboard-response',
@@ -108,7 +135,7 @@ unset($trial2[42]);
         stimulus: "<h1 class='mono'><?php echo $trial[$i] ?></h1>",
         stimulus_duration: 500,
         trial_duration: 2000,
-        choices: [32],
+        choices: [70, 74],
         response_ends_trial: false,
         data: {
             part: "2-back",
@@ -122,17 +149,42 @@ unset($trial2[42]);
         on_finish: function (data) {
             if (data.letter === data.prev_letter) {
                 data.is_target = 1;
+                console.log('Target', data.prev_letter, data.letter);
             }
             if (data.letter !== data.prev_letter) {
                 data.is_target = 0;
+                console.log('Non-target', data.prev_letter, data.letter);
             }
-            if (data.key_press === 32 && data.letter === data.prev_letter) {
+
+            // Target
+            if (data.key_press === 74 && data.letter === data.prev_letter) {
                 data.correct = 1;
-            } else {
+                data.response_type = "Target";
+                console.log(data.key_press, 'Correct');
+            }
+            // Mismatch
+            if (data.key_press === 70 && data.letter === data.prev_letter) {
                 data.correct = 0;
+                data.response_type = "Mismatch";
+                console.log(data.key_press, 'Incorrect: Mismatch');
             }
-            if (data.key_press !== 32 && data.letter !== data.prev_letter) {
+            // False-alarm
+            if (data.key_press === 74 && data.letter !== data.prev_letter) {
+                data.correct = 0;
+                data.response_type = "False-alarm";
+                console.log(data.key_press, 'Incorrect: False-alarm');
+            }
+            // Non-target
+            if (data.key_press === 70 && data.letter !== data.prev_letter) {
                 data.correct = 1;
+                data.response_type = "Non-target";
+                console.log(data.key_press, 'Correct');
+            }
+            // No input
+            if (data.key_press === null) {
+                data.correct = 0;
+                data.response_type = "No-input";
+                console.log(data.key_press, 'Incorrect: no input');
             }
         }
     }
@@ -143,13 +195,30 @@ unset($trial2[42]);
 
     var feedback = {
         type: 'html-keyboard-response',
-        choices: [],
+        choices: [74],
         post_trial_gap: 1000,
-        trial_duration: 2500,
+        //trial_duration: 2500,
         stimulus: function () {
+            var nb_target = jsPsych.data.get().filter({is_target: 1}).count();
+            console.log('Targets counts :', nb_target);
+            var targets = jsPsych.data.get().filter({response_type: 'Target'}).count();
+            console.log('Targets :', targets / nb_target);
+            var mismatch = jsPsych.data.get().filter({response_type: 'Mismatch'}).count();
+            console.log('Mismatches :', mismatch);
+            var false_alarms = jsPsych.data.get().filter({response_type: 'False-alarm'}).count();
+            console.log('False alarms :', false_alarms);
+            var non_targets = jsPsych.data.get().filter({response_type: 'Non-target'}).count();
+            console.log('Non-targets :', non_targets);
+            var no_inputs = jsPsych.data.get().filter({response_type: 'No-input'}).count();
+            console.log('No-inputs :', no_inputs);
+
             var moy = jsPsych.data.get().select('correct').sum();
             var pourc = moy / jsPsych.data.get().select('correct').count();
-            return '<h1>Fin</h1><h2>Score : ' + pourc * 100 + '%</h2><p>Deuxième partie dans 3 secondes ...</p>';
+            return '<h1>Pause</h1>' +
+                '<h2>Cibles trouvées : ' + (targets / nb_target) * 100 + '%</h2>' +
+                '<h2>Cibles manquées : ' + mismatch + '</h2>' +
+                '<h2>Fausses alarmes : ' + false_alarms + '</h2>' +
+                '<p>Appuyez sur la touche "J" pour continuer.</p>';
         },
         data: {
             part: "feedback",
@@ -162,10 +231,10 @@ unset($trial2[42]);
     ?>
     var trial2 = {
         type: 'html-keyboard-response',
-        stimulus: '<h1><?php echo $trial2[$i] ?></h1>',
+        stimulus: "<h1 class='mono'><?php echo $trial2[$i] ?></h1>",
         stimulus_duration: 500,
         trial_duration: 2000,
-        choices: [32],
+        choices: [70, 74],
         response_ends_trial: false,
         data: {
             part: "2-back",
@@ -179,17 +248,42 @@ unset($trial2[42]);
         on_finish: function (data) {
             if (data.letter === data.prev_letter) {
                 data.is_target = 1;
+                console.log('Target', data.prev_letter, data.letter);
             }
             if (data.letter !== data.prev_letter) {
                 data.is_target = 0;
+                console.log('Non-target', data.prev_letter, data.letter);
             }
-            if (data.key_press === 32 && data.letter === data.prev_letter) {
+
+            // Target
+            if (data.key_press === 74 && data.letter === data.prev_letter) {
                 data.correct = 1;
-            } else {
+                data.response_type = "Target";
+                console.log(data.key_press, 'Correct');
+            }
+            // Mismatch
+            if (data.key_press === 70 && data.letter === data.prev_letter) {
                 data.correct = 0;
+                data.response_type = "Mismatch";
+                console.log(data.key_press, 'Incorrect: Mismatch');
             }
-            if (data.key_press !== 32 && data.letter !== data.prev_letter) {
+            // False-alarm
+            if (data.key_press === 74 && data.letter !== data.prev_letter) {
+                data.correct = 0;
+                data.response_type = "False-alarm";
+                console.log(data.key_press, 'Incorrect: False-alarm');
+            }
+            // Non-target
+            if (data.key_press === 70 && data.letter !== data.prev_letter) {
                 data.correct = 1;
+                data.response_type = "Non-target";
+                console.log(data.key_press, 'Correct');
+            }
+            // No input
+            if (data.key_press === null) {
+                data.correct = 0;
+                data.response_type = "No-input";
+                console.log(data.key_press, 'Incorrect: no input');
             }
         }
     }
@@ -202,9 +296,26 @@ unset($trial2[42]);
         type: 'html-keyboard-response',
         choices: [32],
         stimulus: function () {
+            var nb_target = jsPsych.data.get().filter({is_target: 1}).count();
+            console.log('Targets counts :', nb_target);
+            var targets = jsPsych.data.get().filter({response_type: 'Target'}).count();
+            console.log('Targets :', targets / nb_target);
+            var mismatch = jsPsych.data.get().filter({response_type: 'Mismatch'}).count();
+            console.log('Mismatches :', mismatch);
+            var false_alarms = jsPsych.data.get().filter({response_type: 'False-alarm'}).count();
+            console.log('False alarms :', false_alarms);
+            var non_targets = jsPsych.data.get().filter({response_type: 'Non-target'}).count();
+            console.log('Non-targets :', non_targets);
+            var no_inputs = jsPsych.data.get().filter({response_type: 'No-input'}).count();
+            console.log('No-inputs :', no_inputs);
+
             var moy = jsPsych.data.get().select('correct').sum();
             var pourc = moy / jsPsych.data.get().select('correct').count();
-            return '<h1>Fin</h1><h2>Score : ' + pourc * 100 + '%</h2><p>Appuyez sur la touche espace pour envoyer vos résultats.</p>';
+            return '<h1>Fin</h1>' +
+                '<h2>Cibles trouvées : ' + (targets / nb_target) * 100 + '%</h2>' +
+                '<h2>Cibles manquées : ' + mismatch + '</h2>' +
+                '<h2>Fausses alarmes : ' + false_alarms + '</h2>' +
+                '<p>Appuyez sur la touche "Espace" pour envoyer vos données.</p>';
         },
         data: {
             part: "feedback",
