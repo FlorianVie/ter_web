@@ -112,6 +112,34 @@ $back2JSON = json_encode($back2);
                         </tr>
                         </tbody>
                     </table>
+
+                    <h2 class="subtitle">Questionnaires</h2>
+                    <table class="table is-half is-striped has-shadow is-bordered">
+                        <thead>
+                        <tr>
+                            <th>Groupe</th>
+                            <th>Lien</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                Compréhension
+                            </td>
+                            <td>
+                                <a href="expe/comprehension.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/comprehension.php?id=<?php echo $subject[0] ?></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Subjective
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="column is-half">
                     <canvas id="back2" height="200"></canvas>

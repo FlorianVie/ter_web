@@ -154,3 +154,22 @@ function getBack2_results($bdd)
     $req->closeCursor();
     return $audio;
 }
+
+function getComprehension($bdd)
+{
+    $req = $bdd->prepare("SELECT * FROM comprehension");
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}
+
+function insertRepComp($bdd, $sujet, $question, $reponse)
+{
+    $req = $bdd->prepare("INSERT INTO comp_reponses (id_sujet, id_question, reponse_sujet) VALUES (:s, :q, :r)");
+    $req->bindParam(':s', $sujet);
+    $req->bindParam(':q', $question);
+    $req->bindParam(':r', $reponse);
+    $req->execute();
+    $req->closeCursor();
+}
