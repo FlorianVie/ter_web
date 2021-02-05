@@ -128,10 +128,10 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
     var pause_trial = {
         type: 'html-keyboard-response',
         stimulus: "",
-        trial_duration: 1000,
+        trial_duration: 1500,
         choices: "",
         data: {
-            part: "training-letters",
+            part: "pause",
         }
     }
     timeline.push(pause_trial);
@@ -438,6 +438,8 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
     }
     timeline.push(instructions_training_sentences);
 
+    timeline.push(pause_trial);
+
     <?php
     for ($i = 0; $i < count($practice); $i++) {
     ?>
@@ -529,6 +531,8 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         }
     }
     timeline.push(instructions_training_both);
+
+    timeline.push(pause_trial);
 
     <?php
     for ($i = 0; $i < $both_nb; $i++) {
@@ -639,15 +643,47 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
     }
     ?>
 
+    var feedback_final = {
+        type: 'html-keyboard-response',
+        choices: [32],
+        stimulus: function () {
+            var recall_letters = jsPsych.data.get().filter({part: 'training-recall'}).select('correct').sum();
+            console.log(recall_letters);
+
+            var sementics = jsPsych.data.get().filter({part: 'training-sentence'}).select('correct').sum();
+            console.log(sementics);
+
+            var both_recall_score = jsPsych.data.get().filter({part: 'training-both-recall'}).select('correct').sum();
+            console.log(both_recall_score);
+
+            var both_sentences_score = jsPsych.data.get().filter({part: 'training-both-sentence'}).select('correct').sum();
+            console.log(both_sentences_score)
+
+            var printhtml = "<h1>Fin</h1>" +
+                "<p>Rappel des lettres : " + recall_letters + " / 3</p>" +
+                "<p>Jugement de phrases : " + sementics + " / 15</p>" +
+                "<p>Rappel entrainement complet : " + both_recall_score + " / 3</p>" +
+                "<p>Jugement entrainement complet : " + both_sentences_score + "/ 3</p>" +
+                "<p>Appuyez sur la touche 'espace' pour envoyer les données ...</p>"
+
+            return printhtml;
+        },
+        data: {
+            part: "feedback",
+        },
+    }
+    timeline.push(feedback_final);
+
     var fin = {
         type: 'instructions',
-        pages: ["Fin !"],
+        pages: ["<h1>Fin</h1>" +
+        "<p>Appuyez sur suivant pour envoyer les données.</p>"],
         show_clickable_nav: true,
         data: {
             part: 'fin'
         }
     }
-    timeline.push(fin);
+    //timeline.push(fin);
 
     timeline.push({
         type: 'fullscreen',

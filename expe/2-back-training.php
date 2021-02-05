@@ -214,6 +214,7 @@ unset($trial2[42]);
 
             var moy = jsPsych.data.get().select('correct').sum();
             var pourc = moy / jsPsych.data.get().select('correct').count();
+
             return '<h1>Pause</h1>' +
                 '<h2>Cibles trouvées : ' + (targets / nb_target) * 100 + '%</h2>' +
                 '<h2>Cibles manquées : ' + mismatch + '</h2>' +
