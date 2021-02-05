@@ -110,7 +110,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             "<p>Pour cette tâche, des lettres vont apparaitre à l'écran une après l'autre. Essayez de vous rappeler les lettres dans l'ordre présenté.</p>" +
             "<p>Après 2-3 lettres présentées, sur l'écran s'affichera une grille avec les 12 lettres possibles.</p>" +
             "<p>Vous devrez rappeler les lettres en cliquant sur les boutons correspondants de la grille puis sur '<i>Continuer</i>'.</p>" +
-            "<p>Si vous faites une erreur, vous pouvez appuyer sur le bouton '<i>Effacer</i>' pour recommancer votre saisie.</p>" +
+            "<p>Si vous faites une erreur, vous pouvez appuyer sur le bouton '<i>Effacer</i>' pour recommencer votre saisie.</p>" +
             "<p>Si vous avez oublié une lettre, vous pouvez appuyer sur le button '<i>_</i>'.</p>" +
             "<p><b><i>Cliquez sur 'Suivant' pour commencer l'entrainement au rappel.</i></b></p>"
         ],
