@@ -113,7 +113,7 @@ $back2JSON = json_encode($back2);
                         </tbody>
                     </table>
 
-                    <h2 class="subtitle">Questionnaires</h2>
+                    <!--<h2 class="subtitle">Questionnaires</h2>
                     <table class="table is-half is-striped has-shadow is-bordered">
                         <thead>
                         <tr>
@@ -127,7 +127,7 @@ $back2JSON = json_encode($back2);
                                 Compréhension
                             </td>
                             <td>
-                                <a href="expe/comprehension.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/comprehension.php?id=<?php echo $subject[0] ?></a>
+                                <a href="expe/comprehension.php?id=<?php /*echo $subject[0] */?>">http://ter.bigfive.890m.com/expe/comprehension.php?id=<?php /*echo $subject[0] */?></a>
                             </td>
                         </tr>
                         <tr>
@@ -135,11 +135,11 @@ $back2JSON = json_encode($back2);
                                 Subjective
                             </td>
                             <td>
-
+                                <a href="expe/subjective.php?id=<?php /*echo $subject[0] */?>">http://ter.bigfive.890m.com/expe/subjective.php?id=<?php /*echo $subject[0] */?></a>
                             </td>
                         </tr>
                         </tbody>
-                    </table>
+                    </table>-->
                 </div>
                 <div class="column is-half">
                     <canvas id="back2" height="200"></canvas>
