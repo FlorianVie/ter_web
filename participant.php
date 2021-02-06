@@ -17,6 +17,7 @@ $subject = getSubject($bdd, $_GET['id']);
 $back2 = getBack_2_subject($bdd, $_GET['id']);
 $back2fa = getBack_2_subject_fa($bdd, $_GET['id']);
 $back2JSON = json_encode($back2);
+$timeouts = getTimeout($bdd, $_GET['id']);
 ?>
 
 <script>
@@ -32,9 +33,9 @@ $back2JSON = json_encode($back2);
                 Participant <?php echo $subject[0] ?>
             </h1>
             <div class="columns is-centered">
-                <div class="column is-narrow">
+                <div class="column is-half">
                     <h2 class="subtitle">Entrainements</h2>
-                    <table class="table is-half is-striped has-shadow is-bordered">
+                    <table class="table is-half is-striped has-shadow">
                         <thead>
                         <tr>
                             <th>Tâche</th>
@@ -68,9 +69,10 @@ $back2JSON = json_encode($back2);
                         </tr>
                         </tbody>
                     </table>
-
+                </div>
+                <div class="column is-half">
                     <h2 class="subtitle">Tâche principale</h2>
-                    <table class="table is-half is-striped has-shadow is-bordered">
+                    <table class="table is-half is-striped has-shadow">
                         <thead>
                         <tr>
                             <th>Groupe</th>
@@ -112,37 +114,17 @@ $back2JSON = json_encode($back2);
                         </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
 
-                    <!--<h2 class="subtitle">Questionnaires</h2>
-                    <table class="table is-half is-striped has-shadow is-bordered">
-                        <thead>
-                        <tr>
-                            <th>Groupe</th>
-                            <th>Lien</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>
-                                Compréhension
-                            </td>
-                            <td>
-                                <a href="expe/comprehension.php?id=<?php /*echo $subject[0] */?>">http://ter.bigfive.890m.com/expe/comprehension.php?id=<?php /*echo $subject[0] */?></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Subjective
-                            </td>
-                            <td>
-                                <a href="expe/subjective.php?id=<?php /*echo $subject[0] */?>">http://ter.bigfive.890m.com/expe/subjective.php?id=<?php /*echo $subject[0] */?></a>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>-->
+            <div class="columns">
+                <div class="column is-half">
+                    <h2 class="subtitle">2-Back</h2>
+                    <canvas id="back2" height="200"></canvas>
                 </div>
                 <div class="column is-half">
-                    <canvas id="back2" height="200"></canvas>
+                    <h2 class="subtitle">RSPAN Timeout</h2>
+                    <canvas id="rspan" height="200"></canvas>
                 </div>
             </div>
         </div>
@@ -156,14 +138,14 @@ $back2JSON = json_encode($back2);
             type: 'line',
             data: {
                 labels: [<?php for ($i = 0; $i < count($back2); $i++) {
-                    echo $back2[$i]['id_2_back'] . ', ';
+                    echo $back2[$i]['id_2_back'] + 1 . ', ';
                 } ?>],
                 datasets: [{
                     label: 'Score 2-Back',
                     data: [<?php for ($i = 0; $i < count($back2); $i++) {
                         echo $back2[$i]['target_correct'] - $back2fa[$i]['false_alarm'] . ', ';
                     } ?>],
-                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderColor: 'rgba(168, 32, 26, 1)',
                     borderWidth: 1
                 }
                 ]
@@ -174,6 +156,36 @@ $back2JSON = json_encode($back2);
                         ticks: {
                             beginAtZero: true,
                             max: 1
+                        }
+                    }]
+                }
+            }
+        })
+    ;
+
+    var ctxRSPAN = document.getElementById('rspan').getContext('2d');
+    var myChartRSPAN = new Chart(ctxRSPAN, {
+            type: 'bar',
+            data: {
+                labels: [<?php for ($i = 0; $i < count($timeouts); $i++) {
+                    echo $i + 1 . ', ';
+                } ?>],
+                datasets: [{
+                    label: 'Timeout',
+                    data: [<?php for ($i = 0; $i < count($timeouts); $i++) {
+                        echo $timeouts[$i]['timeout_var'] . ', ';
+                    } ?>],
+                    borderColor: 'rgba(241, 194, 50, 1)',
+                    borderWidth: 1
+                }
+                ]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            //max: 1
                         }
                     }]
                 }

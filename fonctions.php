@@ -173,3 +173,13 @@ function insertRepComp($bdd, $sujet, $question, $reponse)
     $req->execute();
     $req->closeCursor();
 }
+
+function getTimeout($bdd, $sujet)
+{
+    $req = $bdd->prepare("SELECT timeout_var FROM rspan_training WHERE subject_id = :s AND timeout_var is not null");
+    $req->bindParam(':s', $sujet);
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}

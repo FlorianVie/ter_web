@@ -18,16 +18,6 @@
             </h1>
             <div class="columns">
                 <div class="column">
-                    <a href="experimentations.php">
-                        <button class="button" disabled>Expérimentations</button>
-                    </a>
-                    <a href="entrainement.php">
-                        <button class="button" disabled>Entrainement</button>
-                    </a>
-                </div>
-            </div>
-            <div class="columns">
-                <div class="column">
                     <a href="participants.php">
                         <button class="button">Participants</button>
                     </a>
