@@ -2,13 +2,7 @@ library(tidyverse)
 library(RMariaDB)
 library(rbokeh)
 
-# Connection BDD
-pw <- "Empereur1"
-storiesDb <- dbConnect(RMariaDB::MariaDB(), user='u485051925_experi', password=pw, dbname='u485051925_ter', host='sql200.main-hosting.eu')
-query <- paste("SELECT * FROM back_2")
-print(query)
-rs = dbSendQuery(storiesDb,query)
-data_raw_2 <- dbFetch(rs)
+data_raw_2 <- read.csv2("http://ter.bigfive.890m.com/2-back.csv", sep = ",")
 
 data_raw_2$id_subject <- as.character(data_raw_2$id_subject)
 

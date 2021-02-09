@@ -183,3 +183,31 @@ function getTimeout($bdd, $sujet)
     $req->closeCursor();
     return $comp;
 }
+
+function get2backData($bdd)
+{
+    $req = $bdd->prepare("select id_subject, id_2_back, part, trial_id, trial_index, time_elapsed, rt, correct, response_type from back_2 where part = '2-back'");
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}
+
+function array_to_csv_download($array, $filename = "export.csv", $delimiter = ";")
+{
+    // open raw memory as file so no temp files needed, you might run out of memory though
+    $f = fopen('php://memory', 'w');
+    // loop over the input array
+    foreach ($array as $line) {
+        // generate csv lines from the inner arrays
+        fputcsv($f, $line, $delimiter);
+    }
+    // reset the file pointer to the start of the file
+    fseek($f, 0);
+    // tell the browser it's going to be a csv file
+    header('Content-Type: application/csv');
+    // tell the browser we want to save it instead of displaying it
+    header('Content-Disposition: attachment; filename="' . $filename . '";');
+    // make php send the generated csv lines to the browser
+    fpassthru($f);
+}

@@ -23,6 +23,13 @@
                     </a>
                 </div>
             </div>
+            <div class="columns">
+                <div class="column">
+                    <a href="data-dl.php">
+                        <button class="button">Données</button>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
