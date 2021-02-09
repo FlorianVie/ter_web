@@ -22,7 +22,6 @@ fputcsv($f_back2, $headers);
 foreach ($back2 as $line){
     fputcsv($f_back2, $line);
 }
-
 ?>
 
 <body>
