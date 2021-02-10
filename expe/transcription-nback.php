@@ -15,6 +15,7 @@
     <script src="plugins/jspsych-html-keyboard-response.js"></script>
     <script src="plugins/jspsych-audio-keyboard-response.js"></script>
     <script src="plugins/retranscription.js"></script>
+    <script src="plugins/jspsych-fullscreen.js"></script>
 </head>
 
 <script>
@@ -85,6 +86,11 @@ unset($block4[42]);
     var subject_id = '<?php echo $id_sujet ?>';
     jsPsych.data.addProperties({
         subject_id: subject_id,
+    });
+
+    timeline.push({
+        type: 'fullscreen',
+        fullscreen_mode: true
     });
 
     var instruction_start = {
@@ -567,6 +573,11 @@ unset($block4[42]);
     }
     ?>
 
+
+    timeline.push({
+        type: 'fullscreen',
+        fullscreen_mode: false
+    });
 
     jsPsych.init({
         timeline: timeline,

@@ -221,3 +221,19 @@ function get_2_back_main($bdd)
     $req->closeCursor();
     return $comp;
 }
+
+function getSentencesPre($bdd){
+    $req = $bdd->prepare("select * from sentences where id_sentences < 40");
+    $req->execute();
+    $sentences = $req->fetchAll();
+    $req->closeCursor();
+    return $sentences;
+}
+
+function getSentencesPost($bdd){
+    $req = $bdd->prepare("select * from sentences where id_sentences > 40");
+    $req->execute();
+    $sentences = $req->fetchAll();
+    $req->closeCursor();
+    return $sentences;
+}
