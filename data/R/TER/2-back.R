@@ -1,6 +1,4 @@
 library(tidyverse)
-library(RMariaDB)
-library(rbokeh)
 
 data_raw_2 <- read.csv2("http://ter.bigfive.890m.com/2-back.csv", sep = ",")
 
@@ -28,11 +26,6 @@ accuracy$mean_correct <- hits$mean_correct - false_alarm$mean_correct
 
 
 # Plots   
-
-acc <- figure(width = 800) %>%
-  ly_points(accuracy$id_2_back, accuracy$mean_correct, color = accuracy$id_subject) %>%
-  ly_lines(accuracy$id_2_back, accuracy$mean_correct, color = accuracy$id_subject)
-acc
 
 accuracy$id_subject <- as.character(accuracy$id_subject)
 

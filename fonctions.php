@@ -139,7 +139,7 @@ function insertSubject($bdd)
 
 function getAudio($bdd)
 {
-    $req = $bdd->prepare("SELECT * FROM duree");
+    $req = $bdd->prepare("SELECT * FROM duree LIMIT 3");
     $req->execute();
     $audio = $req->fetchAll();
     $req->closeCursor();
@@ -210,4 +210,13 @@ function array_to_csv_download($array, $filename = "export.csv", $delimiter = ";
     header('Content-Disposition: attachment; filename="' . $filename . '";');
     // make php send the generated csv lines to the browser
     fpassthru($f);
+}
+
+function get_2_back_main($bdd)
+{
+    $req = $bdd->prepare("select * from 2_back_main");
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
 }
