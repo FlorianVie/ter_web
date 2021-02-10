@@ -139,7 +139,8 @@ function insertSubject($bdd)
 
 function getAudio($bdd)
 {
-    $req = $bdd->prepare("SELECT * FROM duree LIMIT 3");
+    $req = $bdd->prepare("SELECT * FROM duree");
+    #$req = $bdd->prepare("SELECT * FROM duree LIMIT 3");
     $req->execute();
     $audio = $req->fetchAll();
     $req->closeCursor();

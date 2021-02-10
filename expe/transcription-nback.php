@@ -20,7 +20,7 @@
 <script>
     function saveData() {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'write_data_retransc.php'); // change 'write_data.php' to point to php script.
+        xhr.open('POST', 'write_data_retransc_nback.php'); // change 'write_data.php' to point to php script.
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.onload = function () {
             if (xhr.status == 200) {
@@ -30,6 +30,12 @@
             }
         };
         xhr.send(jsPsych.data.get().json());
+    }
+</script>
+
+<script>
+    function playAudio() {
+        new Audio('../assets/beep.mp3').play();
     }
 </script>
 
@@ -56,10 +62,10 @@ unset($block2[42]);
 unset($block3[42]);
 unset($block4[42]);
 
-$block1 = ['1', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
-$block2 = ['2', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
-$block3 = ['3', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
-$block4 = ['4', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
+#$block1 = ['1', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
+#$block2 = ['2', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
+#$block3 = ['3', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
+#$block4 = ['4', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
 
 ?>
 
@@ -88,7 +94,11 @@ $block4 = ['4', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
             "<p>Dans cette session, vous allez effectuer un tâche de retranscription d'une conférence en anglais.</p>" +
             "<p>La durée totale de la tâche de retranscription est d'envirion 30 minutes.</p>" +
             "<p>Avant de débuter la retranscription, vous effecturez une tâche 2-back similaire à la session d'entrainement.</p>" +
-            "<p>A la fin de la retranscription, une deuxième tâche 2-back démarrera automatiquement.</p>"],
+            "<p>A la fin de la retranscription, une deuxième tâche 2-back démarrera automatiquement.</p>",
+            "<h2>Vérification du son</h2>" +
+            "<p>En appuyant sur le bouton, entendez vous du son ?</p>" +
+            "<button class='jspsych-btn' type='button' onclick='playAudio()' >Tester le son</button>" +
+            "<p>Si vous entendez le 'beep', vous pouvez continuer, sinon prevenez l'expérimentateur.</p>"],
         show_clickable_nav: true,
         data: {
             part: "instruction",
@@ -324,15 +334,35 @@ $block4 = ['4', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
             "<p><textarea name='rep-instr' id='test-instr-box' cols='40' rows='10' style='font-family: sans-serif; font-size: 1.3em' ></textarea></p>" +
             "<p>Vous pouvez essayer de taper du texte pour essayer si cela fonctionne.</p>" +
             "<p>Le curseur sera automatiquement placé dans la zone de texte, vous n'aurez pas besoin d'utiliser votre souris.</p>",
-        "<h2>Attention !</h2>" +
-        "<p>Lorsque la tâche de retranscription sera terminée, une deuxième tâche 2-back démarrera automatiquement.</p>",
-        "<p>Appuyez sur 'Suivant' pour commencer ...</p>"],
+            "<h2>Attention !</h2>" +
+            "<p>Lorsque la tâche de retranscription sera terminée, une deuxième tâche 2-back démarrera automatiquement.</p>",
+            "<p>Appuyez sur 'Suivant' pour commencer ...</p>"],
         show_clickable_nav: true,
         data: {
             part: "instruction",
         }
     }
     timeline.push(instruction_retran);
+
+    timeline.push(prepause)
+
+    var pre_audio_beep = {
+        type: 'audio-keyboard-response',
+        stimulus: '../assets/beep_beep_beep.mp3',
+        prompt: "<p><img src='../assets/speaker-filled-audio-tool.png' width='100'></p>" +
+            "<p>Préparez vous ...</p>",
+        choices: jsPsych.NO_KEYS,
+        trial_ends_after_audio: true,
+        data: {
+            part: "Beep Beep Beep",
+        },
+        on_start: function () {
+            console.log("Audio : Beep Beep Beep")
+        }
+    };
+    timeline.push(pre_audio_beep);
+
+    timeline.push(prepause)
 
     <?php
     for ($i = 0; $i < count($audio); $i++) {
@@ -541,10 +571,10 @@ $block4 = ['4', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
     jsPsych.init({
         timeline: timeline,
         show_progress_bar: true,
-        //on_finish: saveData
-        on_finish: function () {
+        on_finish: saveData
+        /*on_finish: function () {
             jsPsych.data.displayData('csv');
-        }
+        }*/
     })
 
 
