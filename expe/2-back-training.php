@@ -76,10 +76,13 @@ unset($trial2[42]);
         type: 'instructions',
         pages: ["<h1>Entrainement 2-Back</h1>",
             "<p>Dans cette tâche, une séquence de lettres s'affichera en continu.</p>" +
-            "<p>Appuyez sur la touche 'J' si la lettre affichée est la même que l'avant-dernière. Si elle est différente, appuyez sur la touche 'F'.</p>",
+            "<p>Appuyez sur la touche 'O' si la lettre affichée est la même que l'avant-dernière. Si elle est différente, appuyez sur la touche 'E'.</p>",
             "<p style='font-size: 1.3em'>Exemple : <span class='mono' >R, T, F, <strong>T</strong>, H</span> </p>" +
-            "<p>Ici, il faut appuyer sur la touche 'J' lorsque la lettre <span class='mono'>T</span> s'affiche pour la deuxième fois et appuyer sur la touche 'F' pour les autres lettres.</p>" +
-            "<p>Vous avez le temps d'appuyer sur les touches jusqu'à l'apparition de la lettre suivante, même si la dernière présentée disparait.</p>",
+            "<p>Ici, il faut appuyer sur la touche 'O' lorsque la lettre <span class='mono'>T</span> s'affiche pour la deuxième fois et appuyer sur la touche 'E' pour les autres lettres.</p>" +
+            "<p>Vous avez le temps d'appuyer sur les touches jusqu'à l'apparition de la lettre suivante, même si la dernière présentée disparait.</p>" +
+            "<p>Vous devez également appuyer sur les touches pour les premières lettres présentées.</p>",
+            "<h2>Attention !</h2>" +
+            "<p>Cette tâche se déroule en deux parties, vous aurez un retour sur vous résultats à la fin de la première partie et de la deuxième.</p>",
             "<p>Appuyez sur 'Suivant' pour commencer ...</p>"],
         show_clickable_nav: true,
         data: {
@@ -91,10 +94,10 @@ unset($trial2[42]);
     var preparation_main_droite = {
         type: 'html-keyboard-response',
         stimulus: "<h1>Positionnement de la main droite</h1>" +
-            "<p>Placez l'index de votre <strong>main droite</strong> sur la touche '<strong>J</strong>'</p>" +
+            "<p>Placez l'index de votre <strong>main droite</strong> sur la touche '<strong>O</strong>'</p>" +
             "<p>Vous devrez garder votre doigt en position durant toute la session.</p>" +
-            "<p>Lorsque vous êtes prêt appuyez sur la touche '<strong>J</strong>' pour continuer.</p>",
-        choices: [74],
+            "<p>Lorsque vous êtes prêt appuyez sur la touche '<strong>O</strong>' pour continuer.</p>",
+        choices: [79],
         post_trial_gap: 500,
         data: {
             part: "Preparation"
@@ -105,10 +108,10 @@ unset($trial2[42]);
     var preparation_main_gauche = {
         type: 'html-keyboard-response',
         stimulus: "<h1>Positionnement de la main gauche</h1>" +
-            "<p>Placez l'index de votre <strong>main gauche</strong> sur la touche '<strong>F</strong>'</p>" +
+            "<p>Placez l'index de votre <strong>main gauche</strong> sur la touche '<strong>E</strong>'</p>" +
             "<p>Vous devrez garder votre doigt en position durant toute la session.</p>" +
-            "<p>Lorsque vous êtes prêt appuyez sur la touche '<strong>F</strong>' pour commencer la tâche.</p>",
-        choices: [70],
+            "<p>Lorsque vous êtes prêt appuyez sur la touche '<strong>E</strong>' pour commencer la tâche.</p>",
+        choices: [69],
         data: {
             part: "Preparation"
         }
@@ -135,7 +138,7 @@ unset($trial2[42]);
         stimulus: "<h1 class='mono'><?php echo $trial[$i] ?></h1>",
         stimulus_duration: 500,
         trial_duration: 2000,
-        choices: [70, 74],
+        choices: [69, 79],
         response_ends_trial: false,
         data: {
             part: "2-back",
@@ -157,25 +160,25 @@ unset($trial2[42]);
             }
 
             // Target
-            if (data.key_press === 74 && data.letter === data.prev_letter) {
+            if (data.key_press === 79 && data.letter === data.prev_letter) {
                 data.correct = 1;
                 data.response_type = "Target";
                 console.log(data.key_press, 'Correct');
             }
             // Mismatch
-            if (data.key_press === 70 && data.letter === data.prev_letter) {
+            if (data.key_press === 69 && data.letter === data.prev_letter) {
                 data.correct = 0;
                 data.response_type = "Mismatch";
                 console.log(data.key_press, 'Incorrect: Mismatch');
             }
             // False-alarm
-            if (data.key_press === 74 && data.letter !== data.prev_letter) {
+            if (data.key_press === 79 && data.letter !== data.prev_letter) {
                 data.correct = 0;
                 data.response_type = "False-alarm";
                 console.log(data.key_press, 'Incorrect: False-alarm');
             }
             // Non-target
-            if (data.key_press === 70 && data.letter !== data.prev_letter) {
+            if (data.key_press === 69 && data.letter !== data.prev_letter) {
                 data.correct = 1;
                 data.response_type = "Non-target";
                 console.log(data.key_press, 'Correct');
@@ -195,7 +198,7 @@ unset($trial2[42]);
 
     var feedback = {
         type: 'html-keyboard-response',
-        choices: [74],
+        choices: [79],
         post_trial_gap: 1000,
         //trial_duration: 2500,
         stimulus: function () {
@@ -219,7 +222,7 @@ unset($trial2[42]);
                 '<h2>Cibles trouvées : ' + (targets / nb_target) * 100 + '%</h2>' +
                 '<h2>Cibles manquées : ' + mismatch + '</h2>' +
                 '<h2>Fausses alarmes : ' + false_alarms + '</h2>' +
-                '<p>Appuyez sur la touche "J" pour continuer.</p>';
+                '<p>Appuyez sur la touche "O" pour commencer la <strong>deuxième partie</strong>.</p>';
         },
         data: {
             part: "feedback",
@@ -235,7 +238,7 @@ unset($trial2[42]);
         stimulus: "<h1 class='mono'><?php echo $trial2[$i] ?></h1>",
         stimulus_duration: 500,
         trial_duration: 2000,
-        choices: [70, 74],
+        choices: [69, 79],
         response_ends_trial: false,
         data: {
             part: "2-back",
@@ -257,25 +260,25 @@ unset($trial2[42]);
             }
 
             // Target
-            if (data.key_press === 74 && data.letter === data.prev_letter) {
+            if (data.key_press === 79 && data.letter === data.prev_letter) {
                 data.correct = 1;
                 data.response_type = "Target";
                 console.log(data.key_press, 'Correct');
             }
             // Mismatch
-            if (data.key_press === 70 && data.letter === data.prev_letter) {
+            if (data.key_press === 69 && data.letter === data.prev_letter) {
                 data.correct = 0;
                 data.response_type = "Mismatch";
                 console.log(data.key_press, 'Incorrect: Mismatch');
             }
             // False-alarm
-            if (data.key_press === 74 && data.letter !== data.prev_letter) {
+            if (data.key_press === 79 && data.letter !== data.prev_letter) {
                 data.correct = 0;
                 data.response_type = "False-alarm";
                 console.log(data.key_press, 'Incorrect: False-alarm');
             }
             // Non-target
-            if (data.key_press === 70 && data.letter !== data.prev_letter) {
+            if (data.key_press === 69 && data.letter !== data.prev_letter) {
                 data.correct = 1;
                 data.response_type = "Non-target";
                 console.log(data.key_press, 'Correct');
