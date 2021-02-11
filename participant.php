@@ -18,6 +18,7 @@ $back2 = getBack_2_subject($bdd, $_GET['id']);
 $back2fa = getBack_2_subject_fa($bdd, $_GET['id']);
 $back2JSON = json_encode($back2);
 $timeouts = getTimeout($bdd, $_GET['id']);
+$motiv = getMotiv($bdd, $_GET['id']);
 ?>
 
 <script>
@@ -127,6 +128,42 @@ $timeouts = getTimeout($bdd, $_GET['id']);
                     <canvas id="rspan" height="200"></canvas>
                 </div>
             </div>
+
+            <div class="columns">
+                <div class="column is-half">
+                    <h2 class="subtitle">Questionnaires</h2>
+                    <table class="table is-half is-striped has-shadow">
+                        <thead>
+                        <tr>
+                            <th>Questionnaire</th>
+                            <th>Lien</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                Compréhension
+                            </td>
+                            <td>
+                                <a href="expe/comprehension.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/comprehension.php?id=<?php echo $subject[0] ?></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Motivation
+                            </td>
+                            <td>
+                                <a href="expe/subjective.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/subjective.php?id=<?php echo $subject[0] ?></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="column is-half">
+                    <h2 class="subtitle">Motivation</h2>
+                    <canvas id="motiv" height="200"></canvas>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -146,7 +183,7 @@ $timeouts = getTimeout($bdd, $_GET['id']);
                         echo $back2[$i]['target_correct'] - $back2fa[$i]['false_alarm'] . ', ';
                     } ?>],
                     borderColor: 'rgba(168, 32, 26, 1)',
-                    borderWidth: 1
+                    borderWidth: 2
                 }
                 ]
             },
@@ -176,7 +213,7 @@ $timeouts = getTimeout($bdd, $_GET['id']);
                         echo $timeouts[$i]['timeout_var'] . ', ';
                     } ?>],
                     borderColor: 'rgba(241, 194, 50, 1)',
-                    borderWidth: 1
+                    borderWidth: 2
                 }
                 ]
             },
@@ -186,6 +223,36 @@ $timeouts = getTimeout($bdd, $_GET['id']);
                         ticks: {
                             beginAtZero: true,
                             //max: 1
+                        }
+                    }]
+                }
+            }
+        })
+    ;
+
+    var ctxMotiv = document.getElementById('motiv').getContext('2d');
+    var myChartMotiv = new Chart(ctxMotiv, {
+            type: 'radar',
+            data: {
+                labels: ["Pré-motivation", "Mem. difficulté", "Transc. difficulté", "Questions difficulté", "Fatigue", "Recommencer"],
+                datasets: [{
+                    label: 'Réponses',
+                    data: [<?php for ($i = 0; $i < count($motiv); $i++) {
+                        echo $motiv[$i]['reponse_sub_sujet'] . ', ';
+                    } ?>],
+                    borderColor: 'rgba(80, 125, 188, 1)',
+                    borderWidth: 2
+                }
+                ]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        gridLines: {
+                            display: false
+                        },
+                        ticks: {
+                            display: false
                         }
                     }]
                 }

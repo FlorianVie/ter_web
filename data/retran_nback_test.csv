@@ -1,0 +1,583 @@
+view_history,rt,part,trial_type,trial_index,time_elapsed,internal_node_id,subject_id,stimulus,key_press,letter,trial_id,id_2_back,block_part,prev_letter,is_target,correct,response_type,audio_id,audio_file,responses,retransc
+,,,fullscreen,0,1095241,0.0-0.0,2,,,,,,,,,,,,,,
+"[{""page_index"":0,""viewing_time"":1011.5299999960698},{""page_index"":1,""viewing_time"":443.6850000056438},{""page_index"":2,""viewing_time"":5667.264999996405}]",7123.2999999993,instruction,instructions,1,1102366,0.0-1.0,2,,,,,,,,,,,,,,
+"[{""page_index"":0,""viewing_time"":522.6099999998696},{""page_index"":1,""viewing_time"":2309.150000001071}]",2832.1099999957,instruction,instructions,2,1105200,0.0-2.0,2,,,,,,,,,,,,,,
+,1253.4500000039,Preparation,html-keyboard-response,3,1106455,0.0-3.0,2,<h1>Positionnement de la main droite</h1><p>Placez l'index de votre <strong>main droite</strong> sur la touche '<strong>J</strong>'</p><p>Vous devrez garder votre doigt en position durant toute la session.</p><p>Lorsque vous êtes prêt appuyez sur la touche '<strong>J</strong>' pour continuer.</p>,74,,,,,,,,,,,,
+,509.73499999964,Preparation,html-keyboard-response,4,1107467,0.0-4.0,2,<h1>Positionnement de la main gauche</h1><p>Placez l'index de votre <strong>main gauche</strong> sur la touche '<strong>F</strong>'</p><p>Vous devrez garder votre doigt en position durant toute la session.</p><p>Lorsque vous êtes prêt appuyez sur la touche '<strong>F</strong>' pour commencer la tâche.</p>,70,,,,,,,,,,,,
+,,Pause,html-keyboard-response,5,1108469,0.0-5.0,2,"",,,,,,,,,,,,,
+,859.57000000053,2-back-pre,html-keyboard-response,6,1110472,0.0-6.0,2,<h1 class='mono'>D</h1>,70,D,0,1,1,,0,1,Non-target,,,,
+,560.88499999885,2-back-pre,html-keyboard-response,7,1112475,0.0-7.0,2,<h1 class='mono'>R</h1>,70,R,1,1,1,,0,1,Non-target,,,,
+,,2-back-pre,html-keyboard-response,8,1114477,0.0-8.0,2,<h1 class='mono'>Z</h1>,,Z,2,1,1,D,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,9,1116479,0.0-9.0,2,<h1 class='mono'>T</h1>,,T,3,1,1,R,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,10,1118482,0.0-10.0,2,<h1 class='mono'>Z</h1>,,Z,4,1,1,Z,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,11,1120485,0.0-11.0,2,<h1 class='mono'>J</h1>,,J,5,1,1,T,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,12,1122488,0.0-12.0,2,<h1 class='mono'>M</h1>,,M,6,1,1,Z,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,13,1124490,0.0-13.0,2,<h1 class='mono'>J</h1>,,J,7,1,1,J,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,14,1126505,0.0-14.0,2,<h1 class='mono'>M</h1>,,M,8,1,1,M,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,15,1128508,0.0-15.0,2,<h1 class='mono'>Q</h1>,,Q,9,1,1,J,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,16,1130510,0.0-16.0,2,<h1 class='mono'>B</h1>,,B,10,1,1,M,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,17,1133361,0.0-17.0,2,<h1 class='mono'>H</h1>,,H,11,1,1,Q,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,18,1136362,0.0-18.0,2,<h1 class='mono'>Q</h1>,,Q,12,1,1,B,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,19,1139361,0.0-19.0,2,<h1 class='mono'>K</h1>,,K,13,1,1,H,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,20,1142362,0.0-20.0,2,<h1 class='mono'>D</h1>,,D,14,1,1,Q,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,21,1145361,0.0-21.0,2,<h1 class='mono'>K</h1>,,K,15,1,1,K,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,22,1148361,0.0-22.0,2,<h1 class='mono'>D</h1>,,D,16,1,1,D,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,23,1150416,0.0-23.0,2,<h1 class='mono'>V</h1>,,V,17,1,1,K,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,24,1152419,0.0-24.0,2,<h1 class='mono'>V</h1>,,V,18,1,1,D,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,25,1155361,0.0-25.0,2,<h1 class='mono'>F</h1>,,F,19,1,1,V,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,26,1158361,0.0-26.0,2,<h1 class='mono'>B</h1>,,B,20,1,1,V,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,27,1161361,0.0-27.0,2,<h1 class='mono'>F</h1>,,F,21,1,1,F,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,28,1164361,0.0-28.0,2,<h1 class='mono'>X</h1>,,X,22,1,1,B,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,29,1167362,0.0-29.0,2,<h1 class='mono'>B</h1>,,B,23,1,1,F,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,30,1170361,0.0-30.0,2,<h1 class='mono'>X</h1>,,X,24,1,1,X,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,31,1173362,0.0-31.0,2,<h1 class='mono'>P</h1>,,P,25,1,1,B,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,32,1176362,0.0-32.0,2,<h1 class='mono'>S</h1>,,S,26,1,1,X,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,33,1179361,0.0-33.0,2,<h1 class='mono'>H</h1>,,H,27,1,1,P,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,34,1182362,0.0-34.0,2,<h1 class='mono'>P</h1>,,P,28,1,1,S,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,35,1185362,0.0-35.0,2,<h1 class='mono'>T</h1>,,T,29,1,1,H,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,36,1188361,0.0-36.0,2,<h1 class='mono'>N</h1>,,N,30,1,1,P,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,37,1191362,0.0-37.0,2,<h1 class='mono'>T</h1>,,T,31,1,1,T,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,38,1194361,0.0-38.0,2,<h1 class='mono'>J</h1>,,J,32,1,1,N,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,39,1197361,0.0-39.0,2,<h1 class='mono'>L</h1>,,L,33,1,1,T,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,40,1200362,0.0-40.0,2,<h1 class='mono'>J</h1>,,J,34,1,1,J,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,41,1203361,0.0-41.0,2,<h1 class='mono'>M</h1>,,M,35,1,1,L,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,42,1206361,0.0-42.0,2,<h1 class='mono'>M</h1>,,M,36,1,1,J,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,43,1209362,0.0-43.0,2,<h1 class='mono'>K</h1>,,K,37,1,1,M,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,44,1212362,0.0-44.0,2,<h1 class='mono'>W</h1>,,W,38,1,1,M,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,45,1215362,0.0-45.0,2,<h1 class='mono'>K</h1>,,K,39,1,1,K,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,46,1218361,0.0-46.0,2,<h1 class='mono'>G</h1>,,G,40,1,1,W,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,47,1221361,0.0-47.0,2,<h1 class='mono'>J</h1>,,J,41,1,1,K,0,0,No-input,,,,
+,,Pause,html-keyboard-response,48,1225362,0.0-48.0,2,<h2>Reprise dans 3 secondes ...</h2>,,,,,,,,,,,,,
+,,Pause,html-keyboard-response,49,1226364,0.0-49.0,2,"",,,,,,,,,,,,,
+,,2-back-pre,html-keyboard-response,50,1229361,0.0-50.0,2,<h1 class='mono'>H</h1>,,H,0,2,2,,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,51,1232361,0.0-51.0,2,<h1 class='mono'>X</h1>,,X,1,2,2,,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,52,1235361,0.0-52.0,2,<h1 class='mono'>K</h1>,,K,2,2,2,H,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,53,1238361,0.0-53.0,2,<h1 class='mono'>P</h1>,,P,3,2,2,X,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,54,1241374,0.0-54.0,2,<h1 class='mono'>K</h1>,,K,4,2,2,K,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,55,1244361,0.0-55.0,2,<h1 class='mono'>B</h1>,,B,5,2,2,P,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,56,1247363,0.0-56.0,2,<h1 class='mono'>B</h1>,,B,6,2,2,K,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,57,1250361,0.0-57.0,2,<h1 class='mono'>F</h1>,,F,7,2,2,B,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,58,1253362,0.0-58.0,2,<h1 class='mono'>M</h1>,,M,8,2,2,B,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,59,1256361,0.0-59.0,2,<h1 class='mono'>F</h1>,,F,9,2,2,F,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,60,1259361,0.0-60.0,2,<h1 class='mono'>Q</h1>,,Q,10,2,2,M,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,61,1262361,0.0-61.0,2,<h1 class='mono'>Z</h1>,,Z,11,2,2,F,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,62,1265362,0.0-62.0,2,<h1 class='mono'>Q</h1>,,Q,12,2,2,Q,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,63,1267364,0.0-63.0,2,<h1 class='mono'>H</h1>,,H,13,2,2,Z,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,64,1269367,0.0-64.0,2,<h1 class='mono'>W</h1>,,W,14,2,2,Q,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,65,1271370,0.0-65.0,2,<h1 class='mono'>N</h1>,,N,15,2,2,H,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,66,1273373,0.0-66.0,2,<h1 class='mono'>H</h1>,,H,16,2,2,W,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,67,1275375,0.0-67.0,2,<h1 class='mono'>S</h1>,,S,17,2,2,N,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,68,1278181,0.0-68.0,2,<h1 class='mono'>J</h1>,,J,18,2,2,H,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,69,1280184,0.0-69.0,2,<h1 class='mono'>S</h1>,,S,19,2,2,S,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,70,1282186,0.0-70.0,2,<h1 class='mono'>L</h1>,,L,20,2,2,J,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,71,1284188,0.0-71.0,2,<h1 class='mono'>Q</h1>,,Q,21,2,2,S,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,72,1286191,0.0-72.0,2,<h1 class='mono'>L</h1>,,L,22,2,2,L,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,73,1288194,0.0-73.0,2,<h1 class='mono'>Z</h1>,,Z,23,2,2,Q,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,74,1290197,0.0-74.0,2,<h1 class='mono'>Z</h1>,,Z,24,2,2,L,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,75,1292200,0.0-75.0,2,<h1 class='mono'>R</h1>,,R,25,2,2,Z,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,76,1294203,0.0-76.0,2,<h1 class='mono'>X</h1>,,X,26,2,2,Z,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,77,1296205,0.0-77.0,2,<h1 class='mono'>R</h1>,,R,27,2,2,R,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,78,1298211,0.0-78.0,2,<h1 class='mono'>G</h1>,,G,28,2,2,X,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,79,1300213,0.0-79.0,2,<h1 class='mono'>P</h1>,,P,29,2,2,R,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,80,1302216,0.0-80.0,2,<h1 class='mono'>G</h1>,,G,30,2,2,G,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,81,1304219,0.0-81.0,2,<h1 class='mono'>B</h1>,,B,31,2,2,P,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,82,1306222,0.0-82.0,2,<h1 class='mono'>P</h1>,,P,32,2,2,G,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,83,1308226,0.0-83.0,2,<h1 class='mono'>B</h1>,,B,33,2,2,B,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,84,1310228,0.0-84.0,2,<h1 class='mono'>F</h1>,,F,34,2,2,P,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,85,1312230,0.0-85.0,2,<h1 class='mono'>H</h1>,,H,35,2,2,B,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,86,1314232,0.0-86.0,2,<h1 class='mono'>F</h1>,,F,36,2,2,F,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,87,1316235,0.0-87.0,2,<h1 class='mono'>H</h1>,,H,37,2,2,H,1,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,88,1318237,0.0-88.0,2,<h1 class='mono'>Z</h1>,,Z,38,2,2,F,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,89,1320241,0.0-89.0,2,<h1 class='mono'>Q</h1>,,Q,39,2,2,H,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,90,1322243,0.0-90.0,2,<h1 class='mono'>H</h1>,,H,40,2,2,Z,0,0,No-input,,,,
+,,2-back-pre,html-keyboard-response,91,1324245,0.0-91.0,2,<h1 class='mono'>D</h1>,,D,41,2,2,Q,0,0,No-input,,,,
+"[{""page_index"":0,""viewing_time"":1839.6250000004657},{""page_index"":1,""viewing_time"":3540.81500000041},{""page_index"":2,""viewing_time"":2603.26500000502},{""page_index"":3,""viewing_time"":967.4599999999627}]",8951.5250000041,instruction,instructions,92,1333198,0.0-92.0,2,,,,,,,,,,,,,,
+,,Pause,html-keyboard-response,93,1334201,0.0-93.0,2,"",,,,,,,,,,,,,
+,,Beep Beep Beep,audio-keyboard-response,94,1337211,0.0-94.0,2,../assets/beep_beep_beep.mp3,,,,,,,,,,,,,
+,,Pause,html-keyboard-response,95,1338225,0.0-95.0,2,"",,,,,,,,,,,,,
+,,Audio,audio-keyboard-response,96,1343290,0.0-96.0,2,audio/mp3/conf-001.mp3,,,,,,,,,,1,conf-001.mp3,,
+,12506.140000005,Retranscription,survey-html-form,97,1355800,0.0-97.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,98,1360954,0.0-98.0,2,audio/mp3/conf-002.mp3,,,,,,,,,,2,conf-002.mp3,,
+,12507.734999999,Retranscription,survey-html-form,99,1373465,0.0-99.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,100,1377315,0.0-100.0,2,audio/mp3/conf-003.mp3,,,,,,,,,,3,conf-003.mp3,,
+,7501.3899999976,Retranscription,survey-html-form,101,1384818,0.0-101.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,102,1388914,0.0-102.0,2,audio/mp3/conf-004.mp3,,,,,,,,,,4,conf-004.mp3,,
+,10004.639999999,Retranscription,survey-html-form,103,1398921,0.0-103.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,104,1403022,0.0-104.0,2,audio/mp3/conf-005.mp3,,,,,,,,,,5,conf-005.mp3,,
+,10014.159999999,Retranscription,survey-html-form,105,1413039,0.0-105.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,106,1417934,0.0-106.0,2,audio/mp3/conf-006.mp3,,,,,,,,,,6,conf-006.mp3,,
+,10002.655000004,Retranscription,survey-html-form,107,1427939,0.0-107.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,108,1430186,0.0-108.0,2,audio/mp3/conf-007.mp3,,,,,,,,,,7,conf-007.mp3,,
+,5000.8999999992,Retranscription,survey-html-form,109,1435189,0.0-109.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,110,1440154,0.0-110.0,2,audio/mp3/conf-008.mp3,,,,,,,,,,8,conf-008.mp3,,
+,10011.620000005,Retranscription,survey-html-form,111,1450168,0.0-111.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,112,1456546,0.0-112.0,2,audio/mp3/conf-009.mp3,,,,,,,,,,9,conf-009.mp3,,
+,15010.929999997,Retranscription,survey-html-form,113,1471560,0.0-113.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,114,1477858,0.0-114.0,2,audio/mp3/conf-010.mp3,,,,,,,,,,10,conf-010.mp3,,
+,15008.614999999,Retranscription,survey-html-form,115,1492870,0.0-115.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,116,1495518,0.0-116.0,2,audio/mp3/conf-011.mp3,,,,,,,,,,11,conf-011.mp3,,
+,5005.1799999999,Retranscription,survey-html-form,117,1500525,0.0-117.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,118,1504958,0.0-118.0,2,audio/mp3/conf-012.mp3,,,,,,,,,,12,conf-012.mp3,,
+,10007.865,Retranscription,survey-html-form,119,1514968,0.0-119.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,120,1517758,0.0-120.0,2,audio/mp3/conf-013.mp3,,,,,,,,,,13,conf-013.mp3,,
+,5002.7200000042,Retranscription,survey-html-form,121,1522763,0.0-121.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,122,1525998,0.0-122.0,2,audio/mp3/conf-014.mp3,,,,,,,,,,14,conf-014.mp3,,
+,7511.8900000018,Retranscription,survey-html-form,123,1533513,0.0-123.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,124,1536678,0.0-124.0,2,audio/mp3/conf-015.mp3,,,,,,,,,,15,conf-015.mp3,,
+,7504.1899999997,Retranscription,survey-html-form,125,1544185,0.0-125.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,126,1547838,0.0-126.0,2,audio/mp3/conf-016.mp3,,,,,,,,,,16,conf-016.mp3,,
+,7508.3950000042,Retranscription,survey-html-form,127,1555349,0.0-127.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,128,1559239,0.0-128.0,2,audio/mp3/conf-017.mp3,,,,,,,,,,17,conf-017.mp3,,
+,7514.0000000028,Retranscription,survey-html-form,129,1566756,0.0-129.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,130,1570599,0.0-130.0,2,audio/mp3/conf-018.mp3,,,,,,,,,,18,conf-018.mp3,,
+,7505.8199999987,Retranscription,survey-html-form,131,1578107,0.0-131.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,132,1582110,0.0-132.0,2,audio/mp3/conf-019.mp3,,,,,,,,,,19,conf-019.mp3,,
+,10005.46,Retranscription,survey-html-form,133,1592118,0.0-133.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,134,1597843,0.0-134.0,2,audio/mp3/conf-020.mp3,,,,,,,,,,20,conf-020.mp3,,
+,12504.504999997,Retranscription,survey-html-form,135,1610350,0.0-135.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,136,1614482,0.0-136.0,2,audio/mp3/conf-021.mp3,,,,,,,,,,21,conf-021.mp3,,
+,10001.554999995,Retranscription,survey-html-form,137,1624487,0.0-137.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,138,1628102,0.0-138.0,2,audio/mp3/conf-022.mp3,,,,,,,,,,22,conf-022.mp3,,
+,7515.1450000049,Retranscription,survey-html-form,139,1635620,0.0-139.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,140,1641011,0.0-140.0,2,audio/mp3/conf-023.mp3,,,,,,,,,,23,conf-023.mp3,,
+,12500.009999996,Retranscription,survey-html-form,141,1653513,0.0-141.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,142,1656894,0.0-142.0,2,audio/mp3/conf-024.mp3,,,,,,,,,,24,conf-024.mp3,,
+,7503.0200000037,Retranscription,survey-html-form,143,1664399,0.0-143.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,144,1667174,0.0-144.0,2,audio/mp3/conf-025.mp3,,,,,,,,,,25,conf-025.mp3,,
+,5014.9850000015,Retranscription,survey-html-form,145,1672192,0.0-145.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,146,1678134,0.0-146.0,2,audio/mp3/conf-026.mp3,,,,,,,,,,26,conf-026.mp3,,
+,12514.330000005,Retranscription,survey-html-form,147,1690651,0.0-147.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,148,1694674,0.0-148.0,2,audio/mp3/conf-027.mp3,,,,,,,,,,27,conf-027.mp3,,
+,10010.750000001,Retranscription,survey-html-form,149,1704688,0.0-149.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,150,1710354,0.0-150.0,2,audio/mp3/conf-028.mp3,,,,,,,,,,28,conf-028.mp3,,
+,12504.965,Retranscription,survey-html-form,151,1722862,0.0-151.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,152,1728495,0.0-152.0,2,audio/mp3/conf-029.mp3,,,,,,,,,,29,conf-029.mp3,,
+,12513.665000006,Retranscription,survey-html-form,153,1741011,0.0-153.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,154,1744195,0.0-154.0,2,audio/mp3/conf-030.mp3,,,,,,,,,,30,conf-030.mp3,,
+,7505.7999999989,Retranscription,survey-html-form,155,1751703,0.0-155.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,156,1756747,0.0-156.0,2,audio/mp3/conf-031.mp3,,,,,,,,,,31,conf-031.mp3,,
+,12509.374999994,Retranscription,survey-html-form,157,1769259,0.0-157.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,158,1774787,0.0-158.0,2,audio/mp3/conf-032.mp3,,,,,,,,,,32,conf-032.mp3,,
+,12515.229999997,Retranscription,survey-html-form,159,1787304,0.0-159.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,160,1790547,0.0-160.0,2,audio/mp3/conf-033.mp3,,,,,,,,,,33,conf-033.mp3,,
+,7510.3500000043,Retranscription,survey-html-form,161,1798059,0.0-161.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,162,1802219,0.0-162.0,2,audio/mp3/conf-034.mp3,,,,,,,,,,34,conf-034.mp3,,
+,10008.390000003,Retranscription,survey-html-form,163,1812230,0.0-163.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,164,1816187,0.0-164.0,2,audio/mp3/conf-035.mp3,,,,,,,,,,35,conf-035.mp3,,
+,7503.1949999975,Retranscription,survey-html-form,165,1823692,0.0-165.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,166,1828139,0.0-166.0,2,audio/mp3/conf-036.mp3,,,,,,,,,,36,conf-036.mp3,,
+,10012.285000004,Retranscription,survey-html-form,167,1838154,0.0-167.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,168,1841871,0.0-168.0,2,audio/mp3/conf-037.mp3,,,,,,,,,,37,conf-037.mp3,,
+,7509.585,Retranscription,survey-html-form,169,1849383,0.0-169.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,170,1852759,0.0-170.0,2,audio/mp3/conf-038.mp3,,,,,,,,,,38,conf-038.mp3,,
+,7502.6949999956,Retranscription,survey-html-form,171,1860264,0.0-171.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,172,1864651,0.0-172.0,2,audio/mp3/conf-039.mp3,,,,,,,,,,39,conf-039.mp3,,
+,10015.535000006,Retranscription,survey-html-form,173,1874669,0.0-173.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,174,1878199,0.0-174.0,2,audio/mp3/conf-040.mp3,,,,,,,,,,40,conf-040.mp3,,
+,7511.155,Retranscription,survey-html-form,175,1885712,0.0-175.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,176,1888659,0.0-176.0,2,audio/mp3/conf-041.mp3,,,,,,,,,,41,conf-041.mp3,,
+,5005.7499999965,Retranscription,survey-html-form,177,1893667,0.0-177.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,178,1898223,0.0-178.0,2,audio/mp3/conf-042.mp3,,,,,,,,,,42,conf-042.mp3,,
+,10004.519999995,Retranscription,survey-html-form,179,1908230,0.0-179.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,180,1910763,0.0-180.0,2,audio/mp3/conf-043.mp3,,,,,,,,,,43,conf-043.mp3,,
+,5015.0350000039,Retranscription,survey-html-form,181,1915780,0.0-181.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,182,1920783,0.0-182.0,2,audio/mp3/conf-044.mp3,,,,,,,,,,44,conf-044.mp3,,
+,12511.269999995,Retranscription,survey-html-form,183,1933297,0.0-183.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,184,1937711,0.0-184.0,2,audio/mp3/conf-045.mp3,,,,,,,,,,45,conf-045.mp3,,
+,10002.715000002,Retranscription,survey-html-form,185,1947717,0.0-185.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,186,1950535,0.0-186.0,2,audio/mp3/conf-046.mp3,,,,,,,,,,46,conf-046.mp3,,
+,5004.2299999986,Retranscription,survey-html-form,187,1955542,0.0-187.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,188,1960695,0.0-188.0,2,audio/mp3/conf-047.mp3,,,,,,,,,,47,conf-047.mp3,,
+,12501.665000003,Retranscription,survey-html-form,189,1973199,0.0-189.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,190,1975055,0.0-190.0,2,audio/mp3/conf-048.mp3,,,,,,,,,,48,conf-048.mp3,,
+,2512.9349999989,Retranscription,survey-html-form,191,1977570,0.0-191.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,192,1980483,0.0-192.0,2,audio/mp3/conf-049.mp3,,,,,,,,,,49,conf-049.mp3,,
+,5009.7000000023,Retranscription,survey-html-form,193,1985495,0.0-193.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,194,1990643,0.0-194.0,2,audio/mp3/conf-050.mp3,,,,,,,,,,50,conf-050.mp3,,
+,12512.560000003,Retranscription,survey-html-form,195,2003158,0.0-195.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,196,2008715,0.0-196.0,2,audio/mp3/conf-051.mp3,,,,,,,,,,51,conf-051.mp3,,
+,12501.625000004,Retranscription,survey-html-form,197,2021219,0.0-197.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,198,2024935,0.0-198.0,2,audio/mp3/conf-052.mp3,,,,,,,,,,52,conf-052.mp3,,
+,7513.715000001,Retranscription,survey-html-form,199,2032451,0.0-199.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,200,2035727,0.0-200.0,2,audio/mp3/conf-053.mp3,,,,,,,,,,53,conf-053.mp3,,
+,7512.880000002,Retranscription,survey-html-form,201,2043243,0.0-201.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,202,2046095,0.0-202.0,2,audio/mp3/conf-054.mp3,,,,,,,,,,54,conf-054.mp3,,
+,5010.5750000002,Retranscription,survey-html-form,203,2051109,0.0-203.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,204,2055967,0.0-204.0,2,audio/mp3/conf-055.mp3,,,,,,,,,,55,conf-055.mp3,,
+,10003.794999997,Retranscription,survey-html-form,205,2065974,0.0-205.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,206,2069019,0.0-206.0,2,audio/mp3/conf-056.mp3,,,,,,,,,,56,conf-056.mp3,,
+,7513.715000001,Retranscription,survey-html-form,207,2076535,0.0-207.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,208,2080820,0.0-208.0,2,audio/mp3/conf-057.mp3,,,,,,,,,,57,conf-057.mp3,,
+,9999.5550000023,Retranscription,survey-html-form,209,2090822,0.0-209.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,210,2096179,0.0-210.0,2,audio/mp3/conf-058.mp3,,,,,,,,,,58,conf-058.mp3,,
+,12515.570000003,Retranscription,survey-html-form,211,2108697,0.0-211.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,212,2113979,0.0-212.0,2,audio/mp3/conf-059.mp3,,,,,,,,,,59,conf-059.mp3,,
+,12508.654999998,Retranscription,survey-html-form,213,2126490,0.0-213.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,214,2128851,0.0-214.0,2,audio/mp3/conf-060.mp3,,,,,,,,,,60,conf-060.mp3,,
+,5003.564999999,Retranscription,survey-html-form,215,2133857,0.0-215.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,216,2136559,0.0-216.0,2,audio/mp3/conf-061.mp3,,,,,,,,,,61,conf-061.mp3,,
+,5000.5500000045,Retranscription,survey-html-form,217,2141562,0.0-217.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,218,2145479,0.0-218.0,2,audio/mp3/conf-062.mp3,,,,,,,,,,62,conf-062.mp3,,
+,7514.8149999953,Retranscription,survey-html-form,219,2152997,0.0-219.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,220,2156691,0.0-220.0,2,audio/mp3/conf-063.mp3,,,,,,,,,,63,conf-063.mp3,,
+,7506.4150000033,Retranscription,survey-html-form,221,2164200,0.0-221.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,222,2169451,0.0-222.0,2,audio/mp3/conf-064.mp3,,,,,,,,,,64,conf-064.mp3,,
+,12503.975,Retranscription,survey-html-form,223,2181958,0.0-223.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,224,2187311,0.0-224.0,2,audio/mp3/conf-065.mp3,,,,,,,,,,65,conf-065.mp3,,
+,12512.364999995,Retranscription,survey-html-form,225,2199826,0.0-225.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,226,2204571,0.0-226.0,2,audio/mp3/conf-066.mp3,,,,,,,,,,66,conf-066.mp3,,
+,10004.820000002,Retranscription,survey-html-form,227,2214578,0.0-227.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,228,2217392,0.0-228.0,2,audio/mp3/conf-067.mp3,,,,,,,,,,67,conf-067.mp3,,
+,5007.6499999994,Retranscription,survey-html-form,229,2222401,0.0-229.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,230,2225104,0.0-230.0,2,audio/mp3/conf-068.mp3,,,,,,,,,,68,conf-068.mp3,,
+,5011.870000002,Retranscription,survey-html-form,231,2230118,0.0-231.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,232,2235784,0.0-232.0,2,audio/mp3/conf-069.mp3,,,,,,,,,,69,conf-069.mp3,,
+,12501.980000001,Retranscription,survey-html-form,233,2248288,0.0-233.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,234,2252284,0.0-234.0,2,audio/mp3/conf-070.mp3,,,,,,,,,,70,conf-070.mp3,,
+,7512.4900000007,Retranscription,survey-html-form,235,2259798,0.0-235.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,236,2262796,0.0-236.0,2,audio/mp3/conf-071.mp3,,,,,,,,,,71,conf-071.mp3,,
+,5012.7100000028,Retranscription,survey-html-form,237,2267811,0.0-237.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,238,2273596,0.0-238.0,2,audio/mp3/conf-072.mp3,,,,,,,,,,72,conf-072.mp3,,
+,12510.445,Retranscription,survey-html-form,239,2286108,0.0-239.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,240,2291855,0.0-240.0,2,audio/mp3/conf-073.mp3,,,,,,,,,,73,conf-073.mp3,,
+,12514.575000001,Retranscription,survey-html-form,241,2304373,0.0-241.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,242,2306468,0.0-242.0,2,audio/mp3/conf-074.mp3,,,,,,,,,,74,conf-074.mp3,,
+,5001.120000001,Retranscription,survey-html-form,243,2311471,0.0-243.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,244,2316256,0.0-244.0,2,audio/mp3/conf-075.mp3,,,,,,,,,,75,conf-075.mp3,,
+,10006.585000003,Retranscription,survey-html-form,245,2326265,0.0-245.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,246,2331916,0.0-246.0,2,audio/mp3/conf-076.mp3,,,,,,,,,,76,conf-076.mp3,,
+,12501.649999999,Retranscription,survey-html-form,247,2344420,0.0-247.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,248,2348796,0.0-248.0,2,audio/mp3/conf-077.mp3,,,,,,,,,,77,conf-077.mp3,,
+,10003.825,Retranscription,survey-html-form,249,2358802,0.0-249.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,250,2363288,0.0-250.0,2,audio/mp3/conf-078.mp3,,,,,,,,,,78,conf-078.mp3,,
+,10005.91,Retranscription,survey-html-form,251,2373296,0.0-251.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,252,2376700,0.0-252.0,2,audio/mp3/conf-079.mp3,,,,,,,,,,79,conf-079.mp3,,
+,7504.0300000035,Retranscription,survey-html-form,253,2384206,0.0-253.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,254,2387808,0.0-254.0,2,audio/mp3/conf-080.mp3,,,,,,,,,,80,conf-080.mp3,,
+,7500.7800000021,Retranscription,survey-html-form,255,2395311,0.0-255.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,256,2398480,0.0-256.0,2,audio/mp3/conf-081.mp3,,,,,,,,,,81,conf-081.mp3,,
+,7501.2699999935,Retranscription,survey-html-form,257,2405984,0.0-257.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,258,2409228,0.0-258.0,2,audio/mp3/conf-082.mp3,,,,,,,,,,82,conf-082.mp3,,
+,7513.5549999978,Retranscription,survey-html-form,259,2416744,0.0-259.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,260,2420540,0.0-260.0,2,audio/mp3/conf-083.mp3,,,,,,,,,,83,conf-083.mp3,,
+,7504.2699999977,Retranscription,survey-html-form,261,2428047,0.0-261.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,262,2430132,0.0-262.0,2,audio/mp3/conf-084.mp3,,,,,,,,,,84,conf-084.mp3,,
+,5014.0949999988,Retranscription,survey-html-form,263,2435148,0.0-263.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,264,2437460,0.0-264.0,2,audio/mp3/conf-085.mp3,,,,,,,,,,85,conf-085.mp3,,
+,5007.3400000036,Retranscription,survey-html-form,265,2442469,0.0-265.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,266,2444680,0.0-266.0,2,audio/mp3/conf-086.mp3,,,,,,,,,,86,conf-086.mp3,,
+,5005.7699999958,Retranscription,survey-html-form,267,2449688,0.0-267.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,268,2455120,0.0-268.0,2,audio/mp3/conf-087.mp3,,,,,,,,,,87,conf-087.mp3,,
+,12512.634999999,Retranscription,survey-html-form,269,2467635,0.0-269.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,270,2472200,0.0-270.0,2,audio/mp3/conf-088.mp3,,,,,,,,,,88,conf-088.mp3,,
+,10002.195000001,Retranscription,survey-html-form,271,2482205,0.0-271.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,272,2485564,0.0-272.0,2,audio/mp3/conf-089.mp3,,,,,,,,,,89,conf-089.mp3,,
+,7506.9099999964,Retranscription,survey-html-form,273,2493073,0.0-273.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,274,2496724,0.0-274.0,2,audio/mp3/conf-090.mp3,,,,,,,,,,90,conf-090.mp3,,
+,7504.6149999984,Retranscription,survey-html-form,275,2504231,0.0-275.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,276,2506484,0.0-276.0,2,audio/mp3/conf-091.mp3,,,,,,,,,,91,conf-091.mp3,,
+,5003.4049999956,Retranscription,survey-html-form,277,2511490,0.0-277.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,278,2514624,0.0-278.0,2,audio/mp3/conf-092.mp3,,,,,,,,,,92,conf-092.mp3,,
+,7514.8600000027,Retranscription,survey-html-form,279,2522141,0.0-279.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,280,2527992,0.0-280.0,2,audio/mp3/conf-093.mp3,,,,,,,,,,93,conf-093.mp3,,
+,12507.915000002,Retranscription,survey-html-form,281,2540502,0.0-281.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,282,2543824,0.0-282.0,2,audio/mp3/conf-094.mp3,,,,,,,,,,94,conf-094.mp3,,
+,7507.9899999979,Retranscription,survey-html-form,283,2551334,0.0-283.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,284,2553236,0.0-284.0,2,audio/mp3/conf-095.mp3,,,,,,,,,,95,conf-095.mp3,,
+,2507.934999994,Retranscription,survey-html-form,285,2555746,0.0-285.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,286,2558656,0.0-286.0,2,audio/mp3/conf-096.mp3,,,,,,,,,,96,conf-096.mp3,,
+,5002.6450000005,Retranscription,survey-html-form,287,2563661,0.0-287.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,288,2566024,0.0-288.0,2,audio/mp3/conf-097.mp3,,,,,,,,,,97,conf-097.mp3,,
+,5012.9649999943,Retranscription,survey-html-form,289,2571039,0.0-289.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,290,2575544,0.0-290.0,2,audio/mp3/conf-098.mp3,,,,,,,,,,98,conf-098.mp3,,
+,10002.810000006,Retranscription,survey-html-form,291,2585549,0.0-291.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,292,2590384,0.0-292.0,2,audio/mp3/conf-099.mp3,,,,,,,,,,99,conf-099.mp3,,
+,10004.885000002,Retranscription,survey-html-form,293,2600391,0.0-293.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,294,2604496,0.0-294.0,2,audio/mp3/conf-100.mp3,,,,,,,,,,100,conf-100.mp3,,
+,10011.634999996,Retranscription,survey-html-form,295,2614511,0.0-295.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,296,2619696,0.0-296.0,2,audio/mp3/conf-101.mp3,,,,,,,,,,101,conf-101.mp3,,
+,12512.085000002,Retranscription,survey-html-form,297,2632211,0.0-297.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,298,2634896,0.0-298.0,2,audio/mp3/conf-102.mp3,,,,,,,,,,102,conf-102.mp3,,
+,5010.2499999995,Retranscription,survey-html-form,299,2639909,0.0-299.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,300,2644176,0.0-300.0,2,audio/mp3/conf-103.mp3,,,,,,,,,,103,conf-103.mp3,,
+,10004.220000003,Retranscription,survey-html-form,301,2654183,0.0-301.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,302,2657837,0.0-302.0,2,audio/mp3/conf-104.mp3,,,,,,,,,,104,conf-104.mp3,,
+,7504.7699999996,Retranscription,survey-html-form,303,2665343,0.0-303.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,304,2670800,0.0-304.0,2,audio/mp3/conf-105.mp3,,,,,,,,,,105,conf-105.mp3,,
+,12500.480000002,Retranscription,survey-html-form,305,2683303,0.0-305.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,306,2686588,0.0-306.0,2,audio/mp3/conf-106.mp3,,,,,,,,,,106,conf-106.mp3,,
+,7509.9899999988,Retranscription,survey-html-form,307,2694100,0.0-307.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,308,2698148,0.0-308.0,2,audio/mp3/conf-107.mp3,,,,,,,,,,107,conf-107.mp3,,
+,10001.489999996,Retranscription,survey-html-form,309,2708152,0.0-309.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,310,2713340,0.0-310.0,2,audio/mp3/conf-108.mp3,,,,,,,,,,108,conf-108.mp3,,
+,12502.690000001,Retranscription,survey-html-form,311,2725845,0.0-311.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,312,2729452,0.0-312.0,2,audio/mp3/conf-109.mp3,,,,,,,,,,109,conf-109.mp3,,
+,7508.79,Retranscription,survey-html-form,313,2736963,0.0-313.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,314,2740660,0.0-314.0,2,audio/mp3/conf-110.mp3,,,,,,,,,,110,conf-110.mp3,,
+,7501.575000002,Retranscription,survey-html-form,315,2748165,0.0-315.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,316,2753100,0.0-316.0,2,audio/mp3/conf-111.mp3,,,,,,,,,,111,conf-111.mp3,,
+,10011.455,Retranscription,survey-html-form,317,2763114,0.0-317.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,318,2765612,0.0-318.0,2,audio/mp3/conf-112.mp3,,,,,,,,,,112,conf-112.mp3,,
+,5003.4349999987,Retranscription,survey-html-form,319,2770618,0.0-319.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,320,2772860,0.0-320.0,2,audio/mp3/conf-113.mp3,,,,,,,,,,113,conf-113.mp3,,
+,5002.7000000044,Retranscription,survey-html-form,321,2777865,0.0-321.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,322,2783612,0.0-322.0,2,audio/mp3/conf-114.mp3,,,,,,,,,,114,conf-114.mp3,,
+,12502.47,Retranscription,survey-html-form,323,2796117,0.0-323.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,324,2798044,0.0-324.0,2,audio/mp3/conf-115.mp3,,,,,,,,,,115,conf-115.mp3,,
+,2503.9850000027,Retranscription,survey-html-form,325,2800550,0.0-325.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,326,2806252,0.0-326.0,2,audio/mp3/conf-116.mp3,,,,,,,,,,116,conf-116.mp3,,
+,12510.125000001,Retranscription,survey-html-form,327,2818765,0.0-327.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,328,2822124,0.0-328.0,2,audio/mp3/conf-117.mp3,,,,,,,,,,117,conf-117.mp3,,
+,7508.0099999974,Retranscription,survey-html-form,329,2829634,0.0-329.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,330,2833352,0.0-330.0,2,audio/mp3/conf-118.mp3,,,,,,,,,,118,conf-118.mp3,,
+,7513.5450000013,Retranscription,survey-html-form,331,2840869,0.0-331.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,332,2845416,0.0-332.0,2,audio/mp3/conf-119.mp3,,,,,,,,,,119,conf-119.mp3,,
+,10008.34,Retranscription,survey-html-form,333,2855427,0.0-333.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,334,2860897,0.0-334.0,2,audio/mp3/conf-120.mp3,,,,,,,,,,120,conf-120.mp3,,
+,12500.009999996,Retranscription,survey-html-form,335,2873399,0.0-335.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,336,2878457,0.0-336.0,2,audio/mp3/conf-121.mp3,,,,,,,,,,121,conf-121.mp3,,
+,12501.730000003,Retranscription,survey-html-form,337,2890961,0.0-337.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,338,2895717,0.0-338.0,2,audio/mp3/conf-122.mp3,,,,,,,,,,122,conf-122.mp3,,
+,10010.715000004,Retranscription,survey-html-form,339,2905730,0.0-339.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,340,2909437,0.0-340.0,2,audio/mp3/conf-123.mp3,,,,,,,,,,123,conf-123.mp3,,
+,7502.760000003,Retranscription,survey-html-form,341,2916941,0.0-341.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,342,2920249,0.0-342.0,2,audio/mp3/conf-124.mp3,,,,,,,,,,124,conf-124.mp3,,
+,7512.5800000024,Retranscription,survey-html-form,343,2927764,0.0-343.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,344,2932988,0.0-344.0,2,audio/mp3/conf-125.mp3,,,,,,,,,,125,conf-125.mp3,,
+,12499.744999994,Retranscription,survey-html-form,345,2945491,0.0-345.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,346,2949717,0.0-346.0,2,audio/mp3/conf-126.mp3,,,,,,,,,,126,conf-126.mp3,,
+,10013.115000001,Retranscription,survey-html-form,347,2959732,0.0-347.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,348,2962909,0.0-348.0,2,audio/mp3/conf-127.mp3,,,,,,,,,,127,conf-127.mp3,,
+,7503.9949999992,Retranscription,survey-html-form,349,2970415,0.0-349.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,350,2972869,0.0-350.0,2,audio/mp3/conf-128.mp3,,,,,,,,,,128,conf-128.mp3,,
+,5004.0250000018,Retranscription,survey-html-form,351,2977875,0.0-351.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,352,2982461,0.0-352.0,2,audio/mp3/conf-129.mp3,,,,,,,,,,129,conf-129.mp3,,
+,10008.875,Retranscription,survey-html-form,353,2992472,0.0-353.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,354,2994381,0.0-354.0,2,audio/mp3/conf-130.mp3,,,,,,,,,,130,conf-130.mp3,,
+,2511.5999999982,Retranscription,survey-html-form,355,2996895,0.0-355.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,356,2999341,0.0-356.0,2,audio/mp3/conf-131.mp3,,,,,,,,,,131,conf-131.mp3,,
+,5000.635000004,Retranscription,survey-html-form,357,3004343,0.0-357.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,358,3008481,0.0-358.0,2,audio/mp3/conf-132.mp3,,,,,,,,,,132,conf-132.mp3,,
+,10012.709999995,Retranscription,survey-html-form,359,3018496,0.0-359.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,360,3024241,0.0-360.0,2,audio/mp3/conf-133.mp3,,,,,,,,,,133,conf-133.mp3,,
+,12514.985000002,Retranscription,survey-html-form,361,3036758,0.0-361.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,362,3041201,0.0-362.0,2,audio/mp3/conf-134.mp3,,,,,,,,,,134,conf-134.mp3,,
+,10001.704999995,Retranscription,survey-html-form,363,3051205,0.0-363.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,364,3056821,0.0-364.0,2,audio/mp3/conf-135.mp3,,,,,,,,,,135,conf-135.mp3,,
+,12500.285000002,Retranscription,survey-html-form,365,3069324,0.0-365.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,366,3072553,0.0-366.0,2,audio/mp3/conf-136.mp3,,,,,,,,,,136,conf-136.mp3,,
+,7509.0100000016,Retranscription,survey-html-form,367,3080064,0.0-367.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,368,3083173,0.0-368.0,2,audio/mp3/conf-137.mp3,,,,,,,,,,137,conf-137.mp3,,
+,7511.8599999989,Retranscription,survey-html-form,369,3090687,0.0-369.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,370,3095465,0.0-370.0,2,audio/mp3/conf-138.mp3,,,,,,,,,,138,conf-138.mp3,,
+,10008.204999998,Retranscription,survey-html-form,371,3105476,0.0-371.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,372,3109733,0.0-372.0,2,audio/mp3/conf-139.mp3,,,,,,,,,,139,conf-139.mp3,,
+,10014.055,Retranscription,survey-html-form,373,3119750,0.0-373.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,374,3122533,0.0-374.0,2,audio/mp3/conf-140.mp3,,,,,,,,,,140,conf-140.mp3,,
+,5000.5549999988,Retranscription,survey-html-form,375,3127536,0.0-375.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,376,3133345,0.0-376.0,2,audio/mp3/conf-141.mp3,,,,,,,,,,141,conf-141.mp3,,
+,12508.005000003,Retranscription,survey-html-form,377,3145856,0.0-377.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,378,3149645,0.0-378.0,2,audio/mp3/conf-142.mp3,,,,,,,,,,142,conf-142.mp3,,
+,7513.9200000046,Retranscription,survey-html-form,379,3157161,0.0-379.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,380,3161017,0.0-380.0,2,audio/mp3/conf-143.mp3,,,,,,,,,,143,conf-143.mp3,,
+,7508.3400000003,Retranscription,survey-html-form,381,3168528,0.0-381.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,382,3172465,0.0-382.0,2,audio/mp3/conf-144.mp3,,,,,,,,,,144,conf-144.mp3,,
+,7510.8150000013,Retranscription,survey-html-form,383,3179978,0.0-383.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,384,3185325,0.0-384.0,2,audio/mp3/conf-145.mp3,,,,,,,,,,145,conf-145.mp3,,
+,12502.645,Retranscription,survey-html-form,385,3197830,0.0-385.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,386,3203517,0.0-386.0,2,audio/mp3/conf-146.mp3,,,,,,,,,,146,conf-146.mp3,,
+,12499.560000004,Retranscription,survey-html-form,387,3216019,0.0-387.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,388,3221609,0.0-388.0,2,audio/mp3/conf-147.mp3,,,,,,,,,,147,conf-147.mp3,,
+,12507.160000001,Retranscription,survey-html-form,389,3234119,0.0-389.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,390,3238317,0.0-390.0,2,audio/mp3/conf-148.mp3,,,,,,,,,,148,conf-148.mp3,,
+,10008.210000007,Retranscription,survey-html-form,391,3248328,0.0-391.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,392,3253937,0.0-392.0,2,audio/mp3/conf-149.mp3,,,,,,,,,,149,conf-149.mp3,,
+,12509.474999999,Retranscription,survey-html-form,393,3266449,0.0-393.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,394,3268829,0.0-394.0,2,audio/mp3/conf-150.mp3,,,,,,,,,,150,conf-150.mp3,,
+,5013.9649999985,Retranscription,survey-html-form,395,3273845,0.0-395.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,396,3278029,0.0-396.0,2,audio/mp3/conf-151.mp3,,,,,,,,,,151,conf-151.mp3,,
+,10011.504999995,Retranscription,survey-html-form,397,3288044,0.0-397.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,398,3293301,0.0-398.0,2,audio/mp3/conf-152.mp3,,,,,,,,,,152,conf-152.mp3,,
+,12504.955000004,Retranscription,survey-html-form,399,3305809,0.0-399.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,400,3310541,0.0-400.0,2,audio/mp3/conf-153.mp3,,,,,,,,,,153,conf-153.mp3,,
+,10008.690000002,Retranscription,survey-html-form,401,3320553,0.0-401.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,402,3325433,0.0-402.0,2,audio/mp3/conf-154.mp3,,,,,,,,,,154,conf-154.mp3,,
+,10015.499999994,Retranscription,survey-html-form,403,3335451,0.0-403.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,404,3341233,0.0-404.0,2,audio/mp3/conf-155.mp3,,,,,,,,,,155,conf-155.mp3,,
+,12514.735000005,Retranscription,survey-html-form,405,3353751,0.0-405.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,406,3359162,0.0-406.0,2,audio/mp3/conf-156.mp3,,,,,,,,,,156,conf-156.mp3,,
+,12515.175000001,Retranscription,survey-html-form,407,3371679,0.0-407.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,408,3376093,0.0-408.0,2,audio/mp3/conf-157.mp3,,,,,,,,,,157,conf-157.mp3,,
+,10006.455000002,Retranscription,survey-html-form,409,3386102,0.0-409.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,410,3389253,0.0-410.0,2,audio/mp3/conf-158.mp3,,,,,,,,,,158,conf-158.mp3,,
+,7500.7850000039,Retranscription,survey-html-form,411,3396756,0.0-411.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,412,3402905,0.0-412.0,2,audio/mp3/conf-159.mp3,,,,,,,,,,159,conf-159.mp3,,
+,15013.555000005,Retranscription,survey-html-form,413,3417923,0.0-413.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,414,3421213,0.0-414.0,2,audio/mp3/conf-160.mp3,,,,,,,,,,160,conf-160.mp3,,
+,7507.1649999954,Retranscription,survey-html-form,415,3428723,0.0-415.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,416,3432873,0.0-416.0,2,audio/mp3/conf-161.mp3,,,,,,,,,,161,conf-161.mp3,,
+,10006.614999998,Retranscription,survey-html-form,417,3442882,0.0-417.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,418,3447997,0.0-418.0,2,audio/mp3/conf-162.mp3,,,,,,,,,,162,conf-162.mp3,,
+,12504.330000003,Retranscription,survey-html-form,419,3460504,0.0-419.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,420,3465945,0.0-420.0,2,audio/mp3/conf-163.mp3,,,,,,,,,,163,conf-163.mp3,,
+,12502.554999999,Retranscription,survey-html-form,421,3478450,0.0-421.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,422,3482705,0.0-422.0,2,audio/mp3/conf-164.mp3,,,,,,,,,,164,conf-164.mp3,,
+,10000.009999996,Retranscription,survey-html-form,423,3492708,0.0-423.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,424,3497437,0.0-424.0,2,audio/mp3/conf-165.mp3,,,,,,,,,,165,conf-165.mp3,,
+,10010.739999998,Retranscription,survey-html-form,425,3507451,0.0-425.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,426,3510497,0.0-426.0,2,audio/mp3/conf-166.mp3,,,,,,,,,,166,conf-166.mp3,,
+,7511.0849999981,Retranscription,survey-html-form,427,3518011,0.0-427.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,428,3521677,0.0-428.0,2,audio/mp3/conf-167.mp3,,,,,,,,,,167,conf-167.mp3,,
+,7506.7750000018,Retranscription,survey-html-form,429,3529187,0.0-429.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,430,3534909,0.0-430.0,2,audio/mp3/conf-168.mp3,,,,,,,,,,168,conf-168.mp3,,
+,12513.180000002,Retranscription,survey-html-form,431,3547425,0.0-431.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,432,3551969,0.0-432.0,2,audio/mp3/conf-169.mp3,,,,,,,,,,169,conf-169.mp3,,
+,10002.760000003,Retranscription,survey-html-form,433,3561975,0.0-433.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,434,3564349,0.0-434.0,2,audio/mp3/conf-170.mp3,,,,,,,,,,170,conf-170.mp3,,
+,5005.1600000006,Retranscription,survey-html-form,435,3569357,0.0-435.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,436,3573242,0.0-436.0,2,audio/mp3/conf-171.mp3,,,,,,,,,,171,conf-171.mp3,,
+,7502.4499999997,Retranscription,survey-html-form,437,3580747,0.0-437.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,438,3585101,0.0-438.0,2,audio/mp3/conf-172.mp3,,,,,,,,,,172,conf-172.mp3,,
+,9999.9249999966,Retranscription,survey-html-form,439,3595104,0.0-439.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,440,3597569,0.0-440.0,2,audio/mp3/conf-173.mp3,,,,,,,,,,173,conf-173.mp3,,
+,5009.4749999987,Retranscription,survey-html-form,441,3602581,0.0-441.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,442,3607902,0.0-442.0,2,audio/mp3/conf-174.mp3,,,,,,,,,,174,conf-174.mp3,,
+,12504.609999997,Retranscription,survey-html-form,443,3620409,0.0-443.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,444,3622514,0.0-444.0,2,audio/mp3/conf-175.mp3,,,,,,,,,,175,conf-175.mp3,,
+,5013.7800000012,Retranscription,survey-html-form,445,3627530,0.0-445.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,446,3632714,0.0-446.0,2,audio/mp3/conf-176.mp3,,,,,,,,,,176,conf-176.mp3,,
+,12500.555000006,Retranscription,survey-html-form,447,3645217,0.0-447.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,448,3648082,0.0-448.0,2,audio/mp3/conf-177.mp3,,,,,,,,,,177,conf-177.mp3,,
+,5009.1300000059,Retranscription,survey-html-form,449,3653093,0.0-449.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,450,3657262,0.0-450.0,2,audio/mp3/conf-178.mp3,,,,,,,,,,178,conf-178.mp3,,
+,9999.629999998,Retranscription,survey-html-form,451,3667264,0.0-451.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,452,3671766,0.0-452.0,2,audio/mp3/conf-179.mp3,,,,,,,,,,179,conf-179.mp3,,
+,10014.295000001,Retranscription,survey-html-form,453,3681783,0.0-453.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,454,3683846,0.0-454.0,2,audio/mp3/conf-180.mp3,,,,,,,,,,180,conf-180.mp3,,
+,5009.9399999967,Retranscription,survey-html-form,455,3688858,0.0-455.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,456,3693774,0.0-456.0,2,audio/mp3/conf-181.mp3,,,,,,,,,,181,conf-181.mp3,,
+,10006.549999998,Retranscription,survey-html-form,457,3703783,0.0-457.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,458,3707554,0.0-458.0,2,audio/mp3/conf-182.mp3,,,,,,,,,,182,conf-182.mp3,,
+,7501.945000004,Retranscription,survey-html-form,459,3715058,0.0-459.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,460,3719166,0.0-460.0,2,audio/mp3/conf-183.mp3,,,,,,,,,,183,conf-183.mp3,,
+,10005.750000004,Retranscription,survey-html-form,461,3729174,0.0-461.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,462,3732478,0.0-462.0,2,audio/mp3/conf-184.mp3,,,,,,,,,,184,conf-184.mp3,,
+,7502.6749999961,Retranscription,survey-html-form,463,3739983,0.0-463.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,464,3743858,0.0-464.0,2,audio/mp3/conf-185.mp3,,,,,,,,,,185,conf-185.mp3,,
+,7511.995000001,Retranscription,survey-html-form,465,3751373,0.0-465.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,466,3756278,0.0-466.0,2,audio/mp3/conf-186.mp3,,,,,,,,,,186,conf-186.mp3,,
+,10013.485000003,Retranscription,survey-html-form,467,3766294,0.0-467.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,468,3769306,0.0-468.0,2,audio/mp3/conf-187.mp3,,,,,,,,,,187,conf-187.mp3,,
+,7511.995000001,Retranscription,survey-html-form,469,3776820,0.0-469.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,470,3782006,0.0-470.0,2,audio/mp3/conf-188.mp3,,,,,,,,,,188,conf-188.mp3,,
+,12500.719999996,Retranscription,survey-html-form,471,3794510,0.0-471.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,472,3798398,0.0-472.0,2,audio/mp3/conf-189.mp3,,,,,,,,,,189,conf-189.mp3,,
+,7510.7250000001,Retranscription,survey-html-form,473,3805911,0.0-473.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,474,3811410,0.0-474.0,2,audio/mp3/conf-190.mp3,,,,,,,,,,190,conf-190.mp3,,
+,12501.700000001,Retranscription,survey-html-form,475,3823914,0.0-475.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,476,3828670,0.0-476.0,2,audio/mp3/conf-191.mp3,,,,,,,,,,191,conf-191.mp3,,
+,10014.414999998,Retranscription,survey-html-form,477,3838687,0.0-477.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,478,3841578,0.0-478.0,2,audio/mp3/conf-192.mp3,,,,,,,,,,192,conf-192.mp3,,
+,5015.2499999967,Retranscription,survey-html-form,479,3846595,0.0-479.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,480,3851370,0.0-480.0,2,audio/mp3/conf-193.mp3,,,,,,,,,,193,conf-193.mp3,,
+,10003.850000001,Retranscription,survey-html-form,481,3861376,0.0-481.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,482,3865982,0.0-482.0,2,audio/mp3/conf-194.mp3,,,,,,,,,,194,conf-194.mp3,,
+,10011.655000002,Retranscription,survey-html-form,483,3875997,0.0-483.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,484,3878370,0.0-484.0,2,audio/mp3/conf-195.mp3,,,,,,,,,,195,conf-195.mp3,,
+,5013.7250000043,Retranscription,survey-html-form,485,3883387,0.0-485.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,486,3887922,0.0-486.0,2,audio/mp3/conf-196.mp3,,,,,,,,,,196,conf-196.mp3,,
+,10008.755000003,Retranscription,survey-html-form,487,3897934,0.0-487.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,488,3903682,0.0-488.0,2,audio/mp3/conf-197.mp3,,,,,,,,,,197,conf-197.mp3,,
+,12506.730000001,Retranscription,survey-html-form,489,3916192,0.0-489.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Audio,audio-keyboard-response,490,3923542,0.0-490.0,2,audio/mp3/conf-198.mp3,,,,,,,,,,198,conf-198.mp3,,
+,17499.754999997,Retranscription,survey-html-form,491,3941045,0.0-491.0,2,,,,,,,,,,,,,"{""rep"":""""}",""
+,,Pause,html-keyboard-response,492,3942053,0.0-492.0,2,"",,,,,,,,,,,,,
+,,Pause,html-keyboard-response,493,3945055,0.0-493.0,2,<h2>2-back dans 3 secondes ...</h2><p>Préparez vous à appuyez sur 'F' et 'J'</p>,,,,,,,,,,,,,
+,,Pause,html-keyboard-response,494,3946058,0.0-494.0,2,"",,,,,,,,,,,,,
+,,2-back-post,html-keyboard-response,495,3948061,0.0-495.0,2,<h1 class='mono'>X</h1>,,X,0,3,1,,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,496,3950065,0.0-496.0,2,<h1 class='mono'>W</h1>,,W,1,3,1,,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,497,3952082,0.0-497.0,2,<h1 class='mono'>N</h1>,,N,2,3,1,X,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,498,3954362,0.0-498.0,2,<h1 class='mono'>W</h1>,,W,3,3,1,W,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,499,3957361,0.0-499.0,2,<h1 class='mono'>K</h1>,,K,4,3,1,N,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,500,3960361,0.0-500.0,2,<h1 class='mono'>Q</h1>,,Q,5,3,1,W,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,501,3963361,0.0-501.0,2,<h1 class='mono'>X</h1>,,X,6,3,1,K,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,502,3966361,0.0-502.0,2,<h1 class='mono'>K</h1>,,K,7,3,1,Q,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,503,3969361,0.0-503.0,2,<h1 class='mono'>B</h1>,,B,8,3,1,X,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,504,3972364,0.0-504.0,2,<h1 class='mono'>H</h1>,,H,9,3,1,K,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,505,3975362,0.0-505.0,2,<h1 class='mono'>B</h1>,,B,10,3,1,B,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,506,3978361,0.0-506.0,2,<h1 class='mono'>V</h1>,,V,11,3,1,H,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,507,3981361,0.0-507.0,2,<h1 class='mono'>C</h1>,,C,12,3,1,B,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,508,3984361,0.0-508.0,2,<h1 class='mono'>V</h1>,,V,13,3,1,V,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,509,3987362,0.0-509.0,2,<h1 class='mono'>J</h1>,,J,14,3,1,C,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,510,3990361,0.0-510.0,2,<h1 class='mono'>T</h1>,,T,15,3,1,V,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,511,3993361,0.0-511.0,2,<h1 class='mono'>J</h1>,,J,16,3,1,J,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,512,3996362,0.0-512.0,2,<h1 class='mono'>L</h1>,,L,17,3,1,T,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,513,3999374,0.0-513.0,2,<h1 class='mono'>L</h1>,,L,18,3,1,J,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,514,4002362,0.0-514.0,2,<h1 class='mono'>G</h1>,,G,19,3,1,L,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,515,4005361,0.0-515.0,2,<h1 class='mono'>Z</h1>,,Z,20,3,1,L,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,516,4008362,0.0-516.0,2,<h1 class='mono'>G</h1>,,G,21,3,1,G,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,517,4011362,0.0-517.0,2,<h1 class='mono'>F</h1>,,F,22,3,1,Z,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,518,4014362,0.0-518.0,2,<h1 class='mono'>P</h1>,,P,23,3,1,G,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,519,4017361,0.0-519.0,2,<h1 class='mono'>D</h1>,,D,24,3,1,F,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,520,4020362,0.0-520.0,2,<h1 class='mono'>P</h1>,,P,25,3,1,P,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,521,4023362,0.0-521.0,2,<h1 class='mono'>R</h1>,,R,26,3,1,D,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,522,4026361,0.0-522.0,2,<h1 class='mono'>R</h1>,,R,27,3,1,P,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,523,4029362,0.0-523.0,2,<h1 class='mono'>K</h1>,,K,28,3,1,R,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,524,4032361,0.0-524.0,2,<h1 class='mono'>W</h1>,,W,29,3,1,R,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,525,4035362,0.0-525.0,2,<h1 class='mono'>K</h1>,,K,30,3,1,K,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,526,4037615,0.0-526.0,2,<h1 class='mono'>X</h1>,,X,31,3,1,W,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,527,4039618,0.0-527.0,2,<h1 class='mono'>W</h1>,,W,32,3,1,K,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,528,4041621,0.0-528.0,2,<h1 class='mono'>X</h1>,,X,33,3,1,X,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,529,4043631,0.0-529.0,2,<h1 class='mono'>H</h1>,,H,34,3,1,W,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,530,4045634,0.0-530.0,2,<h1 class='mono'>C</h1>,,C,35,3,1,X,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,531,4047637,0.0-531.0,2,<h1 class='mono'>H</h1>,,H,36,3,1,H,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,532,4049639,0.0-532.0,2,<h1 class='mono'>C</h1>,,C,37,3,1,C,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,533,4051641,0.0-533.0,2,<h1 class='mono'>B</h1>,,B,38,3,1,H,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,534,4053644,0.0-534.0,2,<h1 class='mono'>Z</h1>,,Z,39,3,1,C,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,535,4055646,0.0-535.0,2,<h1 class='mono'>V</h1>,,V,40,3,1,B,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,536,4057649,0.0-536.0,2,<h1 class='mono'>B</h1>,,B,41,3,1,Z,0,0,No-input,,,,
+,,Pause,html-keyboard-response,537,4060653,0.0-537.0,2,<h2>Reprise dans 3 secondes ...</h2>,,,,,,,,,,,,,
+,,Pause,html-keyboard-response,538,4061655,0.0-538.0,2,"",,,,,,,,,,,,,
+,,2-back-post,html-keyboard-response,539,4063657,0.0-539.0,2,<h1 class='mono'>M</h1>,,M,0,4,2,,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,540,4065659,0.0-540.0,2,<h1 class='mono'>F</h1>,,F,1,4,2,,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,541,4067662,0.0-541.0,2,<h1 class='mono'>L</h1>,,L,2,4,2,M,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,542,4069665,0.0-542.0,2,<h1 class='mono'>F</h1>,,F,3,4,2,F,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,543,4071667,0.0-543.0,2,<h1 class='mono'>G</h1>,,G,4,4,2,L,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,544,4073671,0.0-544.0,2,<h1 class='mono'>G</h1>,,G,5,4,2,F,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,545,4075672,0.0-545.0,2,<h1 class='mono'>J</h1>,,J,6,4,2,G,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,546,4077674,0.0-546.0,2,<h1 class='mono'>H</h1>,,H,7,4,2,G,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,547,4079678,0.0-547.0,2,<h1 class='mono'>J</h1>,,J,8,4,2,J,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,548,4081681,0.0-548.0,2,<h1 class='mono'>P</h1>,,P,9,4,2,H,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,549,4083684,0.0-549.0,2,<h1 class='mono'>H</h1>,,H,10,4,2,J,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,550,4085687,0.0-550.0,2,<h1 class='mono'>P</h1>,,P,11,4,2,P,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,551,4087690,0.0-551.0,2,<h1 class='mono'>W</h1>,,W,12,4,2,H,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,552,4089692,0.0-552.0,2,<h1 class='mono'>X</h1>,,X,13,4,2,P,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,553,4091695,0.0-553.0,2,<h1 class='mono'>W</h1>,,W,14,4,2,W,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,554,4093705,0.0-554.0,2,<h1 class='mono'>Q</h1>,,Q,15,4,2,X,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,555,4095716,0.0-555.0,2,<h1 class='mono'>S</h1>,,S,16,4,2,W,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,556,4097718,0.0-556.0,2,<h1 class='mono'>D</h1>,,D,17,4,2,Q,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,557,4099721,0.0-557.0,2,<h1 class='mono'>S</h1>,,S,18,4,2,S,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,558,4101724,0.0-558.0,2,<h1 class='mono'>D</h1>,,D,19,4,2,D,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,559,4103726,0.0-559.0,2,<h1 class='mono'>V</h1>,,V,20,4,2,S,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,560,4105729,0.0-560.0,2,<h1 class='mono'>V</h1>,,V,21,4,2,D,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,561,4107733,0.0-561.0,2,<h1 class='mono'>M</h1>,,M,22,4,2,V,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,562,4109736,0.0-562.0,2,<h1 class='mono'>B</h1>,,B,23,4,2,V,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,563,4111738,0.0-563.0,2,<h1 class='mono'>M</h1>,,M,24,4,2,M,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,564,4113741,0.0-564.0,2,<h1 class='mono'>N</h1>,,N,25,4,2,B,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,565,4115744,0.0-565.0,2,<h1 class='mono'>T</h1>,,T,26,4,2,M,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,566,4117746,0.0-566.0,2,<h1 class='mono'>K</h1>,,K,27,4,2,N,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,567,4119749,0.0-567.0,2,<h1 class='mono'>N</h1>,,N,28,4,2,T,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,568,4121752,0.0-568.0,2,<h1 class='mono'>G</h1>,,G,29,4,2,K,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,569,4123755,0.0-569.0,2,<h1 class='mono'>F</h1>,,F,30,4,2,N,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,570,4125758,0.0-570.0,2,<h1 class='mono'>G</h1>,,G,31,4,2,G,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,571,4127761,0.0-571.0,2,<h1 class='mono'>Z</h1>,,Z,32,4,2,F,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,572,4129763,0.0-572.0,2,<h1 class='mono'>H</h1>,,H,33,4,2,G,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,573,4131766,0.0-573.0,2,<h1 class='mono'>G</h1>,,G,34,4,2,Z,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,574,4133769,0.0-574.0,2,<h1 class='mono'>R</h1>,,R,35,4,2,H,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,575,4135772,0.0-575.0,2,<h1 class='mono'>C</h1>,,C,36,4,2,G,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,576,4137775,0.0-576.0,2,<h1 class='mono'>R</h1>,,R,37,4,2,R,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,577,4139778,0.0-577.0,2,<h1 class='mono'>W</h1>,,W,38,4,2,C,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,578,4141780,0.0-578.0,2,<h1 class='mono'>X</h1>,,X,39,4,2,R,0,0,No-input,,,,
+,,2-back-post,html-keyboard-response,579,4143783,0.0-579.0,2,<h1 class='mono'>W</h1>,,W,40,4,2,W,1,0,No-input,,,,
+,,2-back-post,html-keyboard-response,580,4145786,0.0-580.0,2,<h1 class='mono'>Q</h1>,,Q,41,4,2,X,0,0,No-input,,,,
+,,,fullscreen,581,4146788,0.0-581.0,2,,,,,,,,,,,,,,

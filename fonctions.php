@@ -237,3 +237,22 @@ function getSentencesPost($bdd){
     $req->closeCursor();
     return $sentences;
 }
+
+function insertRepSub($bdd, $sujet, $question, $reponse)
+{
+    $req = $bdd->prepare("INSERT INTO sub_reponses (id_sujet, id_question_sub, reponse_sub_sujet) VALUES (:s, :q, :r)");
+    $req->bindParam(':s', $sujet);
+    $req->bindParam(':q', $question);
+    $req->bindParam(':r', $reponse);
+    $req->execute();
+    $req->closeCursor();
+}
+
+function getMotiv($bdd, $s){
+    $req = $bdd->prepare("SELECT * FROM sub_reponses WHERE id_sujet = :s");
+    $req->bindParam(':s', $s);
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}
