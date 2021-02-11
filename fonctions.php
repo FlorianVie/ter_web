@@ -222,7 +222,8 @@ function get_2_back_main($bdd)
     return $comp;
 }
 
-function getSentencesPre($bdd){
+function getSentencesPre($bdd)
+{
     $req = $bdd->prepare("select * from sentences where id_sentences < 40");
     $req->execute();
     $sentences = $req->fetchAll();
@@ -230,7 +231,8 @@ function getSentencesPre($bdd){
     return $sentences;
 }
 
-function getSentencesPost($bdd){
+function getSentencesPost($bdd)
+{
     $req = $bdd->prepare("select * from sentences where id_sentences > 40");
     $req->execute();
     $sentences = $req->fetchAll();
@@ -248,8 +250,19 @@ function insertRepSub($bdd, $sujet, $question, $reponse)
     $req->closeCursor();
 }
 
-function getMotiv($bdd, $s){
+function getMotiv($bdd, $s)
+{
     $req = $bdd->prepare("SELECT * FROM sub_reponses WHERE id_sujet = :s");
+    $req->bindParam(':s', $s);
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}
+
+function getCompRep($bdd, $s)
+{
+    $req = $bdd->prepare("select id_sujet, comp_reponses.id_question, question, reponse_sujet, reponse, type from comp_reponses, comprehension where comp_reponses.id_sujet = :s and comp_reponses.id_question = comprehension.id_question;");
     $req->bindParam(':s', $s);
     $req->execute();
     $comp = $req->fetchAll();

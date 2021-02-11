@@ -19,6 +19,8 @@ $back2fa = getBack_2_subject_fa($bdd, $_GET['id']);
 $back2JSON = json_encode($back2);
 $timeouts = getTimeout($bdd, $_GET['id']);
 $motiv = getMotiv($bdd, $_GET['id']);
+$compRep = getCompRep($bdd, $_GET['id']);
+$compTotal = 0;
 ?>
 
 <script>
@@ -158,10 +160,56 @@ $motiv = getMotiv($bdd, $_GET['id']);
                         </tr>
                         </tbody>
                     </table>
-                </div>
-                <div class="column is-half">
+
                     <h2 class="subtitle">Motivation</h2>
                     <canvas id="motiv" height="200"></canvas>
+                </div>
+                <div class="column is-half">
+                    <h2 class="subtitle">Compréhension</h2>
+                    <table class="table is-half is-striped has-shadow">
+                        <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Question</th>
+                            <th>Réponse</th>
+                            <th>Points</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php for ($i = 0; $i < count($compRep); $i++) {
+                            ?>
+                            <tr>
+                                <td>
+                                    <?php echo $compRep[$i]['id_question']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $compRep[$i]['question']; ?>
+                                </td>
+                                <td>
+                                    <?php echo $compRep[$i]['reponse_sujet']; ?>
+                                </td>
+                                <td>
+                                    <?php
+                                    if ($compRep[$i]['reponse_sujet'] == $compRep[$i]['reponse']) {
+                                        echo 1;
+                                        $compTotal += 1;
+                                    } else {
+                                        echo 0;
+                                        $compTotal += 0;
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
+                            <?php
+                        } ?>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th colspan="3">Total (sur 16 points)</th>
+                            <th><?php echo $compTotal; ?></th>
+                        </tr>
+                        </tfoot>
+                    </table>
                 </div>
             </div>
         </div>
