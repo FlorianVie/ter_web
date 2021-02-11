@@ -16,12 +16,45 @@ $bdd = getBD();
 
 $back2 = get2backData($bdd);
 $headers = array_keys($back2[0]);
-
-$f_back2 = fopen("2-back.csv", "w");
+$f_back2 = fopen("data/CSV/2-back.csv", "w");
 fputcsv($f_back2, $headers);
-foreach ($back2 as $line){
+foreach ($back2 as $line) {
     fputcsv($f_back2, $line);
 }
+
+$t_back = getDataTexteBack($bdd);
+$t_back_headers = array_keys($t_back[0]);
+$f_t_back = fopen("data/CSV/texte-back.csv", "w");
+fputcsv($f_t_back, $t_back_headers);
+foreach ($t_back as $line) {
+    fputcsv($f_t_back, $line);
+}
+
+$t_rspan = getDataTexteRspan($bdd);
+$t_rspan_headers = array_keys($t_rspan[0]);
+$f_t_rspan = fopen("data/CSV/rspan-texte.csv", "w");
+fputcsv($f_t_rspan, $t_rspan_headers);
+foreach ($t_rspan as $line) {
+    fputcsv($f_t_rspan, $line);
+}
+
+$n_back = getDataMainBack($bdd);
+$n_back_headers = array_keys($n_back[0]);
+$f_n_back = fopen("data/CSV/nback-back.csv", "w");
+fputcsv($f_n_back, $n_back_headers);
+foreach ($n_back as $line) {
+    fputcsv($f_n_back, $line);
+}
+
+$n_rspan = getDataMainRspan($bdd);
+$n_rspan_headers = array_keys($n_rspan[0]);
+$f_n_rspan = fopen("data/CSV/rspan-prepost.csv", "w");
+fputcsv($f_n_rspan, $n_rspan_headers);
+foreach ($n_rspan as $line) {
+    fputcsv($f_n_rspan, $line);
+}
+
+
 ?>
 
 <body>
@@ -33,20 +66,68 @@ foreach ($back2 as $line){
             </h1>
             <div class="columns is-centered">
                 <div class="column is-narrow">
-                    <table class="table">
+                    <table class="table is-striped">
                         <thead>
                         <tr>
-                            <th>Type</th>
+                            <th>Groupe</th>
+                            <th>Données</th>
                             <th>Téléchargement</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>
-                                2-back
+                                N-Back
                             </td>
                             <td>
-                                <a href="2-back.csv">Télécharger</a>
+                                Entrainement
+                            </td>
+                            <td>
+                                <a href="data/CSV/2-back.csv">Télécharger</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                N-Back
+                            </td>
+                            <td>
+                                Retranscription
+                            </td>
+                            <td>
+                                <a href="data/CSV/texte-back.csv">Télécharger</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                N-Back
+                            </td>
+                            <td>
+                                Pre-Post
+                            </td>
+                            <td>
+                                <a href="data/CSV/nback-back.csv">Télécharger</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                RSPAN
+                            </td>
+                            <td>
+                                Retranscription
+                            </td>
+                            <td>
+                                <a href="data/CSV/rspan-texte.csv">Télécharger</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                RSPAN
+                            </td>
+                            <td>
+                                Pre-Post
+                            </td>
+                            <td>
+                                <a href="data/CSV/rspan-prepost.csv">Télécharger</a>
                             </td>
                         </tr>
                         </tbody>

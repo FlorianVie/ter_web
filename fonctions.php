@@ -269,3 +269,44 @@ function getCompRep($bdd, $s)
     $req->closeCursor();
     return $comp;
 }
+
+function getDataTexteBack($bdd)
+{
+    $req = $bdd->prepare("select subject_id, retransc, trial_index, rt from retran_nback where retran_nback.part = 'Retranscription'");
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}
+
+function getDataTexteRspan($bdd)
+{
+    $req = $bdd->prepare("select subject_id, retransc, trial_index, rt from retran_rspan where part = 'Retranscription'");
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}
+
+function getDataMainBack($bdd)
+{
+    $req = $bdd->prepare("select subject_id, part, trial_id, id_2_back, block_part, correct, response_type, rt, time_elapsed from retran_nback where part = '2-back-pre' or part = '2-back-post'");
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}
+
+function getDataMainRspan($bdd)
+{
+    $req = $bdd->prepare("select subject_id, trial_index, part, set_number, size, correct, rt, time_elapsed, letters_recalled, correct_letters
+                            from retran_rspan
+                            where part = 'sentence-pre'
+                            or part = 'recall-pre'
+                            or part = 'sentence-post'
+                            or part = 'recall-post';");
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}
