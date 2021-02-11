@@ -6,9 +6,10 @@ rspan_raw$rt <- as.numeric(rspan_raw$rt)
 recall <- rspan_raw %>%
   filter(part != 'sentence-pre') %>%
   filter(part != 'sentence-post') %>%
-  group_by(subject_id, part) %>%
+  group_by(subject_id, part, size) %>%
   summarise(
     correct_sum = sum(correct),
+    correct_mean = mean(correct),
     rt_mean = mean(rt)
   )
 
@@ -18,6 +19,7 @@ sentences <- rspan_raw %>%
   group_by(subject_id, part) %>%
   summarise(
     correct_sum = sum(correct),
+    correct_mean = mean(correct),
     rt_mean = mean(rt)
   )
 
