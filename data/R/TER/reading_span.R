@@ -1,46 +1,25 @@
 library(tidyverse)
-library(RMariaDB)
 
-# Connection BDD
-pw <- "Empereur1"
-storiesDb <- dbConnect(RMariaDB::MariaDB(), user='u485051925_experi', password=pw, dbname='u485051925_ter', host='sql200.main-hosting.eu')
-query <- paste("SELECT * FROM data")
-print(query)
-rs = dbSendQuery(storiesDb,query)
-data_raw <- dbFetch(rs)
+rspan_raw <- read.csv2('retran_rspan.csv', sep = ',')
+rspan_raw$rt <- as.numeric(rspan_raw$rt)
 
-
-data_raw$rt <- as.numeric(data_raw$rt)
-data_raw$correct <- as.numeric(data_raw$correct)
-
-sentences <- data_raw %>%
-  filter(part == "sentence")
-
-sentences_desc <- sentences %>%
-  group_by(subject, make_sense) %>%
+recall <- rspan_raw %>%
+  filter(part != 'sentence-pre') %>%
+  filter(part != 'sentence-post') %>%
+  group_by(subject_id, part) %>%
   summarise(
-    rt_mean = mean(rt, na.rm = TRUE),
-    correct_mean = mean(correct, na.rm = TRUE)
+    correct_sum = sum(correct),
+    rt_mean = mean(rt)
   )
 
-recall <- data_raw %>%
-  filter(part == "recall")
-
-recall_desc <- recall %>%
-  group_by(subject) %>%
+sentences <- rspan_raw %>%
+  filter(part != 'recall-pre') %>%
+  filter(part != 'recall-post') %>%
+  group_by(subject_id, part) %>%
   summarise(
-    rt_mean = mean(rt, na.rm = TRUE),
-    correct_mean = mean(correct, na.rm = TRUE)
+    correct_sum = sum(correct),
+    rt_mean = mean(rt)
   )
-
-
-
-
-
-
-
-
-
 
 
 
