@@ -310,3 +310,12 @@ function getDataMainRspan($bdd)
     $req->closeCursor();
     return $comp;
 }
+
+function getRspanTraining($bdd)
+{
+    $req = $bdd->prepare("select subject_id, part, correct, timeout_var, rt, time_elapsed from rspan_training");
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}

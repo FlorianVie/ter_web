@@ -54,6 +54,14 @@ foreach ($n_rspan as $line) {
     fputcsv($f_n_rspan, $line);
 }
 
+$tr_rspan = getRspanTraining($bdd);
+$tr_rspan_headers = array_keys($tr_rspan[0]);
+$f_tr_rspan = fopen("data/CSV/rspan-training.csv", "w");
+fputcsv($f_tr_rspan, $tr_rspan_headers);
+foreach ($tr_rspan as $line) {
+    fputcsv($f_tr_rspan, $line);
+}
+
 
 ?>
 
@@ -106,6 +114,17 @@ foreach ($n_rspan as $line) {
                             </td>
                             <td>
                                 <a href="data/CSV/nback-back.csv">Télécharger</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                RSPAN
+                            </td>
+                            <td>
+                                Entrainement
+                            </td>
+                            <td>
+                                <a href="data/CSV/rspan-training.csv">Télécharger</a>
                             </td>
                         </tr>
                         <tr>
