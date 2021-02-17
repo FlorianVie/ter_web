@@ -24,7 +24,7 @@ $questions = getComprehension($bdd);
             <div class="columns has-text-centered">
                 <div class="column">
                     <h1 class="title">
-                        Questions de compréhension
+                        Questions de motivation
                     </h1>
                     <h2 class="subtitle">
                         ID : <?php echo $subject['id_subject'] ?>
