@@ -68,10 +68,11 @@ $id_sujet = $_GET['id'];
         type: 'instructions',
         pages: ["<h1>Entrainement 0-Back</h1>",
             "<p>Dans cette tâche, une séquence de lettres s'affichera en continu.</p>" +
-            "<p>Appuyez sur la barre espace si la lettre affichée est la lettre <strong><span class='mono' style='font-size: 1.3em'>M</span></strong>.</p>",
-            "<p style='font-size: 1.3em'>Exemple : <span class='mono' >R, T, F, <strong>M</strong>, H</span> </p>" +
-            "<p>Ici, il faut appuyer sur la barre espace à chaque fois que la lettre <span class='mono' >M</span> s'affiche.</p>" +
-            "<p>Vous avez le temps d'appuyer sur la barre espace jusqu'à l'apparition de la lettre suivante, même si la dernière présentée disparait.</p>",
+            "<p>Appuyez sur la touche '<strong>O</strong>' si la lettre affichée est la lettre <strong class='mono'>M</strong>. Sinon appuyez sur la touche '<strong>E</strong>'.</p>",
+            "<p style='font-size: 1.3em'>Exemple : <span class='mono'>R, T, K, <strong>M</strong>, H</span> </p>" +
+            "<p>Ici, il faut appuyer sur la touche '<strong>O</strong>' lorsque la lettre <span class='mono'>M</span> s'affiche, et sur la touche '<strong>E</strong>' pour les autres lettres.</p>" +
+            "<p>Vous avez le temps d'appuyer sur les touches jusqu'à l'apparition de la lettre suivante, même si la dernière présentée disparait.</p>" +
+            "<p>Vous devez également appuyer sur les touches pour les premières lettres présentées.</p>",
             "<p>Appuyez sur 'Suivant' pour commencer ...</p>"],
         show_clickable_nav: true,
         data: {
@@ -79,6 +80,35 @@ $id_sujet = $_GET['id'];
         }
     }
     timeline.push(welcome);
+
+
+    var preparation_main_droite = {
+        type: 'html-keyboard-response',
+        stimulus: "<h1>Positionnement de la main droite</h1>" +
+            "<p>Placez l'index de votre <strong>main droite</strong> sur la touche '<strong>O</strong>'</p>" +
+            "<p>Vous devrez garder votre doigt en position durant toute la session.</p>" +
+            "<p>Lorsque vous êtes prêt appuyez sur la touche '<strong>O</strong>' pour continuer.</p>",
+        choices: [79],
+        post_trial_gap: 500,
+        data: {
+            part: "Preparation"
+        }
+    }
+    timeline.push(preparation_main_droite);
+
+    var preparation_main_gauche = {
+        type: 'html-keyboard-response',
+        stimulus: "<h1>Positionnement de la main gauche</h1>" +
+            "<p>Placez l'index de votre <strong>main gauche</strong> sur la touche '<strong>E</strong>'</p>" +
+            "<p>Vous devrez garder votre doigt en position durant toute la session.</p>" +
+            "<p>Lorsque vous êtes prêt appuyez sur la touche '<strong>E</strong>' pour commencer la tâche.</p>",
+        choices: [69],
+        data: {
+            part: "Preparation"
+        }
+    }
+    timeline.push(preparation_main_gauche);
+
 
     var prepause = {
         type: 'html-keyboard-response',
@@ -100,23 +130,51 @@ $id_sujet = $_GET['id'];
         stimulus: "<h1 class='mono'><?php echo $back_0[$i] ?></h1>",
         stimulus_duration: 500,
         trial_duration: 2000,
-        choices: [32],
+        choices: [69, 79],
         response_ends_trial: false,
         data: {
             letter: "<?php echo $back_0[$i] ?>",
             trial_id: "<?php echo $i ?>"
         },
         on_finish: function (data) {
-            if (data.key_press === 32 && data.letter === 'M') {
-                data.correct = 1;
+            if (data.letter === 'M') {
                 data.is_target = 1;
-            } else {
-                data.correct = 0;
-                data.is_target = 0;
+                console.log('Target', data.letter);
             }
-            if (data.key_press !== 32 && data.letter !== 'M') {
-                data.correct = 1;
+            if (data.letter !== 'M') {
                 data.is_target = 0;
+                console.log('Non-target', data.letter);
+            }
+
+            // Target
+            if (data.key_press === 79 && data.letter === 'M') {
+                data.correct = 1;
+                data.response_type = "Target";
+                console.log(data.key_press, 'Correct');
+            }
+            // Mismatch
+            if (data.key_press === 69 && data.letter === 'M') {
+                data.correct = 0;
+                data.response_type = "Mismatch";
+                console.log(data.key_press, 'Incorrect: Mismatch');
+            }
+            // False-alarm
+            if (data.key_press === 79 && data.letter !== 'M') {
+                data.correct = 0;
+                data.response_type = "False-alarm";
+                console.log(data.key_press, 'Incorrect: False-alarm');
+            }
+            // Non-target
+            if (data.key_press === 69 && data.letter !== 'M') {
+                data.correct = 1;
+                data.response_type = "Non-target";
+                console.log(data.key_press, 'Correct');
+            }
+            // No input
+            if (data.key_press === null) {
+                data.correct = 0;
+                data.response_type = "No-input";
+                console.log(data.key_press, 'Incorrect: no input');
             }
         }
     }
