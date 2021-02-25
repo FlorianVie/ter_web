@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tâche Principale</title>
+    <title>Tâche Principale - RSPAN</title>
     <script src="jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/8.1.1/math.js"></script>
     <script src="jspsych.js"></script>
@@ -22,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/jspsych.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/thinking.svg">
 </head>
 
 <script>
@@ -353,7 +354,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
 
     var retranscription = {
         type: 'survey-html-form',
-        html: '<h1>Retrancription :</h1>' +
+        html: '<h1>Retranscription :</h1>' +
             '<p><textarea name="rep" id="test-resp-box" cols="40" rows="10" style="font-family: sans-serif; font-size: 1.3em" ></textarea></p>',
         autofocus: 'test-resp-box',
         button_label: "",

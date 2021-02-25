@@ -5,11 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>2-back entrainement</title>
+    <title>2-Back Entrainement</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/jspsych.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/thinking.svg">
     <script src="jspsych.js"></script>
     <script src="plugins/jspsych-instructions.js"></script>
     <script src="plugins/jspsych-html-keyboard-response.js"></script>

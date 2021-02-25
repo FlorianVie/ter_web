@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../bulma/css/bulma.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/thinking.svg">
     <title>Compréhension</title>
 </head>
 

@@ -6,22 +6,25 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="bulma/css/bulma.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/thinking.svg">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-    <title>TER</title>
+
+    <?php
+    include 'fonctions.php';
+    $bdd = getBD();
+    $subject = getSubject($bdd, $_GET['id']);
+    $back2 = getBack_2_subject($bdd, $_GET['id']);
+    $back2fa = getBack_2_subject_fa($bdd, $_GET['id']);
+    $back2JSON = json_encode($back2);
+    $timeouts = getTimeout($bdd, $_GET['id']);
+    $motiv = getMotiv($bdd, $_GET['id']);
+    $compRep = getCompRep($bdd, $_GET['id']);
+    $compTotal = 0;
+    ?>
+
+    <title>TER - Participant <?php echo $subject[0] ?></title>
 </head>
 
-<?php
-include 'fonctions.php';
-$bdd = getBD();
-$subject = getSubject($bdd, $_GET['id']);
-$back2 = getBack_2_subject($bdd, $_GET['id']);
-$back2fa = getBack_2_subject_fa($bdd, $_GET['id']);
-$back2JSON = json_encode($back2);
-$timeouts = getTimeout($bdd, $_GET['id']);
-$motiv = getMotiv($bdd, $_GET['id']);
-$compRep = getCompRep($bdd, $_GET['id']);
-$compTotal = 0;
-?>
 
 <script>
     var back2 = <?php echo $back2JSON ?>;

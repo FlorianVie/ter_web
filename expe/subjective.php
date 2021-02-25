@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../bulma/css/bulma.css">
     <link rel="stylesheet" href="css/custom.css">
-    <title>Compréhension</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/thinking.svg">
+    <title>Motivation</title>
 </head>
 
 <?php
