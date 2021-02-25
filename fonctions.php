@@ -319,3 +319,15 @@ function getRspanTraining($bdd)
     $req->closeCursor();
     return $comp;
 }
+
+function updatePart($bdd, $id, $angl, $frap, $age, $sexe)
+{
+    $req = $bdd->prepare("UPDATE subjects SET oxford = :ang, typing_speed = :frap, age = :age, sexe = :sexe WHERE id_subject = :id");
+    $req->bindParam(':id', $id);
+    $req->bindParam(':ang', $angl);
+    $req->bindParam(':frap', $frap);
+    $req->bindParam(':age', $age);
+    $req->bindParam(':sexe', $sexe);
+    $req->execute();
+    $req->closeCursor();
+}

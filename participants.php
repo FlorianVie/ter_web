@@ -29,9 +29,9 @@ $subjects = getAllSubjects($bdd);
                         <thead>
                         <tr>
                             <th>ID Participant</th>
-                            <th>Compteur 1-Back</th>
-                            <th>Compteur 2-Back</th>
-                            <th>Oxford</th>
+                            <!--<th>Compteur 1-Back</th>
+                            <th>Compteur 2-Back</th>-->
+                            <th>Anglais</th>
                             <th>Vitesse frappe</th>
                             <th>Age</th>
                             <th>Sexe</th>
@@ -43,9 +43,9 @@ $subjects = getAllSubjects($bdd);
                         for ($i = 0; $i < count($subjects); $i++) {
                             ?>
                             <tr>
-                                <td><?php echo $subjects[$i][0] ?></td>
-                                <td><?php echo $subjects[$i][1] ?></td>
-                                <td><?php echo $subjects[$i][2] ?></td>
+                                <th><?php echo $subjects[$i][0] ?></th>
+                                <!--<td><?php /*echo $subjects[$i][1] */?></td>
+                                <td><?php /*echo $subjects[$i][2] */?></td>-->
                                 <td><?php echo $subjects[$i][3] ?></td>
                                 <td><?php echo $subjects[$i][4] ?></td>
                                 <td><?php echo $subjects[$i][5] ?></td>

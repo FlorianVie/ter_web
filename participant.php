@@ -164,6 +164,62 @@
                         </tbody>
                     </table>
 
+                    <h2 class="subtitle">Données complémentaires</h2>
+                    <form action="part-update.php" method="post" style="margin-bottom: 40px">
+                        <table class="table is-half is-striped has-shadow">
+                            <thead>
+                            <tr>
+                                <th>Données</th>
+                                <th>Valeurs</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    Identifiant
+                                </td>
+                                <td>
+                                    <?php echo $subject[0]?>
+                                    <input name="id" class="input" type="hidden" value="<?php echo $subject[0]?>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Anglais
+                                </td>
+                                <td>
+                                    <input name="angl" class="input" type="number" value="<?php echo $subject[3] ?>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Frappe
+                                </td>
+                                <td>
+                                    <input name="frap" class="input" type="number" value="<?php echo $subject[4] ?>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Age
+                                </td>
+                                <td>
+                                    <input name="age" class="input" type="number" value="<?php echo $subject[5] ?>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Sexe
+                                </td>
+                                <td>
+                                    <input name="sexe" class="input" type="text" value="<?php echo $subject[6] ?>">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" class="button is-primary">Modifier</button>
+                    </form>
+
                     <h2 class="subtitle">Motivation</h2>
                     <canvas id="motiv" height="200"></canvas>
                 </div>
