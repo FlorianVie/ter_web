@@ -35,6 +35,7 @@ $subjects = getAllSubjects($bdd);
                             <th>Vitesse frappe</th>
                             <th>Age</th>
                             <th>Sexe</th>
+                            <th>Groupe</th>
                             <th></th>
                         </tr>
                         </thead>
@@ -50,6 +51,7 @@ $subjects = getAllSubjects($bdd);
                                 <td><?php echo $subjects[$i][4] ?></td>
                                 <td><?php echo $subjects[$i][5] ?></td>
                                 <td><?php echo $subjects[$i][6] ?></td>
+                                <td><?php echo $subjects[$i][7] ?></td>
                                 <td><a href="participant.php?id=<?php echo $subjects[$i][0] ?>"><button class="button">Gérer</button></a></td>
                             </tr>
                             <?php

@@ -215,6 +215,21 @@
                                     <input name="sexe" class="input" type="text" value="<?php echo $subject[6] ?>">
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    Groupe
+                                </td>
+                                <td>
+                                    <div class="select">
+                                        <select name="groupe" id="grp">
+                                            <option value="Principal N-Back">Principal N-Back</option>
+                                            <option value="Principal RSPAN">Principal RSPAN</option>
+                                            <option value="Controle N-Back">Controle N-Back</option>
+                                            <option value="Controle RSPAN">Controle RSPAN</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
                             </tbody>
                         </table>
                         <button type="submit" class="button is-primary">Modifier</button>
