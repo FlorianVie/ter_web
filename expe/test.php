@@ -32,6 +32,27 @@ shuffle($letters);
     // timeline creation
     var timeline = [];
 
+    var retranscription = {
+        type: 'survey-html-form',
+        html: '<h1>Vos notes :</h1>' +
+            '<p><textarea name="rep" id="test-resp-box" cols="40" rows="10" style="font-family: sans-serif; font-size: 1.3em"></textarea></p>',
+        autofocus: 'test-resp-box',
+        button_label: "",
+        data: {
+            part: "Retranscription",
+        },
+        on_start: function () {
+            jsPsych.pluginAPI.setTimeout(function () {
+                document.getElementById("jspsych-survey-html-form-next").click();
+            }, <?php echo (intval($audio[$i]['duree']) * 2.5) * 1000 ?>);
+        },
+        on_finish: function (data) {
+            data.retransc = JSON.parse(data.responses).rep;
+            console.log(data.retransc);
+        }
+    }
+    timeline.push(retranscription)
+
     var recall = {
         type: 'button-response-grid',
         stimulus: 'TEST',
