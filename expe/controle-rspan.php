@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tâche Principale - RSPAN</title>
+    <title>Tâche Écoute - RSPAN</title>
     <script src="jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/8.1.1/math.js"></script>
     <script src="jspsych.js"></script>

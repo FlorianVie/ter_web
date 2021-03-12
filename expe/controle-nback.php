@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tâche Principale - N-Back</title>
+    <title>Tâche Écoute - N-Back</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/jspsych.css">
@@ -64,6 +64,11 @@ unset($block2[42]);
 unset($block3[42]);
 unset($block4[42]);
 
+#print_r($block1);
+#print_r($block2);
+#print_r($block3);
+#print_r($block4);
+
 #$block1 = ['1', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
 #$block2 = ['2', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
 #$block3 = ['3', 'F', 'T', 'F', 'S', 'R', 'S', 'F'];
@@ -73,13 +78,13 @@ unset($block4[42]);
 
 <script>
     var block1 = <?php echo json_encode($block1) ?>;
-    console.log(block1);
+    console.log("Block 1 :", block1);
     var block2 = <?php echo json_encode($block2) ?>;
-    console.log(block2);
+    console.log("Block 2 :", block2);
     var block3 = <?php echo json_encode($block3) ?>;
-    console.log(block2);
+    console.log("Block 3 :", block3);
     var block4 = <?php echo json_encode($block4) ?>;
-    console.log(block2);
+    console.log("Block 4 :", block4);
 
     var timeline = [];
 
