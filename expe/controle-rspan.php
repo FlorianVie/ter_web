@@ -294,7 +294,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
         "<p>Cette tâche consiste à écouter le discours que vous entendrez.</p>" +
         "<p>Deux phases alternent durant la tâche : une phase d'écoute et une pause.</p>" +
         "<p>Durant les phases d'écoute, vous entendrez une portion de la conférence audio.</p>" +
-        "<p>Durant les phases de pause, vous pourrrez prendre des notes si vous le souhaitez dans la zone prévue à cet effet.</p>" +
+        "<p>Durant les phases de pause, vous pourrrez prendre des notes si vous le souhaitez et si vous en avez le besoin dans la zone prévue à cet effet.</p>" +
         "<p>Les pauses sont calibrées pour durer un certain temps, lorsque celles-ci seront écoulées, le programme bascule automatiquement sur une nouvelle phase d'écoute.</p>" +
         "<p>Les notes qui vous prennez disparaissent durant la phase d'écoute et reviennent durant les pauses.</p>",
             "<p>Voici un exemple de la zone dans laquelle vous pourrez prendre des notes :</p>" +
@@ -302,7 +302,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             "<p>Vous pouvez essayer de taper du texte pour essayer si cela fonctionne.</p>" +
             "<p>Le curseur sera automatiquement placé dans la zone de texte, vous n'aurez pas besoin d'utiliser votre souris.</p>",
             "<h2>Attention !</h2>" +
-            "<p>Lorsque la tâche de retranscription sera terminée, une deuxième tâche Reading Span démarrera automatiquement.</p>",
+            "<p>Lorsque la tâche d'écoute sera terminée, une deuxième tâche Reading Span démarrera automatiquement.</p>",
             "<p>Appuyez sur 'Suivant' pour commencer ...</p>"],
         show_clickable_nav: true,
         data: {
@@ -354,7 +354,7 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
 
     var retranscription = {
         type: 'survey-html-form',
-        html: '<h1>Retranscription :</h1>' +
+        html: '<h1>Vos notes :</h1>' +
             '<p><textarea name="rep" id="test-resp-box" cols="40" rows="10" style="font-family: sans-serif; font-size: 1.3em" ></textarea></p>',
         autofocus: 'test-resp-box',
         button_label: "",

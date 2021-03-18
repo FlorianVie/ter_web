@@ -128,7 +128,7 @@ unset($block4[42]);
         "<p>Vous devez également appuyer sur les touches pour les premières lettres présentées.</p>",
             "<h2>Attention !</h2>" +
             "<p>Cette tâche se déroule en deux parties qui s'enchainent avec 3 secondes d'intervalle.</p>" +
-            "<p>Il en va de même vour la tâche après la retranscription.</p>",
+            "<p>Il en va de même vour la tâche après l'écoute de la conférence'.</p>",
             "<p>Appuyez sur 'Suivant' pour commencer ...</p>"],
         show_clickable_nav: true,
         data: {
@@ -342,7 +342,7 @@ unset($block4[42]);
         "<p>Cette tâche consiste à écouter le discours que vous entendrez.</p>" +
         "<p>Deux phases alternent durant la tâche : une phase d'écoute et une pause.</p>" +
         "<p>Durant les phases d'écoute, vous entendrez une portion de la conférence audio.</p>" +
-        "<p>Durant les phases de pause, vous pourrrez prendre des notes si vous le souhaitez dans la zone prévue à cet effet.</p>" +
+        "<p>Durant les phases de pause, vous pourrrez prendre des notes si vous le souhaitez et si vous en avez le besoin dans la zone prévue à cet effet.</p>" +
         "<p>Les pauses sont calibrées pour durer un certain temps, lorsque celles-ci seront écoulées, le programme bascule automatiquement sur une nouvelle phase d'écoute.</p>" +
         "<p>Les notes qui vous prennez disparaissent durant la phase d'écoute et reviennent durant les pauses.</p>",
             "<p>Voici un exemple de la zone dans laquelle vous pourrez prendre des notes :</p>" +
