@@ -302,7 +302,9 @@ $main_sizes = [4, 4, 5, 5, 6, 6];
             "<p>Vous pouvez essayer de taper du texte pour essayer si cela fonctionne.</p>" +
             "<p>Le curseur sera automatiquement placé dans la zone de texte, vous n'aurez pas besoin d'utiliser votre souris.</p>",
             "<h2>Attention !</h2>" +
-            "<p>Lorsque la tâche d'écoute sera terminée, une deuxième tâche Reading Span démarrera automatiquement.</p>",
+            "<p>Lorsque la tâche d'écoute sera terminée, une deuxième tâche 2-back démarrera automatiquement.</p>" +
+            "<p>A la toute fin de la session, l'expérimentateur vous demandera de répondre à des questions de compréhension sur la conférence. </p>" +
+            "<p>Vous n'aurez pas accès à vos notes, pour répondre aux questions. La prise de note est là pour vous aider durant l'écoute si vous en avez besoin.</p>",
             "<p>Appuyez sur 'Suivant' pour commencer ...</p>"],
         show_clickable_nav: true,
         data: {
