@@ -56,6 +56,16 @@ function getSubject($bdd, $id)
     return $subject[0];
 }
 
+function getSubjectFR($bdd, $id)
+{
+    $req = $bdd->prepare("SELECT * FROM subjects_fr WHERE subjects_fr.id_subject = :id");
+    $req->bindParam(':id', $id);
+    $req->execute();
+    $subject = $req->fetchAll();
+    $req->closeCursor();
+    return $subject[0];
+}
+
 function getBack_1($bdd, $id)
 {
     $req = $bdd->prepare("SELECT * FROM 1_back WHERE id_1_back = :id");
@@ -130,6 +140,15 @@ function getAllSubjects($bdd)
     return $subject;
 }
 
+function getAllSubjectsFR($bdd)
+{
+    $req = $bdd->prepare("SELECT * FROM subjects_fr");
+    $req->execute();
+    $subject = $req->fetchAll();
+    $req->closeCursor();
+    return $subject;
+}
+
 function insertSubject($bdd)
 {
     $req = $bdd->prepare("INSERT INTO subjects VALUES ()");
@@ -140,6 +159,16 @@ function insertSubject($bdd)
 function getAudio($bdd)
 {
     $req = $bdd->prepare("SELECT * FROM duree");
+    #$req = $bdd->prepare("SELECT * FROM duree LIMIT 3");
+    $req->execute();
+    $audio = $req->fetchAll();
+    $req->closeCursor();
+    return $audio;
+}
+
+function getAudioFR($bdd)
+{
+    $req = $bdd->prepare("SELECT * FROM audioFR");
     #$req = $bdd->prepare("SELECT * FROM duree LIMIT 3");
     $req->execute();
     $audio = $req->fetchAll();
@@ -325,6 +354,18 @@ function updatePart($bdd, $id, $angl, $frap, $age, $sexe, $groupe)
     $req = $bdd->prepare("UPDATE subjects SET oxford = :ang, typing_speed = :frap, age = :age, sexe = :sexe, groupe = :groupe WHERE id_subject = :id");
     $req->bindParam(':id', $id);
     $req->bindParam(':ang', $angl);
+    $req->bindParam(':frap', $frap);
+    $req->bindParam(':age', $age);
+    $req->bindParam(':sexe', $sexe);
+    $req->bindParam(':groupe', $groupe);
+    $req->execute();
+    $req->closeCursor();
+}
+
+function updatePartFR($bdd, $id, $frap, $age, $sexe, $groupe)
+{
+    $req = $bdd->prepare("UPDATE subjects_fr SET typing_speed = :frap, age = :age, sexe = :sexe, groupe = :groupe WHERE id_subject = :id");
+    $req->bindParam(':id', $id);
     $req->bindParam(':frap', $frap);
     $req->bindParam(':age', $age);
     $req->bindParam(':sexe', $sexe);

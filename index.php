@@ -20,7 +20,14 @@
             <div class="columns">
                 <div class="column">
                     <a href="participants.php">
-                        <button class="button">Participants</button>
+                        <button class="button">Participants - Conf EN</button>
+                    </a>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <a href="participants-fr.php">
+                        <button class="button">Participants - Conf FR</button>
                     </a>
                 </div>
             </div>
