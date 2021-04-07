@@ -156,6 +156,13 @@ function insertSubject($bdd)
     $req->closeCursor();
 }
 
+function insertSubjectFR($bdd)
+{
+    $req = $bdd->prepare("INSERT INTO subjects_fr VALUES ()");
+    $req->execute();
+    $req->closeCursor();
+}
+
 function getAudio($bdd)
 {
     $req = $bdd->prepare("SELECT * FROM duree");
@@ -168,8 +175,8 @@ function getAudio($bdd)
 
 function getAudioFR($bdd)
 {
-    $req = $bdd->prepare("SELECT * FROM audioFR");
-    #$req = $bdd->prepare("SELECT * FROM duree LIMIT 3");
+    $req = $bdd->prepare("SELECT * FROM audiofr");
+    #$req = $bdd->prepare("SELECT * FROM audiofr LIMIT 3");
     $req->execute();
     $audio = $req->fetchAll();
     $req->closeCursor();
@@ -194,9 +201,28 @@ function getComprehension($bdd)
     return $comp;
 }
 
+function getComprehensionFR($bdd)
+{
+    $req = $bdd->prepare("SELECT * FROM comprehension_fr");
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}
+
 function insertRepComp($bdd, $sujet, $question, $reponse)
 {
     $req = $bdd->prepare("INSERT INTO comp_reponses (id_sujet, id_question, reponse_sujet) VALUES (:s, :q, :r)");
+    $req->bindParam(':s', $sujet);
+    $req->bindParam(':q', $question);
+    $req->bindParam(':r', $reponse);
+    $req->execute();
+    $req->closeCursor();
+}
+
+function insertRepCompFR($bdd, $sujet, $question, $reponse)
+{
+    $req = $bdd->prepare("INSERT INTO comp_reponses_fr (id_sujet, id_question, reponse_sujet) VALUES (:s, :q, :r)");
     $req->bindParam(':s', $sujet);
     $req->bindParam(':q', $question);
     $req->bindParam(':r', $reponse);
@@ -292,6 +318,16 @@ function getMotiv($bdd, $s)
 function getCompRep($bdd, $s)
 {
     $req = $bdd->prepare("select id_sujet, comp_reponses.id_question, question, reponse_sujet, reponse, type from comp_reponses, comprehension where comp_reponses.id_sujet = :s and comp_reponses.id_question = comprehension.id_question;");
+    $req->bindParam(':s', $s);
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}
+
+function getCompRepFR($bdd, $s)
+{
+    $req = $bdd->prepare("select id_sujet, comp_reponses_fr.id_question, question, reponse_sujet, reponse from comp_reponses_fr, comprehension_fr where comp_reponses_fr.id_sujet = :s and comp_reponses_fr.id_question = comprehension_fr.id_question;");
     $req->bindParam(':s', $s);
     $req->execute();
     $comp = $req->fetchAll();

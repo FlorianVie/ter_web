@@ -22,7 +22,7 @@
 <script>
     function saveData() {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'write_data_fr_adapt.php'); // change 'write_data.php' to point to php script.
+        xhr.open('POST', 'write_data_fr_control.php'); // change 'write_data.php' to point to php script.
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.onload = function () {
             if (xhr.status == 200) {
@@ -44,7 +44,6 @@
 <body></body>
 
 <?php
-// TODO Instructions
 include '../fonctions.php';
 $bdd = getBD();
 $id_sujet = $_GET['id'];
@@ -68,40 +67,31 @@ $audio = getAudioFR($bdd);
         type: 'instructions',
         pages: ["<h1>Tâche de retranscription</h1>",
             "<h1>Présentation</h1>" +
-            "<p>Dans cette session, vous allez effectuer un tâche de retranscription d'une conférence en anglais.</p>" +
-            "<p>La durée totale de la tâche de retranscription est d'envirion 30 minutes.</p>" +
-            "<p>Avant de débuter la retranscription, vous effecturez une tâche 2-back similaire à la session d'entrainement.</p>" +
-            "<p>A la fin de la retranscription, une deuxième tâche 2-back démarrera automatiquement.</p>",
+            "<p>Dans cette session, vous allez effectuer un tâche de retranscription d'une conférence en français.</p>" +
+            "<p>La durée totale de la tâche de retranscription est d'environ 12 minutes.</p>",
             "<h2>Vérification du son</h2>" +
             "<p>En appuyant sur le bouton, entendez vous du son ?</p>" +
             "<button class='jspsych-btn' type='button' onclick='playAudio()' >Tester le son</button>" +
-            "<p>Si vous entendez le 'beep', vous pouvez continuer, sinon prevenez l'expérimentateur.</p>"],
-        show_clickable_nav: true,
-        data: {
-            part: "instruction",
-        }
-    }
-    timeline.push(instruction_start);
-
-    var instruction_nback = {
-        type: 'instructions',
-        pages: ["<h1>2-Back</h1>" +
-        "<p>Dans cette tâche, une séquence de lettres s'affichera en continu.</p>" +
-        "<p>Appuyez sur la touche 'O' si la lettre affichée est la même que l'avant-dernière. Si elle est différente, appuyez sur la touche 'E'.</p>" +
-        "<p style='font-size: 1.3em'>Exemple : <span class='mono' >R, T, F, <strong>T</strong>, H</span> </p>" +
-        "<p>Ici, il faut appuyer sur la touche 'O' lorsque la lettre <span class='mono'>T</span> s'affiche pour la deuxième fois et appuyer sur la touche 'E' pour les autres lettres.</p>" +
-        "<p>Vous avez le temps d'appuyer sur les touches jusqu'à l'apparition de la lettre suivante, même si la dernière présentée disparait.</p>" +
-        "<p>Vous devez également appuyer sur les touches pour les premières lettres présentées.</p>",
+            "<p>Si vous entendez le 'beep', vous pouvez continuer, sinon prevenez l'expérimentateur.</p>",
+            "<h2>Instructions</h2>" +
+            "<p>Cette expérience consiste à retranscrire le discours que vous entendez.</p>" +
+            "<p>Deux phases alternent durant la tâche : une phase d'écoute et une phase de retranscription.</p>" +
+            "<p>Durant les phases d'écoute, vous entendrez une portion d'une conférence audio.</p>" +
+            "<p>Durant les phases de retranscription, vous devrez retranscrire les paroles que vous avez entendu le plus fidèlement possible.</p>" +
+            "<p>La phase de retranscription est calibrée pour durer un certain temps, lorsque celui-ci sera écoulé, le programme bascule automatiquement sur une nouvelle phase d'écoute.</p>" +
+            "<p>Si vous n'avez pas réussi à finir de taper votre texte, ne vous en faites pas, il sera tout de même pris en compte.</p>",
+            "<p>Voici un exemple de la zone dans laquelle vous pourrez retranscrire le discours :</p>" +
+            "<p><textarea name='rep-instr' id='test-instr-box' cols='40' rows='10' style='font-family: sans-serif; font-size: 1.3em' ></textarea></p>" +
+            "<p>Vous pouvez essayer de taper du texte pour vérifier si cela fonctionne.</p>" +
+            "<p>Le curseur sera automatiquement placé dans la zone de texte, vous n'aurez pas besoin d'utiliser votre souris.</p>",
             "<h2>Attention !</h2>" +
-            "<p>Cette tâche se déroule en deux parties qui s'enchainent avec 3 secondes d'intervalle.</p>" +
-            "<p>Il en va de même vour la tâche après la retranscription.</p>",
             "<p>Appuyez sur 'Suivant' pour commencer ...</p>"],
         show_clickable_nav: true,
         data: {
             part: "instruction",
         }
     }
-    timeline.push(instruction_nback);
+    timeline.push(instruction_start);
 
     var prepause = {
         type: 'html-keyboard-response',
@@ -116,35 +106,11 @@ $audio = getAudioFR($bdd);
             part: "Pause"
         }
     }
-    timeline.push(prepause);
 
 
     // ---------------------------------------
     // RETRANSCRIPTION
     // ---------------------------------------
-
-    var instruction_retran = {
-        type: 'instructions',
-        pages: ["<h1>Tâche de retranscription</h1>" +
-        "<p>Cette tâche consiste à retranscrire le discours que vous entendez.</p>" +
-        "<p>Deux phases alternent durant la tâche : une phase d'écoute et une phase de retranscription.</p>" +
-        "<p>Durant les phases d'écoute, vous entendrez une portion de la conférence audio.</p>" +
-        "<p>Durant les phases de retranscription, vous devrez retranscrire les paroles que vous avez entendu.</p>" +
-        "<p>La phase de retranscription est calibrée pour durer un certain temps, lorsque celui-ci sera écoulé, le programme bascule automatiquement sur une nouvelle phase d'écoute.</p>" +
-        "<p>Si vous n'avez pas réussi à finir de taper votre texte, ne vous en faites pas, il sera tout de même pris en compte.</p>",
-            "<p>Voici un exemple de la zone dans laquelle vous pourrez retranscrire le discours :</p>" +
-            "<p><textarea name='rep-instr' id='test-instr-box' cols='40' rows='10' style='font-family: sans-serif; font-size: 1.3em' ></textarea></p>" +
-            "<p>Vous pouvez essayer de taper du texte pour essayer si cela fonctionne.</p>" +
-            "<p>Le curseur sera automatiquement placé dans la zone de texte, vous n'aurez pas besoin d'utiliser votre souris.</p>",
-            "<h2>Attention !</h2>" +
-            "<p>Lorsque la tâche de retranscription sera terminée, une deuxième tâche 2-back démarrera automatiquement.</p>",
-            "<p>Appuyez sur 'Suivant' pour commencer ...</p>"],
-        show_clickable_nav: true,
-        data: {
-            part: "instruction",
-        }
-    }
-    timeline.push(instruction_retran);
 
     timeline.push(prepause)
 
@@ -221,11 +187,10 @@ $audio = getAudioFR($bdd);
     jsPsych.init({
         timeline: timeline,
         show_progress_bar: true,
-        //TODO activer enregistrement
-        //on_finish: saveData
-        on_finish: function () {
+        on_finish: saveData
+        /*on_finish: function () {
             jsPsych.data.displayData('csv');
-        }
+        }*/
     })
 
 

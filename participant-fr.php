@@ -19,7 +19,7 @@
     $bdd = getBD();
     $subject = getSubjectFR($bdd, $_GET['id']);
     $motiv = getMotiv($bdd, $_GET['id']);
-    $compRep = getCompRep($bdd, $_GET['id']);
+    $compRep = getCompRepFR($bdd, $_GET['id']);
     $compTotal = 0;
     ?>
 
@@ -54,7 +54,7 @@
                         </tr>
                         <tr>
                             <td>
-                                Groupe Transcription
+                                Groupe Adaptation
                             </td>
                             <td>
                                 <a href="expe/transcription-fr.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/transcription-fr.php?id=<?php echo $subject[0] ?></a>
@@ -87,7 +87,7 @@
                                 Compréhension
                             </td>
                             <td>
-                                <a href="expe/comprehension.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/comprehension.php?id=<?php echo $subject[0] ?></a>
+                                <a href="expe/comprehension-fr.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/comprehension-fr.php?id=<?php echo $subject[0] ?></a>
                             </td>
                         </tr>
                         <tr>
@@ -95,7 +95,7 @@
                                 Motivation
                             </td>
                             <td>
-                                <a href="expe/subjective.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/subjective.php?id=<?php echo $subject[0] ?></a>
+                                <a href="expe/subjective-fr.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/subjective-fr.php?id=<?php echo $subject[0] ?></a>
                             </td>
                         </tr>
                         </tbody>
@@ -166,8 +166,8 @@
                                 <td>
                                     <div class="select">
                                         <select name="groupe" id="grp">
-                                            <option value="transcription">Transcription</option>
-                                            <option value="controle">Controle</option>
+                                            <option value="Adaptation">Adaptation</option>
+                                            <option value="Controle">Controle</option>
                                         </select>
                                     </div>
                                 </td>
@@ -224,7 +224,7 @@
                         </tbody>
                         <tfoot>
                         <tr>
-                            <th colspan="3">Total (sur 16 points)</th>
+                            <th colspan="3">Total (sur 10 points)</th>
                             <th><?php echo $compTotal; ?></th>
                         </tr>
                         </tfoot>

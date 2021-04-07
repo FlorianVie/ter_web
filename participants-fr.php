@@ -61,7 +61,7 @@ $subjects = getAllSubjectsFR($bdd);
             </div>
             <div class="columns">
                 <div class="column">
-                    <a href="n-part.php">
+                    <a href="n-part-fr.php">
                         <button class="button">Nouveau participant</button>
                     </a>
                 </div>
