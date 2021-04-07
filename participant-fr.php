@@ -1,4 +1,3 @@
-<!--TODO Questionnaire de comprehension-->
 <!--TODO Questionnaire de motivation-->
 <!--TODO Panneau de resultats-->
 <!--TODO Modificateur du temps de pause-->
