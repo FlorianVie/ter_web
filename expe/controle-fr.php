@@ -78,6 +78,7 @@ $audio = getAudioFR($bdd);
             "<p>Deux phases alternent durant la tâche : une phase d'écoute et une phase de retranscription.</p>" +
             "<p>Durant les phases d'écoute, vous entendrez une portion d'une conférence audio.</p>" +
             "<p>Durant les phases de retranscription, vous devrez retranscrire les paroles que vous avez entendu le plus fidèlement possible.</p>" +
+            "<p>Il n'est pas nécessaire de retranscrire la ponctuation.</p>" +
             "<p>La phase de retranscription est calibrée pour durer un certain temps, lorsque celui-ci sera écoulé, le programme bascule automatiquement sur une nouvelle phase d'écoute.</p>" +
             "<p>Si vous n'avez pas réussi à finir de taper votre texte, ne vous en faites pas, il sera tout de même pris en compte.</p>",
             "<p>Voici un exemple de la zone dans laquelle vous pourrez retranscrire le discours :</p>" +
@@ -149,7 +150,7 @@ $audio = getAudioFR($bdd);
             audio_file: "<?php echo $audio[$i]['fichier'] ?>"
         },
         on_start: function () {
-            console.log("Audio : <?php echo $audio[$i]['fichier'] ?>", <?php echo $audio[$i]['duree'] ?>, <?php echo (floatval($audio[$i]['duree']) * 2.5) ?>)
+            console.log("Audio : <?php echo $audio[$i]['fichier'] ?>", <?php echo $audio[$i]['duree'] ?>, <?php echo (floatval($audio[$i]['duree']) * 3) ?>)
         }
     };
     timeline.push(audio);
@@ -166,7 +167,7 @@ $audio = getAudioFR($bdd);
         on_start: function () {
             jsPsych.pluginAPI.setTimeout(function () {
                 document.getElementById("jspsych-survey-html-form-next").click();
-            }, <?php echo (floatval($audio[$i]['duree']) * 2.5 * 1000) ?>); // TODO Changer variable temps de pause
+            }, <?php echo (floatval($audio[$i]['duree']) * 3 * 1000) ?>); // TODO Changer variable temps de pause
         },
         on_finish: function (data) {
             data.retransc = JSON.parse(data.responses).rep;
