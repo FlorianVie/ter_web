@@ -56,7 +56,7 @@
                                 Groupe Adaptation
                             </td>
                             <td>
-                                <a href="expe/transcription-fr.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/transcription-fr.php?id=<?php echo $subject[0] ?></a>
+                                <a href="expe/transcription-fr.php?id=<?php echo $subject[0] ?>">Work in progress</a>
                             </td>
                         </tr>
                         <tr>
@@ -94,7 +94,7 @@
                                 Motivation
                             </td>
                             <td>
-                                <a href="expe/subjective-fr.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/subjective-fr.php?id=<?php echo $subject[0] ?></a>
+                                <a href="expe/subjective-fr.php?id=<?php echo $subject[0] ?>"></a>
                             </td>
                         </tr>
                         </tbody>
@@ -177,12 +177,12 @@
                     </form>
                 </div>
 
-                <div class="column is-one-third">
+                <!--<div class="column is-one-third">
                     <h2 class="subtitle">Motivation</h2>
                     <canvas id="motiv" height="200"></canvas>
-                </div>
+                </div>-->
 
-                <div class="column is-one-third">
+                <div class="column is-two-third">
                     <h2 class="subtitle">Compréhension</h2>
                     <table class="table is-half is-striped has-shadow">
                         <thead>

@@ -85,6 +85,7 @@ $audio = getAudioFR($bdd);
             "<p>Vous pouvez essayer de taper du texte pour vérifier si cela fonctionne.</p>" +
             "<p>Le curseur sera automatiquement placé dans la zone de texte, vous n'aurez pas besoin d'utiliser votre souris.</p>",
             "<h2>Attention !</h2>" +
+            "<p>Lorsque l'expérimentation sera finie, attendez d'être notifié de la transmission des données avant de quitter la page.</p>" +
             "<p>Appuyez sur 'Suivant' pour commencer ...</p>"],
         show_clickable_nav: true,
         data: {
@@ -148,7 +149,7 @@ $audio = getAudioFR($bdd);
             audio_file: "<?php echo $audio[$i]['fichier'] ?>"
         },
         on_start: function () {
-            console.log("Audio : <?php echo $audio[$i]['fichier'] ?>", <?php echo $audio[$i]['duree'] ?>)
+            console.log("Audio : <?php echo $audio[$i]['fichier'] ?>", <?php echo $audio[$i]['duree'] ?>, <?php echo (floatval($audio[$i]['duree']) * 2.5) ?>)
         }
     };
     timeline.push(audio);
@@ -165,11 +166,13 @@ $audio = getAudioFR($bdd);
         on_start: function () {
             jsPsych.pluginAPI.setTimeout(function () {
                 document.getElementById("jspsych-survey-html-form-next").click();
-            }, <?php echo (intval($audio[$i]['duree']) * 2.5) * 1000 ?>);
+            }, <?php echo (floatval($audio[$i]['duree']) * 2.5 * 1000) ?>); // TODO Changer variable temps de pause
         },
         on_finish: function (data) {
             data.retransc = JSON.parse(data.responses).rep;
-            console.log(data.retransc);
+            //console.log(data.retransc);
+            data.audio_id = <?php echo $i + 1 ?>;
+            console.log(data.audio_id, data.retransc);
         }
     }
     timeline.push(retranscription)
