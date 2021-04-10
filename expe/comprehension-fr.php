@@ -61,6 +61,7 @@ $questions = getComprehensionFR($bdd);
                                             <option value="500 000">500 000</option>
                                             <option value="200 000 000">200 000 000</option>
                                             <option value="500 000 000">500 000 000</option>
+                                            <option value="Je ne sais pas">Je ne sais pas</option>
                                         </select>
                                     </div>
                                 </td>
@@ -80,6 +81,7 @@ $questions = getComprehensionFR($bdd);
                                             <option value="" selected disabled hidden>---</option>
                                             <option value="Vrai">Vrai</option>
                                             <option value="Faux">Faux</option>
+                                            <option value="Je ne sais pas">Je ne sais pas</option>
                                         </select>
                                     </div>
                                 </td>
@@ -100,6 +102,7 @@ $questions = getComprehensionFR($bdd);
                                             <option value="Heureux">Heureux</option>
                                             <option value="Pauvre">Pauvre</option>
                                             <option value="Malheureux">Malheureux</option>
+                                            <option value="Je ne sais pas">Je ne sais pas</option>
                                         </select>
                                     </div>
                                 </td>
@@ -119,6 +122,7 @@ $questions = getComprehensionFR($bdd);
                                             <option value="" selected disabled hidden>---</option>
                                             <option value="Vrai">Vrai</option>
                                             <option value="Faux">Faux</option>
+                                            <option value="Je ne sais pas">Je ne sais pas</option>
                                         </select>
                                     </div>
                                 </td>
@@ -143,6 +147,7 @@ $questions = getComprehensionFR($bdd);
                                             <option value="Dans notre épanouissement professionnel">Dans notre
                                                 épanouissement professionnel
                                             </option>
+                                            <option value="Je ne sais pas">Je ne sais pas</option>
                                         </select>
                                     </div>
                                 </td>
@@ -162,6 +167,7 @@ $questions = getComprehensionFR($bdd);
                                             <option value="" selected disabled hidden>---</option>
                                             <option value="Vrai">Vrai</option>
                                             <option value="Faux">Faux</option>
+                                            <option value="Je ne sais pas">Je ne sais pas</option>
                                         </select>
                                     </div>
                                 </td>
@@ -186,6 +192,7 @@ $questions = getComprehensionFR($bdd);
                                             </option>
                                             <option value="faire entrer le bonheur">Faire entrer le bonheur
                                             </option>
+                                            <option value="Je ne sais pas">Je ne sais pas</option>
                                         </select>
                                     </div>
                                 </td>
@@ -205,6 +212,7 @@ $questions = getComprehensionFR($bdd);
                                             <option value="" selected disabled hidden>---</option>
                                             <option value="Vrai">Vrai</option>
                                             <option value="Faux">Faux</option>
+                                            <option value="Je ne sais pas">Je ne sais pas</option>
                                         </select>
                                     </div>
                                 </td>
@@ -228,6 +236,7 @@ $questions = getComprehensionFR($bdd);
                                             <option value="Les petites choses peuvent produire de grands changements">
                                                 Les petites choses peuvent produire de grands changements
                                             </option>
+                                            <option value="Je ne sais pas">Je ne sais pas</option>
                                         </select>
                                     </div>
                                 </td>
@@ -247,6 +256,7 @@ $questions = getComprehensionFR($bdd);
                                             <option value="" selected disabled hidden>---</option>
                                             <option value="Vrai">Vrai</option>
                                             <option value="Faux">Faux</option>
+                                            <option value="Je ne sais pas">Je ne sais pas</option>
                                         </select>
                                     </div>
                                 </td>
