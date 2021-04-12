@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="bulma/css/bulma.css">
     <link rel="icon" type="image/svg+xml" href="/assets/thinking.svg">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script>
 
     <?php
     include 'fonctions.php';
@@ -20,6 +20,11 @@
     $motiv = getMotiv($bdd, $_GET['id']);
     $compRep = getCompRepFR($bdd, $_GET['id']);
     $compTotal = 0;
+
+    if ($subject["groupe"] == "Controle") {
+        $perf = getPerfControleFR($bdd, $subject[0]);
+        #print_r($perf);
+    }
     ?>
 
     <title>TER - Participant <?php echo $subject[0] ?></title>
@@ -99,6 +104,14 @@
                         </tr>
                         </tbody>
                     </table>
+                </div>
+            </div>
+
+            <div class="columns is-centered">
+                <div class="column is-6">
+                    <div>
+                        <canvas id="performances"></canvas>
+                    </div>
                 </div>
             </div>
 
@@ -234,5 +247,44 @@
     </div>
 </section>
 </body>
+
+<script>
+
+    var perf = <?php echo json_encode($perf) ?>;
+
+    var labels = [];
+    var data_transc = [];
+    for (var i = 0; i < perf.length; i++) {
+        labels.push(perf[i].audio_id)
+        data_transc.push(perf[i].ratio)
+    }
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'Nb car transcrit / Nb car à transcrire',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: data_transc,
+        }]
+    };
+
+    const config = {
+        type: 'line',
+        data,
+        options: {
+            scales: {
+                y: {
+                    min: 0,
+                }
+            }
+        }
+    };
+
+    var myChart = new Chart(
+        document.getElementById('performances'),
+        config
+    );
+</script>
 
 </html>
