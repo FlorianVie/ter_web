@@ -67,8 +67,8 @@ $audio = getAudioFR($bdd);
         type: 'instructions',
         pages: ["<h1>Tâche de retranscription</h1>",
             "<h1>Présentation</h1>" +
-            "<p>Dans cette session, vous allez effectuer un tâche de retranscription d'une conférence en français.</p>" +
-            "<p>La durée totale de la tâche de retranscription est d'environ 12 minutes.</p>",
+            "<p>Dans cette session, vous allez effectuer une tâche de retranscription d'une conférence en français.</p>" +
+            "<p>La durée totale de la tâche de retranscription est d'environ 19 minutes.</p>",
             "<h2>Vérification du son</h2>" +
             "<p>En appuyant sur le bouton, entendez vous du son ?</p>" +
             "<button class='jspsych-btn' type='button' onclick='playAudio()' >Tester le son</button>" +
@@ -79,7 +79,7 @@ $audio = getAudioFR($bdd);
             "<p>Durant les phases d'écoute, vous entendrez une portion d'une conférence audio.</p>" +
             "<p>Durant les phases de retranscription, vous devrez retranscrire les paroles que vous avez entendu le plus fidèlement possible.</p>" +
             "<p>Il n'est pas nécessaire de retranscrire la ponctuation.</p>" +
-            "<p>La phase de retranscription est calibrée pour durer un certain temps, lorsque celui-ci sera écoulé, le programme bascule automatiquement sur une nouvelle phase d'écoute.</p>" +
+            "<p>La phase de retranscription est calibrée pour durer un certain temps, lorsque celui-ci sera écoulé, le programme basculera automatiquement sur une nouvelle phase d'écoute.</p>" +
             "<p>Si vous n'avez pas réussi à finir de taper votre texte, ne vous en faites pas, il sera tout de même pris en compte.</p>",
             "<p>Voici un exemple de la zone dans laquelle vous pourrez retranscrire le discours :</p>" +
             "<p><textarea name='rep-instr' id='test-instr-box' cols='40' rows='10' style='font-family: sans-serif; font-size: 1.3em' ></textarea></p>" +
