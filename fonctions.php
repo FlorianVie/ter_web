@@ -424,6 +424,20 @@ function getPerfControleFR($bdd, $sujet)
     return $comp;
 }
 
+function getPerfAdaptFR($bdd, $sujet)
+{
+    $req = $bdd->prepare("select subject_id, audiofr.audio_id, retransc, char_length(retransc) as nb_car, char_length(retransc)/char_length(correction) as ratio, char_length(retransc)-char_length(correction) as nt
+                            from fr_adapt, audiofr
+                            where part = 'Retranscription'
+                            and audiofr.audio_id = fr_control.audio_id
+                            and subject_id = :sujet");
+    $req->bindParam(':sujet', $sujet);
+    $req->execute();
+    $comp = $req->fetchAll();
+    $req->closeCursor();
+    return $comp;
+}
+
 function getTypingFR($bdd, $id)
 {
     $req = $bdd->prepare("select typing_speed from subjects_fr where id_subject = :id");

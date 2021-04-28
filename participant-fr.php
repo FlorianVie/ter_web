@@ -24,6 +24,8 @@
     if ($subject["groupe"] == "Controle") {
         $perf = getPerfControleFR($bdd, $subject[0]);
         #print_r($perf);
+    } elseif ($subject["groupe"] == "Controle") {
+
     }
     ?>
 
