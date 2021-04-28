@@ -22,7 +22,7 @@
 <script>
     function saveData() {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'write_data_fr_adapt.php'); // change 'write_data.php' to point to php script.
+        xhr.open('POST', 'write_data_fr_control.php'); // change 'write_data.php' to point to php script.
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.onload = function () {
             if (xhr.status == 200) {
@@ -48,17 +48,9 @@ include '../fonctions.php';
 $bdd = getBD();
 $id_sujet = $_GET['id'];
 $audio = getAudioFR($bdd);
-
-$perf_moy = 196.65;
-$perf_par = getTypingFR($bdd, $id_sujet)[0][0];
-$coeff_cor = ($perf_moy - $perf_par) / $perf_moy;
-#print_r($coeff_cor);
-
 ?>
 
 <script>
-    console.log("Coeff correction : ", <?php echo $coeff_cor; ?>);
-
     var timeline = [];
 
     var subject_id = '<?php echo $id_sujet ?>';
@@ -158,7 +150,7 @@ $coeff_cor = ($perf_moy - $perf_par) / $perf_moy;
             audio_file: "<?php echo $audio[$i]['fichier'] ?>"
         },
         on_start: function () {
-            console.log("Audio : <?php echo $audio[$i]['fichier'] ?>", <?php echo $audio[$i]['duree'] ?>, <?php echo((floatval($audio[$i]['duree']) + (floatval($audio[$i]['duree']) * $coeff_cor)) * 1) ?>)
+            console.log("Audio : <?php echo $audio[$i]['fichier'] ?>", <?php echo $audio[$i]['duree'] ?>, <?php echo (floatval($audio[$i]['duree']) * 3) ?>)
         }
     };
     timeline.push(audio);
@@ -175,7 +167,7 @@ $coeff_cor = ($perf_moy - $perf_par) / $perf_moy;
         on_start: function () {
             jsPsych.pluginAPI.setTimeout(function () {
                 document.getElementById("jspsych-survey-html-form-next").click();
-            }, <?php echo((floatval($audio[$i]['duree']) + (floatval($audio[$i]['duree']) * $coeff_cor)) * 1000) ?>); // TODO Changer variable temps de pause
+            }, <?php echo (floatval($audio[$i]['duree']) * 3 * 1000) ?>); // TODO Changer variable temps de pause
         },
         on_finish: function (data) {
             data.retransc = JSON.parse(data.responses).rep;
