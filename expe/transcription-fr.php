@@ -158,7 +158,7 @@ $coeff_cor = ($perf_moy - $perf_par) / $perf_moy;
             audio_file: "<?php echo $audio[$i]['fichier'] ?>"
         },
         on_start: function () {
-            console.log("Audio : <?php echo $audio[$i]['fichier'] ?>", <?php echo $audio[$i]['duree'] ?>, <?php echo((floatval($audio[$i]['duree']) + (floatval($audio[$i]['duree']) * $coeff_cor)) * 1) ?>)
+            console.log("Audio : <?php echo $audio[$i]['fichier'] ?>", <?php echo $audio[$i]['duree'] * 3 ?>, <?php echo((floatval($audio[$i]['duree']) * 3 + ((floatval($audio[$i]['duree']) * 3) * $coeff_cor)) * 1) ?>)
         }
     };
     timeline.push(audio);
@@ -175,7 +175,7 @@ $coeff_cor = ($perf_moy - $perf_par) / $perf_moy;
         on_start: function () {
             jsPsych.pluginAPI.setTimeout(function () {
                 document.getElementById("jspsych-survey-html-form-next").click();
-            }, <?php echo((floatval($audio[$i]['duree']) + (floatval($audio[$i]['duree']) * $coeff_cor)) * 1000) ?>); // TODO Changer variable temps de pause
+            }, <?php echo((floatval($audio[$i]['duree']) * 3 + ((floatval($audio[$i]['duree']) * 3) * $coeff_cor)) * 1000) ?>); // TODO Changer variable temps de pause
         },
         on_finish: function (data) {
             data.retransc = JSON.parse(data.responses).rep;

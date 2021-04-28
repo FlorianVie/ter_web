@@ -53,7 +53,7 @@
                                 Vitesse de frappe
                             </td>
                             <td>
-                                <a href=""></a>
+                                <a href="https://10fastfingers.com/typing-test/french#">https://10fastfingers.com/typing-test/french#</a>
                             </td>
                         </tr>
                         <tr>
@@ -61,7 +61,7 @@
                                 Groupe Adaptation
                             </td>
                             <td>
-                                <a href="expe/transcription-fr.php?id=<?php echo $subject[0] ?>">Work in progress</a>
+                                <a href="expe/transcription-fr.php?id=<?php echo $subject[0] ?>">http://ter.bigfive.890m.com/expe/transcription-fr.php?id=<?php echo $subject[0] ?></a>
                             </td>
                         </tr>
                         <tr>
