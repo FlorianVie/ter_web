@@ -429,7 +429,7 @@ function getPerfAdaptFR($bdd, $sujet)
     $req = $bdd->prepare("select subject_id, audiofr.audio_id, retransc, char_length(retransc) as nb_car, char_length(retransc)/char_length(correction) as ratio, char_length(retransc)-char_length(correction) as nt
                             from fr_adapt, audiofr
                             where part = 'Retranscription'
-                            and audiofr.audio_id = fr_control.audio_id
+                            and audiofr.audio_id = fr_adapt.audio_id
                             and subject_id = :sujet");
     $req->bindParam(':sujet', $sujet);
     $req->execute();

@@ -21,11 +21,15 @@
     $compRep = getCompRepFR($bdd, $_GET['id']);
     $compTotal = 0;
 
+    $perf_moy = 196.65;
+    $perf_par = getTypingFR($bdd, $subject[0])[0][0];
+    $coeff_cor = ($perf_moy - $perf_par) / $perf_moy;
+
     if ($subject["groupe"] == "Controle") {
         $perf = getPerfControleFR($bdd, $subject[0]);
         #print_r($perf);
-    } elseif ($subject["groupe"] == "Controle") {
-
+    } elseif ($subject["groupe"] == "Adaptation") {
+        $perf = getPerfAdaptFR($bdd, $subject[0]);
     }
     ?>
 
@@ -113,6 +117,7 @@
                 <div class="column is-6">
                     <div>
                         <canvas id="performances"></canvas>
+                        <h2 class="subtitle">Coefficient de correction : <strong><?php echo $coeff_cor ?></strong></h2>
                     </div>
                 </div>
             </div>
